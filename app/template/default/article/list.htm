@@ -1,0 +1,39 @@
+{yun:}include file="$tplstyle/header.htm"{/yun}
+
+<script src="{yun:}$config.sy_weburl{/yun}/js/jquery-1.8.0.min.js" language="javascript"></script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/layer/layer.min.js" language="javascript"></script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/lazyload.min.js" language="javascript"></script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/public.js" language="javascript"></script>
+<link rel="stylesheet" href="{yun:}$style{/yun}/style/news.css" type="text/css" />
+
+{yun:}assign var=curr value=1{/yun}
+{yun:}include file="$tplstyle/top.htm"{/yun}
+
+<div class="news">
+    <ul>
+        <li class="b1" id="n1">
+            <div class="news_in">
+                <div class="news_title">{yun:}$classname{/yun}</div>
+                <div class="news_resource">
+                    <ul>
+                        {yun:}article nid='auto.nid' ispage=1 urlstatic=1 limit=6 pic=1  t_len=30 item=news{/yun}
+                        <li>
+                            <a href="{yun:}$news.url{/yun}"><img src="{yun:}formatpicurl path=$news.newsphoto{/yun}" width="346" height="218" /></a>
+                            <span class="news_txt">
+                                <h1><a href="{yun:}$news.url{/yun}" title="{yun:}$news.title{/yun}">{yun:}$news.title{/yun}</a></h1>
+                            </span>
+                        </li>
+                        {yun:}/article{/yun}
+                    </ul>
+                    <div class="page">
+                        <a href="{yun:}if $smarty.get.page&&$smarty.get.page>1{/yun}{yun:}url m=article c=list page=$smarty.get.page-1{/yun}{yun:}else{/yun}javascript:;{yun:}/if{/yun}" class="pre"><img src="{yun:}$style{/yun}/picture/pre_1.png" width="117" height="36" /></a>
+                        <a href="{yun:}if !$smarty.get.page{/yun}{yun:}url m=article c=list page=2{/yun}{yun:}elseif $smarty.get.page<$pages{/yun}{yun:}url m=article c=list page=$smarty.get.page+1{/yun}{yun:}else{/yun}javascript:;{yun:}/if{/yun}" class="next"><img src="{yun:}$style{/yun}/picture/next_1.png" width="113" height="36" /></a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!--content½áÊø--> 
+{yun:}include file="$tplstyle/footer.htm"{/yun}

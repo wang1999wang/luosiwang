@@ -1,0 +1,101 @@
+{yun:}include file="$tplstyle/header.htm"{/yun}
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link href="{yun:}$style{/yun}/vivo/common.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{yun:}$style{/yun}/vivo/tinybox.js"></script>
+
+	<style type="text/css">
+.zxx_list_title{background:#eeeeee; border:1px solid #cccccc; padding:1em;}
+.zxx_list_content{padding:1em;}
+#tinybox{position:absolute; display:none; padding:10px; background:#ffffff url({yun:}$style{/yun}/images/preload.gif) no-repeat 50% 50%; border:10px solid #e3e3e3; z-index:2000;}
+#tinymask{position:absolute; display:none; top:0; left:0; height:100%; width:100%; background:#000000; z-index:1500;}
+#tinycontent{background:#ffffff; font-size:1.1em; display:block !important}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0; padding:0; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+
+.cl:after { content: "."; display: block; height: 0; clear: both; visibility: hidden;} .cl{ zoom:1;}
+
+/*a-pages*/
+#mobile-pages{width:100%; position:relative; background:#f2f2f2; overflow:hidden; font-size:12px; }
+#mobile-pages .page-specs{width:1000px; margin:0 auto;  position:relative;}
+.page-specs .specs-content{margin-top:40px; color:#666; position:relative;}
+.page-specs a.close,.page-support a.close{width:49px; height:49px; overflow:hidden; display:block; position:absolute; top:-20px; right:0; background:url(images/oper-ele-ico.png) 0 -88px no-repeat; _background:url({yun:}$style{/yun}/images/oper-ele-ico.gif) 0 -88px no-repeat;}
+.page-specs a.close:hover,.page-support a.close:hover{background-position:0 -138px;}
+.specs-show-style1 ul,.support-show-style1 ul{display:block; padding-top:20px;}
+.specs-show-style1 ul li{display:block; width:45%;}
+.specs-show-style1 ul li.left{float:left;}
+.specs-show-style1 ul li.right{float:right;}
+.specs-show-style1 ul li dl{display:block; padding-bottom:35px;}
+.specs-show-style1 ul li dl dt{font-size:18px; padding-bottom:10px; border-bottom:1px #f2f2f2 solid; color:#000;}
+.specs-show-style1 ul li dl dd{border-bottom:1px #e2e2e2 solid; display:block;}
+.specs-show-style1 ul li dl dd label{width:150px; padding: 6px 10px 6px 0; display:inline-block; float:left;}
+.specs-show-style1 ul li dl dd span{width:250px; padding:6px 10px; display:inline-block; float:left;}
+.specs-show-style1 ul li dl dd.setheight label{height:40px; vertical-align:top;}
+.specs-show-style1 ul li dl dd.listen label{height:45px;}
+.specs-expand{width:69px; height:28px; display:block; position:absolute; bottom:-10px; left:50%; margin-left:-34px; background:url(../images/expand-ico.png) no-repeat;}
+.specs-expand:hover{background-position:0 -29px;}
+/*z-pages*/
+</style>
+
+{yun:}assign var=curr value=2{/yun}
+
+{yun:}include file="$tplstyle/top.htm"{/yun}
+    <div class="news">
+        <ul>
+            <li class="b3">
+                <div class="news_in">
+                    <div class="news_detail_position"><a href="{yun:}$config.sy_weburl{/yun}">首页</a> 〉<a href="news.html">{yun:}$Info.class_name{/yun}</a> 〉详细</div>
+                    <div class="news_detail_title">{yun:}$Info.title{/yun}</div>
+                    <div class="news_detail">
+                        <div class="news_detail_left">
+                            {yun:}$Info.content{/yun}
+                        </div>
+                    </div>
+                    <div class="news_detail_right">
+                        <div class="news_detail_right_title">相关新闻</div>
+                        <ul style="padding-top:30px;margin-bottom: 20px;">
+                            {yun:}foreach from=$Info.like item=about{/yun}
+                            <li>
+                                <a href="{yun:}$about.url{/yun}" title="{yun:}$about.title{/yun}"><img src="{yun:}formatpicurl path=$about.newsphoto{/yun}" width="230" height="145" /></a>
+                                <span class="news_detail_right_txt">
+                                    <h1><a href="{yun:}$about.url{/yun}" title="{yun:}$about.title{/yun}">{yun:}$about.title{/yun}</a></h1>
+                                </span>
+                            </li>
+                            {yun:}/foreach{/yun}
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+<div id="airbox" style="display:none;">	
+    <div id="mobile-pages">
+        <div class="page-specs" h="400">
+            <div class="specs-content">
+                <a href="#" class="close" title="关闭"></a>
+                <div class="specs-show-style1 cl">
+                    <h1>基本参数</h1>
+                    <ul>
+                        <li class="left cl"><label>叉车品牌：</label><span>E</span></li>
+                        <li class="right cl"><label>叉车品牌：</label><span>E</span></li>
+                        <li class="left cl"><label>叉车品牌：</label><span>E</span></li>
+                        <li class="right cl"><label>叉车品牌：</label><span>E</span></li>
+                        <li class="left cl"><label>叉车品牌：</label><span>E</span></li>
+                        <li class="right cl"><label>叉车品牌：</label><span>E</span></li>
+                        <li class="left cl"><label>叉车品牌：</label><span>E</span></li>
+                        <li class="right cl"><label>叉车品牌：</label><span>E</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>	
+    </div>
+	
+	<div style="position:fixed; top:100px; right:50px; background-color:black; width:50px; height:50px;" id="click_test2">详细参数</div>
+<script type="text/javascript">
+        var content2 =$('#airbox').html();
+        T$('click_test2').onclick = function(){TINY.box.show(content2,0,0,0,1);}
+    </script>
+{yun:}include file="$tplstyle/footer.htm"{/yun}

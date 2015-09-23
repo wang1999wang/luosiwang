@@ -1,0 +1,137 @@
+﻿/*
+Powered by uimix.com;
+date:2014-05-25;
+*/
+.tmp-head{height: 61px; width: 100%; background: #f2f2f2; position: relative; z-index: 99; text-align: center;}
+.tmp-foot{height: 140px; width: 100%; background: #f2f2f2; text-align: center;}
+
+@font-face{
+    font-family:Tinghei;
+        src: url('Lan-Tinghei.TTF') format('truetype');
+    font-style:normal;
+    font-weight:200;
+}
+@font-face{
+    font-family:fine-Tinghei;
+    src:url('Lan-fine-Tinghei.TTF') format('truetype');
+    font-style:normal;
+    font-weight:200;
+}
+
+/*a-contain*/
+#mobile-contain{padding-top: 112px;}
+.vmb-stage{width: 100%; position:relative; color: #555; z-index:1; font-size:14px; overflow: hidden;}
+.section{width:1180px; height:700px; margin:auto; position: relative;}
+.title{text-align: center; position: relative; z-index: 9;}
+.title b{width: 100px; height: 100px; display: inline-block; overflow: hidden; margin: auto; margin-bottom: 10px;}
+.title h2{color: #fff; display: block; font-size: 36px; font-family:Tinghei,"Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;}
+.title h2 span{font-family:fine-Tinghei,"Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif; display: block; padding-top: 10px;}
+.title p.stitle{padding-top: 30px; text-align: justify; color: #fff; font-size: 16px;}
+.figure{z-index: 1;}
+
+
+
+/* a-intro */
+.high{background: url(../images/x5pro-high-bg.jpg) repeat;}
+.high .section{height: 1200px;}
+.high .title{width: 490px; position: absolute; top: 160px; left: 50%; margin-left: -245px;}
+.high .figure{width: 1480px; height: 720px; position: absolute; top: 380px; right: -100px;}
+.high .figure img{ position: absolute; top: 0; left: 0;}
+.high .figure img.f1{z-index: 2;}
+
+.s1{background: #E8F2D8;}
+.s1 .title b.ico{background: url(../images/x5pro-s1-ico.jpg) no-repeat;}
+.s1 .title{width: 350px; position: absolute; top: 140px; left: 80px; text-align: left;}
+.s1 .title h2{color: #333}
+.s1 .title p.stitle{text-align: left; color: #666;}
+.s1 .figure{width: 1020px; height: 590px; position: absolute; top: 0; left: 0;}
+.s1 .figure img{position: absolute; top: 0; left: 0;}
+.s1 .figure img.f2{top: 100px; left: 560px;}
+
+.s2{background: #fff;}
+.s2 .section{height: 410px;}
+.s2 .figure{width: 900px; height: 400px; position: absolute; top: 10px; left: 0;}
+.s2 .figure .f{width: 500%; height: 400px; background: #f6f7f7; position: absolute; top: 0; overflow: hidden;}
+.s2 .figure .f1{right: 50.5%;}
+.s2 .figure .f2{left: 50.5%;}
+.s2 .figure .f1 img{position: absolute; top: 0; right: 0;}
+.s2 .figure .f2 img{position: absolute; top: 0; left: 90px;}
+
+.s3{background: #ccc;}
+.s3 .section{height: 850px;}
+.s3 .title{width: 460px; position: absolute; left: 30px;  left: 50%; margin-left: -230px; text-align: center;}
+.s3 .title h2{color: #333;}
+.s3 .title p.stitle{color: #666; text-align: center;}
+.s3 .mobile{width: 700px; position: absolute; bottom: 0; left: 0;}
+
+.s4{background: #f6f7f7;}
+.s4 .section{height: 1000px;}
+.s4 .title b.ico{background: url(../images/x5pro-s4-ico.jpg) no-repeat;}
+.s4 .title{width: 600px; margin: auto; position: relative; top: 150px; left: 50%; margin-left: -300px; text-align: center;}
+.s4 .title h2{color: #333;}
+.s4 .title p.stitle{color: #666; text-align: center;}
+.s4 .figure{width: 3170px; height: 340px; position: absolute; top: 530px; left: -280px;}
+
+.s5{background: #fff;}
+.s5 .section{height: 510px;}
+.s5 .figure{width: 900px; height: 500px; position: absolute; top: 10px; left: 0;}
+.s5 .figure .f{width: 500%; height: 500px; background: #f6f7f7; position: absolute; top: 0; overflow: hidden;}
+.s5 .figure .f1{right: 50.5%;}
+.s5 .figure .f2{left: 50.5%;}
+.s5 .figure .f1 img{position: absolute; bottom: -50px; right:160px;}
+.s5 .figure .f2 img{position: absolute; bottom: -50px; left: 160px;}
+
+.s6{background: #fff;}
+.s6 .title b.ico{background: url(../images/x5pro-s6-ico.jpg) no-repeat;}
+.s6 .title{width: 500px; margin: auto; position: relative; top: 140px; left: 50%; margin-left: -250px; text-align: center;}
+.s6 .title h2{color: #333;}
+.s6 .title p.stitle{color: #666; text-align: center;}
+.s6 .s6-video{width: 1200px; height: 480px; overflow: hidden; position: absolute; bottom: 100px; left: 50%; margin-left: -600px; background: url(../images/x5pro-s6-vfigure.jpg) no-repeat;}
+.s6 .s6-video i{width: 5000px; height: 480px; overflow: hidden; text-align: center; position: absolute; top: 0; left: 50%; margin-left: -2500px;}
+.s6 .s6-video i video{height: 480px; width: auto; visibility: hidden;}
+
+.s7{background: #f6f7f7;}
+/*.s7 i{display: block; width: 4500px; height: 5000px; position: absolute; top: 50%; left: 50%; margin: -2500px 0 0 -2250px; background: #f6f7f7 url(../images/x5pro-s7-bg.jpg) center center no-repeat;}*/
+.s7 .section{z-index: 1}
+.s7 .title b.ico{background: url(../images/x5pro-s7-ico.png) no-repeat;}
+.s7 .title{width: 580px; margin: auto; position: relative; top: 145px; text-align: center;}
+.s7 .title h2{color: #333;}
+.s7 .title p.stitle{color: #666; text-align: center;}
+.s7 .figure{width: 6000px; height: 700px; position: absolute; top: 50%; left: 50%; margin-left: -3000px;}
+
+.s8{background: #fff;}
+.s8 .title{width: 430px; position: absolute; top: 70px; right: 0; text-align: left;}
+.s8 .title h2{color: #333;}
+.s8 .title b.ico{background: url(../images/x5pro-s8-ico.jpg) no-repeat;}
+.s8 .title p.stitle{text-align: left; color: #333;}
+.s8 .sc{width: 640px; height:430px; position: absolute; top: 90px; left: 0px; z-index: 2;}
+
+
+.s18{background:  #E8F2D8;}
+.s18 .title b.ico{background: url(../images/x5pro-s18-ico.jpg) no-repeat;}
+.s18 .title{width: 440px; position: absolute; top: 90px; left: 80px; text-align: left;}
+.s18 .title h2{color: #333}
+.s18 .title p.stitle{text-align: left; color: #666;}
+.s18 .figure{width: 410px; height: 740px; position: absolute; top: 90px; right: 180px;}
+.s18 .figure .f{width:610px; height: 533px;  position: absolute; top: 0; left: 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*z-contain*/

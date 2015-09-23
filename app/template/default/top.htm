@@ -1,0 +1,53 @@
+
+</head>
+
+<body class="home">
+
+    <div class="header">
+        <div class="header_in">
+            <div id="vivo-airbox"></div>
+            <div id="vivo-wrap">
+                <div id="vivo-head">
+                    <div class="vivo-search">
+                        <div class="search-box">
+                            <form action='/search' method='get' onSubmit="if ($.trim($(this).find('input').val()) == '') {alert('请输入关键词'); return false;} return true;">
+                            <select name="type" style=" height:37px;">
+                                <option value="article">E叉动态</option>
+                                <option value="school">E叉学堂</option>
+                                <option value="cars">叉车家族</option>
+                            </select>
+                            <select name="range" style=" height:37px;">
+                                <option value="title">标题</option>
+                                <option value="content">全文</option>
+                            </select>
+                            <input style="width:400px;" type="text" placeholder="如:E叉车租赁" name='q' class='data_q' autocomplete="off" /><button>搜索</button><a class="close"></a></form>
+                            <div class="qk-results">
+                                <ul></ul>
+                                <div class="other-results"><a href="#">其他搜索结果</a></div>
+                            </div>
+                        </div>
+                    </div><div class="wd">
+                    <div class="vivo-nav cl" style="height:0px;">
+                        <a href="{yun:}$config.sy_weburl{/yun}" class="vivo-logo" title="vivo" style="background-image:none;"><img src="{yun:}$style{/yun}/picture/logo.png" alt="E叉车租赁" /></a>
+                        <div id="menu">
+                            <ul>
+                                {yun:}foreach from=$nav_list1 item=one key=key{/yun}
+                                <li data-ref="{yun:}$one.id{/yun}" class="{yun:}if $curr==$key{/yun}curr{yun:}/if{/yun}">
+                                    <a href="{yun:}$config.sy_weburl{/yun}/{yun:}$one.url{/yun}">{yun:}$one.name{/yun}</a>
+                                    <ul class="sub_menu">
+                                        {yun:}foreach from=$one.sonlist item=two{/yun}
+                                        <li><a href="{yun:}$config.sy_weburl{/yun}/{yun:}$two.url{/yun}">{yun:}$two.name{/yun}</a></li>
+                                        {yun:}/foreach{/yun}
+                                    </ul>
+                                </li>
+                                {yun:}/foreach{/yun}
+                            </ul>
+                        </div>
+                        <div class="search-user"><a href="#" class="search"><b></b></a></div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   

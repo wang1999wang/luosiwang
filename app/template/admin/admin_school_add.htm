@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="images/reset.css" rel="stylesheet" type="text/css" />
+<link href="images/system.css" rel="stylesheet" type="text/css" />
+<link href="images/table_form.css" rel="stylesheet" type="text/css" />
+<script>var weburl = '{yun:}$config.sy_weburl{/yun}';</script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/jquery-1.8.0.min.js"></script>
+<script charset="utf-8" src="../js/kindeditor/kindeditor-min.js"></script>
+<script charset="utf-8" src="../js/kindeditor/lang/zh_CN.js"></script>
+<link rel="stylesheet" href="../js/kindeditor/themes/default/default.css" />
+<script src="{yun:}$config.sy_weburl{/yun}/js/layer/layer.min.js" language="javascript"></script>
+<script src="js/admin_public.js" language="javascript"></script>
+<script language="javascript">
+<!--
+KindEditor.ready(function(K) {
+	var editor = K.editor({
+		allowFileManager : false
+	}); 
+	K.create('#content', {
+		themeType : 'default',
+		items : ['source', '|', 'fullscreen', 'undo', 'redo', 'print', 'cut', 'copy', 'paste',
+'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+'superscript', '|', 'selectall', '-',
+'title', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+'italic', 'underline', 'strikethrough', 'removeformat', '|', 'image',
+'flash', 'media', 'advtable', 'hr', 'emoticons', 'link', 'unlink', 'lineheight']
+		
+	});
+	K('#insertfile').click(function() {
+		editor.loadPlugin('images', function() {
+			editor.plugin.imageDialog({
+				imageUrl : K('#pic_url').val(),
+				clickFn : function(url, title, width, height, border, align) {
+					K('#pic_url').val(url);
+					K('#school_pic').html(url);
+					editor.hideDialog();
+				}
+			});
+		});
+	});
+	var colorpicker;
+	K('#colorpicker').bind('click', function(e) {
+		e.stopPropagation();
+		if (colorpicker) {
+			colorpicker.remove();
+			colorpicker = null;
+			return;
+		}
+		var colorpickerPos = K('#colorpicker').pos();
+		colorpicker = K.colorpicker({
+			x : colorpickerPos.x,
+			y : colorpickerPos.y + K('#colorpicker').height(),
+			z : 19811214,
+			selectedColor : 'default',
+			noColor : '无颜色',
+			click : function(color) {
+				K('#color').val(color);
+				$('#color + font').css('color', color);
+				colorpicker.remove();
+				colorpicker = null;
+			}
+		});
+	});
+	K(document).click(function() {
+		if (colorpicker) {
+			colorpicker.remove();
+			colorpicker = null;
+		}
+	});
+});
+//-->
+function school_preview(url){
+	$(".job_box_div").html("<img src='"+url+"' style='max-width:500px' />");//
+ 	$.layer({
+		type : 1,
+		title : '查看图片',
+		closeBtn : [0 , true],
+		offset : ['20%' , '30%'],
+		border : [10 , 0.3 , '#000', true],
+		area : ['560px','auto'],
+		page : {dom : '#school_preview'}
+	}); 
+}
+function checkform(myform){
+  if (myform.title.value=="") {
+		parent.layer.msg('请填写文章标题！', 2,2,function(){myform.title.focus();});return false;
+  }
+}
+</script>
+
+<title>后台管理</title>
+</head>
+<body class="body_ifm">
+<div class="infoboxp">
+<div class="infoboxp_top_bg"></div>
+  <div class="infoboxp_top">
+     <span class="admin_title_span">添加文章</span>
+        <a href="index.php?m=admin_school" class="admin_infoboxp_nav admin_infoboxp_gl">文章列表</a>
+          <em class="admin-tit_line"></em>
+        <a href="index.php?m=admin_school&c=group" class="admin_infoboxp_nav admin_infoboxp_lb">类别管理</a>
+  </div>
+  <div class="clear"></div>
+  <div class="admin_table_border">
+    <iframe id="supportiframe"  name="supportiframe" onload="returnmessage('supportiframe');" style="display:none"></iframe>
+    <form name="myform" target="supportiframe" action="index.php?m=admin_school&c=addschool" method="post" onSubmit="return checkform(this);">
+      <table width="100%" class="table_form"  style="background:#fff;">
+        <tr >
+          <th width="120">文章类别：</th>
+          <td><select name="nid">
+	  {yun:}foreach item=v from=$one_class{/yun}
+      <option value="{yun:}$v.id{/yun}" {yun:}if $v.id eq $school.nid{/yun} selected='selected'{yun:}/if{/yun}>{yun:}$v.name{/yun}</option>
+      {yun:}foreach item=val from=$two_class[$v.id]{/yun}
+      <option value="{yun:}$val.id{/yun}" {yun:}if $val.id eq $school.nid{/yun} selected='selected'{yun:}/if{/yun}> 　┗{yun:}$val.name{/yun}</option>
+      {yun:}/foreach{/yun}
+      {yun:}/foreach{/yun}
+            </select>
+            &nbsp;&nbsp;<a href="index.php?m=admin_school&c=group" class="on" style=" text-decoration:none;"><font style="background:#498CD0; color:#FFF; padding:5px 10px 5px 10px;">添加分类</font></a></td>
+        </tr>
+        <tr class="admin_table_trbg" >
+          <th>文章标题：</th>
+          <td><input class="input-text" type="text" name="title" size="40" value="{yun:}$school.title{/yun}" style="width:330px;"/><input type="hidden" name='color' id="color" value="{yun:}$school.color{/yun}" /><font color="{yun:}$school.color{/yun}">字体颜色</font><input type="button" id="colorpicker" value="打开取色器" class="admin_submit6" style="background:#F60; margin-left:5px;"/></td>
+        </tr>
+     	<tr style="display:none;">
+        <th>使用范围：</th>
+        <td><input type="button" value="{yun:}if $domainname!=""{/yun}{yun:}$domainname{/yun}{yun:}else{/yun}全站{yun:}/if{/yun}" class="city_school_but" onClick="domain_show();"></td>
+      </tr> 
+          <tr class="admin_table_trbg" style="display:none;">
+              <th>作　　者：</th>
+              <td><input class="input-text" type="text" name="author" size="20" value="{yun:}$school.author{/yun}" /></td>
+          </tr>
+          <tr style="display:none;">
+              <th>来　　源：</th>
+              <td><input class="input-text" type="text" name="source" size="50" value="{yun:}$school.source{/yun}" /></td>
+          </tr>
+        <tr class="admin_table_trbg" >
+          <th>关 键 词：</th>
+          <td><input class="input-text" type="text" name="keyword" size="50" value="{yun:}$school.keyword{/yun}"/>
+            (多关键字，请用，隔开，为空则自动提取) </td>
+        </tr>
+        <tr >
+          <th>描　　述：</th>
+          <td><textarea name="description" cols="55" rows="3">{yun:}$school.description{/yun}</textarea></td>
+        </tr>
+        <tr class="admin_table_trbg" >
+          <th>文章内容： </th>
+          <td><textarea  id="content" name="content" cols="100" rows="8" style="width:800px;height:300px;">{yun:}$school.content{/yun}</textarea></td>
+        </tr>
+        <tr >
+          <th>缩 略 图：</th>
+          <td><span id='school_pic'>{yun:}$school.s_thumb{/yun}</span><input type="hidden"  class="input-text" name="uplocadpic"  value="{yun:}$school.s_thumb{/yun}"   id='pic_url' />{yun:}if $school.s_thumb{/yun}<a href="javascript:void(0)" onClick="school_preview('../{yun:}$school.schoolphoto{/yun}')" style="margin:0px 10px">查看</a>{yun:}/if{/yun}<input   type="button" id="insertfile" value="选择图片" /></td>
+        </tr>
+        <tr class="admin_table_trbg" >
+          <th>类　　型：</th>
+          <td>
+            {yun:}foreach item=property_row from=$property{/yun}
+            <input type="checkbox" name="describe[]" value="{yun:}$property_row.value{/yun}" 
+            {yun:}if in_array($property_row.value,$describe){/yun}checked="checked" {yun:}/if{/yun}/>{yun:}$property_row.name{/yun} &nbsp;
+            {yun:}/foreach{/yun}</td>
+        </tr>
+        <tr >
+          <th>排　　序：</th>
+          <td><input name="sort" type="text"  size="10" class="input-text" value="{yun:}$school.sort{/yun}" /></td>
+        </tr>
+        <tr class="admin_table_trbg" >
+          <td align="center" colspan="2"> 
+            {yun:}if $school.id{/yun}
+            <input type="hidden" name="id" size="40" value="{yun:}$school.id{/yun}"/>
+            <input type="hidden" name="lasturl" value="{yun:}$lasturl{/yun}">
+            <input class="admin_submit4" type="submit" name="updateschool" value="&nbsp;更 新&nbsp;"  />
+            {yun:}else{/yun}
+            <input class="admin_submit4" type="submit" name="schooladd" value="&nbsp;添 加&nbsp;"  />
+            {yun:}/if{/yun}
+            <input class="admin_submit4" type="reset" name="reset" value="&nbsp;重 置 &nbsp;" /></td>
+        </tr>
+      </table>
+	  <input type="hidden" name="pytoken" value="{yun:}$pytoken{/yun}">
+    </form>
+  </div>
+</div>
+<div id="school_preview"  style="display:none;width:560px ">
+	<div style="height:300px; overflow:auto;width:560px;" >
+		<div class="job_box_div" style="text-align:center;margin-top:10px;"></div>
+	</div>
+</div>
+<div id="domainlist" style="display:none;">
+<div class="fz_city_school_cont" style="padding:10px;">
+<span class="fz_city_school"><label class="fz_label"><input type="radio" name="did" onClick="check_domain('全站')" value="0" checked class="fz_city_school_check">全站</label></span>
+{yun:}foreach from=$domain item=list{/yun}
+<span class="fz_city_school"><label class="fz_label"><input type="radio" name="did" onClick="check_domain('{yun:}$list.title{/yun}')" {yun:}if $list.id==$school.did{/yun}checked{yun:}/if{/yun} value="{yun:}$list.id{/yun}" class="fz_city_school_check">{yun:}$list.title{/yun}</label></span>
+{yun:}/foreach{/yun}
+</div>
+</div>
+</body>
+</html>

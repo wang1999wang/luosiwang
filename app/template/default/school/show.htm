@@ -1,0 +1,48 @@
+{yun:}assign var=title value=$Info.title|cat:"_"|cat:$Info.class_name|cat:"_E叉学堂-E叉租赁网-一站式叉车租赁综合交易平台"{/yun}
+{yun:}assign var=description value=""{/yun}
+
+{yun:}include file="$tplstyle/header.htm"{/yun}
+
+{yun:}assign var=curr value=3{/yun}
+
+{yun:}include file="$tplstyle/top.htm"{/yun}
+
+    <div class="news">
+        <ul>
+            <li class="b3">
+                <div class="news_in">
+                    <div class="news_detail_position"><a href="{yun:}$config.sy_weburl{/yun}">首页</a> 〉<a href="{yun:}url m=school nid=$Info.nid{/yun}">{yun:}$Info.class_name{/yun}</a> 〉<a href="{yun:}url m=school c=show id=$Info.id{/yun}">{yun:}$Info.title{/yun}</a></div>
+                    <div class="news_detail_title">{yun:}$Info.title{/yun}<br /><span class="lastupdate_time">{yun:}$Info.lastupdate|date_format:"%Y-%m-%d %H:%M:%S"{/yun}</span></div>
+                    <div class="news_detail">
+                        <div class="news_detail_left">
+                            {yun:}$Info.content{/yun}
+                        </div>
+                        <p class="f14" style="float:left;width:100%;padding:25px 0;">
+                            <div class="bdsharebuttonbox"><a class="bds_more" href="#" data-cmd="more">分享到：</a><a title="分享到QQ空间" class="bds_qzone" href="#" data-cmd="qzone">QQ空间</a><a title="分享到新浪微博" class="bds_tsina" href="#" data-cmd="tsina">新浪微博</a><a title="分享到腾讯微博" class="bds_tqq" href="#" data-cmd="tqq">腾讯微博</a><a title="分享到人人网" class="bds_renren" href="#" data-cmd="renren">人人网</a><a title="分享到微信" class="bds_weixin" href="#" data-cmd="weixin">微信</a></div>
+                            <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": { "bdSize": 16 } }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+                        </p><br/>
+                        <p class="f14" style="float:left;width:100%;padding-bottom:25px">
+                            {yun:}if !empty($Info.last){/yun} <span>上一篇： <a title="{yun:}$Info.last.title{/yun}" href="{yun:}$Info.last.url{/yun}">{yun:}$Info.last.title{/yun}</a></span> {yun:}/if{/yun}
+                            {yun:}if !empty($Info.next){/yun} <span>下一篇： <a title="{yun:}$Info.next.title{/yun}" href="{yun:}$Info.next.url{/yun}">{yun:}$Info.next.title{/yun}</a> </span> {yun:}/if{/yun}
+                        </p>
+                    </div>
+                    <div class="news_detail_right">
+                        <div class="news_detail_right_title">相关知识</div>
+                        <ul style="padding-top:30px;margin-bottom: 20px;">
+                            {yun:}foreach from=$Info.like item=about{/yun}
+                            <li>
+                                <a href="{yun:}$about.url{/yun}" title="{yun:}$about.title{/yun}"><img src="{yun:}formatpicurl path=$about.newsphoto{/yun}" width="230" height="145" /></a>
+                                <span class="news_detail_right_txt">
+                                    <h1><a href="{yun:}$about.url{/yun}" title="{yun:}$about.title{/yun}">{yun:}$about.title{/yun}</a></h1>
+                                </span>
+                            </li>
+                            {yun:}/foreach{/yun}
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+
+{yun:}include file="$tplstyle/footer.htm"{/yun}

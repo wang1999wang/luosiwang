@@ -1,0 +1,263 @@
+{yun:}include file="$tplstyle/header.htm"{/yun}
+
+<script src="{yun:}$config.sy_weburl{/yun}/js/jquery-1.8.0.min.js" language="javascript"></script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/layer/layer.min.js" language="javascript"></script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/lazyload.min.js" language="javascript"></script>
+<script src="{yun:}$config.sy_weburl{/yun}/js/public.js" language="javascript"></script>
+<link rel="stylesheet" href="{yun:}$style{/yun}/css/pro.css" type="text/css" />
+<link type="text/css" href="{yun:}$style{/yun}/css/ui-lightness/jquery-ui-1.8.10.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="{yun:}$style{/yun}/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="{yun:}$style{/yun}/js/jquery-ui-1.8.10.custom.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // Slider
+        window.oldfuzai = '{yun:}if $smarty.get.fuzai&&$smarty.get.fuzai>=1&&$smarty.get.fuzai<=10{/yun}{yun:}$smarty.get.fuzai{/yun}{yun:}else{/yun}1{yun:}/if{/yun}';
+        window.nowfuzai = window.oldfuzai;
+        $('#slider_fuzai').slider({
+            value: window.oldfuzai,
+            min: 1,
+            max: 10,
+            step: 1,
+            range: "min",
+            slide: function (event, ui) {
+                $('#slider_fuzai .ui-state-default').html(ui.value);
+            }
+        });
+        $('#slider_fuzai .ui-state-default').html(window.oldfuzai);
+
+        window.oldgaodu = '{yun:}if $smarty.get.tishenggaodu&&$smarty.get.tishenggaodu>=1&&$smarty.get.tishenggaodu<=10{/yun}{yun:}$smarty.get.tishenggaodu{/yun}{yun:}else{/yun}1{yun:}/if{/yun}';
+        window.nowgaodu = window.oldfuzai;
+        $('#slider_gaodu').slider({
+            value: window.oldgaodu,
+            min: 1,
+            max: 10,
+            step: 1,
+            range: "min",
+            slide: function (event, ui) {
+                $('#slider_gaodu .ui-state-default').html(ui.value);
+            }
+        });
+        $('#slider_gaodu .ui-state-default').html(window.oldgaodu);
+
+        var cururl_fuzai = "{yun:}searchurl m=cars c=list untype='fuzai' fuzai='a'{/yun}";
+        var cururl_gaodu = "{yun:}searchurl m=cars c=list untype='tishenggaodu' tishenggaodu='a'{/yun}";
+
+        setInterval('100', function () {
+            if (oldfuzai != nowfuzai) {
+                location.href = cururl_fuzai.replace('fuzai=a', 'fuzai=' + nowfuzai);
+            }
+            if (oldgaodu != nowgaodu) {
+                location.href = cururl_gaodu.replace('tishenggaodu=a', 'tishenggaodu=' + nowgaodu);
+            }
+        });
+        $('#slider_fuzai').mousedown(function () {
+            window.oldfuzai = $("#slider_fuzai").slider("value");
+        });
+        $('#slider_gaodu').mousedown(function () {
+            window.oldgaodu = $("#slider_gaodu").slider("value");
+        });
+
+        $(document.body).mouseup(function () {
+            window.nowfuzai = $("#slider_fuzai").slider("value");
+            if (oldfuzai != nowfuzai) {
+                location.href = cururl_fuzai.replace('fuzai=a', 'fuzai=' + nowfuzai);
+            }
+            window.nowgaodu = $("#slider_gaodu").slider("value");
+            if (oldgaodu != nowgaodu) {
+                location.href = cururl_gaodu.replace('tishenggaodu=a', 'tishenggaodu=' + nowgaodu);
+            }
+            setTimeout('200', function () {
+                oldfuzai = nowfuzai;
+                oldgaodu = nowgaodu;
+            });
+        });
+    });
+</script>
+<style type="text/css">
+    /*demo page css*/
+    body {
+        font: 62.5% "Trebuchet MS", sans-serif;
+        margin: 50px;
+    }
+
+    .demoHeaders {
+        margin-top: 2em;
+    }
+
+    #dialog_link {
+        padding: .4em 1em .4em 20px;
+        text-decoration: none;
+        position: relative;
+    }
+
+        #dialog_link span.ui-icon {
+            margin: 0 5px 0 0;
+            position: absolute;
+            left: .2em;
+            top: 50%;
+            margin-top: -8px;
+        }
+
+    ul#icons {
+        margin: 0;
+        padding: 0;
+    }
+
+        ul#icons li {
+            margin: 2px;
+            position: relative;
+            padding: 4px 0;
+            cursor: pointer;
+            float: left;
+            list-style: none;
+        }
+
+        ul#icons span.ui-icon {
+            float: left;
+            margin: 0 4px;
+        }
+</style>
+
+{yun:}assign var=curr value=2{/yun}
+
+{yun:}include file="$tplstyle/top.htm"{/yun}
+
+<div align="center" class="pro_bj">
+    <h0>产品 挑选器</h0>
+    <!--////////////////////////////////////// 代码开始 www.16css.com ///////////////////////////////////////-->
+
+    <ul class="select">
+        <li class="select-list">
+            <dl id="select1">
+                <dt>品牌：</dt>
+                <dd href="{yun:}searchurl m=cars c=list untype='pinpai'{/yun}" class="select-all Search_jobs_sub_a {yun:}if $smarty.get.pinpai==''{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars c=list untype='pinpai'{/yun}">全部</a></dd>
+                {yun:}foreach from=$comdata.chache_pinpai item=v key=key{/yun}
+                <dd class="{yun:}if $smarty.get.pinpai==$v{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars c=list pinpai=$v untype='pinpai'{/yun}">{yun:}$comclass_name[$v]{/yun}</a></dd>
+                {yun:}/foreach{/yun}
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select2">
+                <dt>类型：</dt>
+                <dd href="{yun:}searchurl m=cars c=list untype='leixing'{/yun}" class="select-all  Search_jobs_sub_a {yun:}if $smarty.get.leixing==''{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars c=list untype='leixing'{/yun}">全部</a></dd>
+                {yun:}foreach from=$comdata.chache_leixing item=v key=key{/yun}
+                <dd class="{yun:}if $smarty.get.leixing==$v{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars c=list leixing=$v untype='leixing'{/yun}">{yun:}$comclass_name[$v]{/yun}</a></dd>
+                {yun:}/foreach{/yun}
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select4">
+                <dt>动力源：</dt>
+                <dd href="{yun:}searchurl m=cars c=list untype='dongliyuan'{/yun}" class="select-all  Search_jobs_sub_a {yun:}if $smarty.get.dongliyuan==''{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars c=list untype='dongliyuan'{/yun}">全部</a></dd>
+                {yun:}foreach from=$comdata.chache_dongliyuan item=v key=key{/yun}
+                <dd class="{yun:}if $smarty.get.dongliyuan==$v{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars c=list dongliyuan=$v untype='dongliyuan'{/yun}">{yun:}$comclass_name[$v]{/yun}</a></dd>
+                {yun:}/foreach{/yun}
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select5">
+                <dt>工作场地：</dt>
+                <dd href="{yun:}searchurl m=cars c=list untype='gongzuochangdi'{/yun}" class="select-all  Search_jobs_sub_a {yun:}if $smarty.get.gongzuochangdi==''{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars c=list untype='gongzuochangdi'{/yun}">全部</a></dd>
+                {yun:}foreach from=$comdata.chache_gongzuochangdi item=v key=key{/yun}
+                <dd class="{yun:}if $smarty.get.gongzuochangdi==$v{/yun}selected{yun:}/if{/yun}"><a href="{yun:}searchurl m=cars c=list gongzuochangdi=$v untype='gongzuochangdi'{/yun}">{yun:}$comclass_name[$v]{/yun}</a></dd>
+                {yun:}/foreach{/yun}
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select3">
+                <dt>负载（吨）：</dt>
+                <div id="slider_fuzai" style="float:left; width:50%;"></div>
+            </dl>
+        </li>
+        <li class="select-list">
+            <dl id="select6">
+                <dt>提升高度（米）：</dt>
+                <div id="slider_gaodu" style="float:left; width:50%;"></div>
+            </dl>
+        </li>
+        <li class="select-result">
+            <dl>
+                <dt>已选条件：</dt>
+                {yun:}if $comclass_name[$smarty.get.pinpai]{/yun}
+                <a href="{yun:}searchurl m=cars c=list untype='pinpai'{/yun}" class="Search_jobs_c_a disc_fac">品牌：{yun:}$comclass_name[$smarty.get.pinpai]{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if $comclass_name[$smarty.get.leixing]{/yun}
+                <a href="{yun:}searchurl m=cars c=list untype='leixing'{/yun}" class="Search_jobs_c_a disc_fac">类型：{yun:}$comclass_name[$smarty.get.leixing]{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if $comclass_name[$smarty.get.dongliyuan]{/yun}
+                <a href="{yun:}searchurl m=cars c=list untype='dongliyuan'{/yun}" class="Search_jobs_c_a disc_fac">动力源：{yun:}$comclass_name[$smarty.get.dongliyuan]{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if $comclass_name[$smarty.get.gongzuochangdi]{/yun}
+                <a href="{yun:}searchurl m=cars c=list untype='gongzuochangdi'{/yun}" class="Search_jobs_c_a disc_fac">工作场地：{yun:}$comclass_name[$smarty.get.gongzuochangdi]{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if $comclass_name[$smarty.get.fuzai]{/yun}
+                <a href="{yun:}searchurl m=cars c=list untype='fuzai'{/yun}" class="Search_jobs_c_a disc_fac">负载：{yun:}$smarty.get.fuzai{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if $comclass_name[$smarty.get.tishenggaodu]{/yun}
+                <a href="{yun:}searchurl m=cars c=list untype='tishenggaodu'{/yun}" class="Search_jobs_c_a disc_fac">提升高度：{yun:}$smarty.get.tishenggaodu{/yun}</a>
+                {yun:}/if{/yun}
+                {yun:}if !($comclass_name[$smarty.get.pinpai]||$comclass_name[$smarty.get.leixing]||$comclass_name[$smarty.get.fuzai]||$comclass_name[$smarty.get.dongliyuan]||$comclass_name[$smarty.get.gongzuochangdi]||$comclass_name[$smarty.get.tishenggaodu]){/yun}
+                <dd class="select-no">暂时没有选择过滤条件</dd>
+                {yun:}/if{/yun}
+            </dl>
+        </li>
+    </ul>
+
+    <!--////////////////////////////////////// 代码结束 www.16css.com ///////////////////////////////////////-->
+    <ul id="breadcrumb">
+        <li><a href="javascript:;"></a></li>
+        <li><a href="{yun:}searchurl m=cars c=list id=1{/yun}">热门车型</a></li>
+        <li><a href="{yun:}searchurl m=cars c=list id=2{/yun}">促销车型</a></li>
+        <li><a href="javascript:;"></a></li>
+    </ul>
+</div>
+
+<div class="news">
+    <ul>
+        {yun:}if $smarty.get.id!=2{/yun}
+        <li class="b1" id="pro1">
+            <div class="news_in">
+                <div class="news_title">热门车型</div>
+                <div class="news_resource">
+                    <ul>
+                        {yun:}carslist nid=1 ispage=1 urlstatic=1 limit=6  t_len=30 item=cars pinpai='auto.pinpai' leixing='auto.leixing' fuzai='auto.fuzai' dongliyuan='auto.dongliyuan' gongzuochangdi='auto.gongzuochangdi' tishenggaodu='auto.tishenggaodu'{/yun}
+                        <li>
+                            <a href="{yun:}$cars.url{/yun}"><img src="{yun:}formatpicurl path=$cars.newsphoto{/yun}" width="346" height="218" /></a>
+                            <span class="news_txt">
+                                <h1><a href="{yun:}$cars.url{/yun}" title="{yun:}$cars.title{/yun}">{yun:}$cars.title{/yun}</a></h1>
+                            </span>
+                        </li>
+                        {yun:}carslistelse{/yun}
+                        暂无相关车型，请重新选择筛选条件
+                        {yun:}/carslist{/yun}
+                    </ul>
+                </div>
+            </div>
+        </li>
+        {yun:}/if{/yun}
+        {yun:}if $smarty.get.id!=1{/yun}
+        <li class="b2" id="pro2">
+            <div class="news_in">
+                <div class="news_title" style="top:20px">促销车型</div>
+                <div class="news_resource" style="top:80px">
+                    <ul>
+                        {yun:}carslist nid=1 ispage=1 urlstatic=1 limit=6  t_len=30 item=cars2 pinpai='auto.pinpai' leixing='auto.leixing' fuzai='auto.fuzai' dongliyuan='auto.dongliyuan' gongzuochangdi='auto.gongzuochangdi' tishenggaodu='auto.tishenggaodu'{/yun}
+                        <li>
+                            <a href="{yun:}$cars2.url{/yun}"><img src="{yun:}formatpicurl path=$cars2.newsphoto{/yun}" width="346" height="218" /></a>
+                            <span class="news_txt">
+                                <h1><a href="{yun:}$cars2.url{/yun}" title="{yun:}$cars.title{/yun}">{yun:}$cars2.title{/yun}</a></h1>
+                            </span>
+                        </li>
+                        {yun:}carslistelse{/yun}
+                        暂无相关车型，请重新选择筛选条件
+                        {yun:}/carslist{/yun}
+                    </ul>
+                </div>
+            </div>
+        </li>
+        {yun:}/if{/yun}
+    </ul>
+</div>
+
+<!--content结束-->
+{yun:}include file="$tplstyle/footer.htm"{/yun}

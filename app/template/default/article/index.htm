@@ -1,0 +1,44 @@
+﻿{yun:}include file="$tplstyle/header.htm"{/yun}
+
+		<link href="{yun:}$style{/yun}/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="{yun:}$style{/yun}/css/jquery.fullpage.css" rel="stylesheet" type="text/css" />
+		<script src="{yun:}$style{/yun}/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+		<script src="{yun:}$style{/yun}/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
+		<script src="{yun:}$style{/yun}/js/jquery.fullpage.min.js" type="text/javascript"></script>
+		<script src="{yun:}$style{/yun}/js/public.js" type="text/javascript"></script>		
+
+{yun:}assign var=curr value=1{/yun}
+{yun:}include file="$tplstyle/top.htm"{/yun}
+		
+		<div class="section">
+		  <div class="download_bg">
+		     <div class="download_bg_in">
+			    <div class="news_resource">
+					<ul>
+                        {yun:}article nid='auto.nid' ispage=1 urlstatic=1 limit=6  t_len=30 item=news order=sort sort=asc{/yun}
+                        <li>
+                            <a href="{yun:}$news.url{/yun}"><img src="{yun:}formatpicurl path=$news.newsphoto{/yun}" width="313" height="220" /></a>
+                            <span class="news_txt">
+                                <h1><a href="{yun:}$news.url{/yun}" title="{yun:}$news.title{/yun}">{yun:}$news.title{/yun}</a></h1>
+                            </span>
+                        </li>
+                        {yun:}/article{/yun}
+						 </ul>
+						 <div class="page">						
+                       <a href="{yun:}if $get.page>1{/yun}{yun:}url m=article nid=$get.nid page=$get.page-1{/yun}{yun:}else{/yun}javascript:;{yun:}/if{/yun}" class="pre"><img src="{yun:}$style{/yun}/picture/pre_1.png" width="117" height="36" /></a>
+                       <a href="{yun:}if !$get.page&&$pages>1{/yun}{yun:}url m=article nid=$get.nid page=2{/yun}{yun:}elseif $get.page<$pages{/yun}{yun:}url m=article nid=$get.nid page=$get.page+1{/yun}{yun:}else{/yun}javascript:;{yun:}/if{/yun}" class="next"><img src="{yun:}$style{/yun}/picture/next_1.png" width="113" height="36" /></a>
+					</div>
+				 </div>
+				 
+				 <div class="download_nav">
+					 <ul>
+                    <li class="{yun:}if $get.nid==2{/yun}curr{yun:}/if{/yun}"><a href="{yun:}url m=article nid=2{/yun}"><img src="{yun:}$style{/yun}/picture/zixun.png" /></a></li>
+                    <li class="{yun:}if $get.nid==1{/yun}curr{yun:}/if{/yun}"><a href="{yun:}url m=article nid=1{/yun}"><img src="{yun:}$style{/yun}/picture/huodong.png" /></a></li>
+					 </ul>
+				 </div>
+			 </div>
+		  </div>
+		</div>
+		
+<div class="clear"></div>
+{yun:}include file="$tplstyle/footer.htm"{/yun}

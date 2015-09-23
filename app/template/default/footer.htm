@@ -1,0 +1,47 @@
+<div class="clear"></div>
+<div class="footer">
+<div class="wd">
+    <div class="lm-footer">
+        <div class="sns-list">
+            关注:
+            <a class="sina" target="_blank" href="#"><b></b></a>
+            <a class="tencent" target="_blank" href="#"><b></b></a>
+            <a class="weixin"><b></b></a>
+            <div class="weixin-overbox" style=""><img src="{yun:}$style{/yun}/picture/liantu.jpg" width="113" heith="113" /><b></b></div>
+        </div>
+        <div class="tel">全国服务热线：{yun:}$config.sy_freewebtel{/yun}</div>
+        <p class="footer-nav">
+            {yun:}nav item=navlist_app hovclass=nav_list_hover nid=2 key=key{/yun}
+            {yun:}if $key>0{/yun}|{yun:}/if{/yun}<a href="{yun:}$navlist_app.url{/yun}">{yun:}$navlist_app.name{/yun}</a>
+            {yun:}/nav{/yun}
+            
+        </p>
+        <p>{yun:}$config.sy_webcopyright{/yun}<br />{yun:}$config.sy_webrecord{/yun}</p>
+    </div>
+    </div>
+</div>
+{yun:}if $isshowlink{/yun}
+<div class="footer">
+<div class="wd">
+    <div class="lm-footer">
+        <p class="footer-nav">
+            友情链接：
+        {yun:}link type=1 tem_type=2 item=linklist2 key=key{/yun} {yun:}if $key>0{/yun}|{yun:}/if{/yun}<a href="{yun:}$linklist2.link_url{/yun}"> {yun:}$linklist2.link_name{/yun}</a>{yun:}/link{/yun}
+        </p>
+    </div>
+    </div>
+</div>
+{yun:}/if{/yun}
+<script>
+    /*(function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-36726401-1', 'auto');
+    ga('send', 'pageview');*/
+</script>
+</body>
+</html>

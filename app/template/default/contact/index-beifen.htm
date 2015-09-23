@@ -1,0 +1,159 @@
+{yun:}include file="$tplstyle/header.htm"{/yun}	
+{yun:}assign var=curr value=6{/yun}
+<link href="{yun:}$style{/yun}/css/tianjia.css" rel="stylesheet" type="text/css" />
+ <script type="text/javascript" src="{yun:}$style{/yun}/js/jquery.js"></script>
+<script src="{yun:}$style{/yun}/js/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="{yun:}$style{/yun}/js/common.js"></script>
+
+</head>
+<body>
+<div class="header">
+        <div class="header_in">
+            <div id="vivo-airbox"></div>
+            <div id="vivo-wrap">
+                <div id="vivo-head">
+                    <div class="vivo-search">
+                        <div class="search-box">
+                            <form action='/search' method='get' onSubmit="if ($.trim($(this).find('input').val()) == '') {alert('请输入关键词'); return false;} return true;"><input type="text" placeholder="如:E叉车租赁" name='q' class='data_q' autocomplete="off" /><button>搜索</button><a class="close"></a></form>
+                            <div class="qk-results">
+                                <ul></ul>
+                                <div class="other-results"><a href="#">其他搜索结果</a></div>
+                            </div>
+                        </div>
+                    </div><div class="wd">
+                              <div class="vivo-nav cl" style="height:0px;">
+                                  <a href="{yun:}$config.sy_weburl{/yun}" class="vivo-logo" title="vivo" style="background-image:none;"><img src="{yun:}$style{/yun}/picture/logo.png" alt="E叉车租赁" /></a>
+                                  <div id="menu">
+                                      <ul>
+                                          {yun:}foreach from=$nav_list1 item=one key=key{/yun}
+                                          <li data-ref="{yun:}$one.id{/yun}" class="{yun:}if $curr==$key{/yun}curr{yun:}/if{/yun}">
+                                              <a href="{yun:}$config.sy_weburl{/yun}/{yun:}$one.url{/yun}">{yun:}$one.name{/yun}</a>
+                                              <ul class="sub_menu">
+                                                  {yun:}foreach from=$one.sonlist item=two{/yun}
+                                                  <li><a href="{yun:}$config.sy_weburl{/yun}/{yun:}$two.url{/yun}">{yun:}$two.name{/yun}</a></li>
+                                                  {yun:}/foreach{/yun}
+                                              </ul>
+                                          </li>
+                                          {yun:}/foreach{/yun}
+                                      </ul>
+                                  </div>
+                                  <div class="search-user"><a href="#" class="search"><b></b></a></div>
+                              </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="fixed_r">
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</div>
+<div class="num_box">
+	<div class="num" id="num_0 au1" style="background:url({yun:}$adlist[29].pic{/yun}) no-repeat center;background-size:100% 100%;"></div>
+	<div class="num" id="num_1 au2" style="background:url({yun:}$adlist[30].pic{/yun}) no-repeat center;background-size:100% 100%;"></div>
+	<div class="num" id="num_2 au3" style="background:url({yun:}$adlist[31].pic{/yun}) no-repeat center;background-size:100% 100%;"></div>
+  <div class="num" id="num_3 au4"> 
+  <div style="height:80px; width:100%;"> </div>
+        <div class="area-sixth tianjia-one">
+        	<div class="tianjia-two">
+            <div class="areasix-wrap">
+                <div class="areasix-top">
+                    <div class="areasix-tit">
+                        <span class="linebd"></span>
+                        <strong>在线留言</strong>
+                        <span class="linebd"></span>
+                        <div class="clear"></div>
+                    </div>
+                    <span class="en">LEAVE A MESSAGE</span>
+                </div>
+                <div class="areasix-form">
+                    <form action="#" method="post" accept-charset="utf-8" class="" id="feedback" name="feedback" onSubmit="return vilidate()">
+                        <div style="display:none">
+                            <input type="hidden" name="_scfs" value="8160bf24666a2adcea7aae88f2a57160" />
+                        </div>                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="90">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+                                <td class="form-inputfir"><input type="text" name="username" required></td>
+                                <td colspan="2" class="form-inputthi">先生<input type="radio" name="sex" value="先生" checked required>女士<input type="radio" name="sex" required value="女士"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" height="10"></td>
+                            </tr>
+                            <tr>
+                                <td>电&nbsp;&nbsp;&nbsp;&nbsp;话：</td>
+                                <td class="form-inputfir"><input type="text" name="tel" required></td>
+                                <td width="142" align="center">QQ/EMAIL：</td>
+                                <td class="form-inputfir"><input type="text" name="email" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" height="10"></td>
+                            </tr>
+                            <tr>
+                                <td valign="top" height="80">留言：</td>
+                                <td colspan="3" valign="top" class="form-text">
+                                    <textarea name="content" id="content" class="mesfont" required></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" height="10"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="3" height="45" class="form-inputfif">
+                                    <input type="submit" value="提交留言">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    
+     <div class="footerall">
+    <div class="footer">
+        <div class="wd footer_allone">
+            <p class="footer-nav">
+                {yun:}nav item=navlist_app hovclass=nav_list_hover nid=2 key=key{/yun}
+                {yun:}if $key>0{/yun}|{yun:}/if{/yun}<a href="{yun:}$navlist_app.url{/yun}">{yun:}$navlist_app.name{/yun}</a>
+                {yun:}/nav{/yun}
+
+            </p>
+            <p class="footer_alltwo">{yun:}$config.sy_webcopyright{/yun}</p>
+            <p class="footer_alltwo">{yun:}$config.sy_webrecord{/yun}</p>
+            <div class="footer_icno">
+                <p class="footer_icno_p">
+                    <span>关注： </span>
+                    <a class="footer_a1"></a>
+                    <a class="footer_a2"></a>
+                    <a class="footer_a3" id="fooo">
+                    </a>
+                    <div class="footer-weixin" id="foooo"><img src="{yun:}$style{/yun}/picture/liantu.jpg" width="113" height="113" /></div>
+                </p>
+                <p class="footer_icno_tel">全国服务热线：{yun:}$config.sy_freewebtel{/yun}</p>
+            </div>
+        </div>
+    <script type="text/javascript"> 
+$(".footer_a3").hover(function(){
+        (".footer-weixin").toggle();
+});
+</script>   
+  </div>
+</div>
+</div>
+<input type="hidden" value="0" class="ddw"/>
+<input type="hidden" value="0" class="ddw2"/>
+
+<script src="{yun:}$style{/yun}/js/lanrenzhijia.js" ></script> 
+<script src="{yun:}$style{/yun}/js/jquery.mousewheel.js" ></script>
+</body>
+</html>
