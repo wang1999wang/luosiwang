@@ -35,9 +35,13 @@ class mysql {
 	} 
 
 	public function connect() {
-		if (!$this -> conn) {
-			$this -> conn = @mysql_pconnect($this -> db_host, $this -> db_user, $this -> db_pwd) or die('数据库连接出错!');
-		} 
+		if ($this->conn == "pconn") {
+			//永久链接
+			$this->conn = @mysql_pconnect($this->db_host, $this->db_user, $this->db_pwd) or die('数据库连接出错!');
+		} else {
+			//即时链接
+			$this->conn = @mysql_connect($this->db_host, $this->db_user, $this->db_pwd) or die('数据库连接出错!');
+		}
 		if (!@mysql_select_db($this -> db_database, $this -> conn)) {
 			if ($this -> show_error) {
 				$this -> show_error("数据库不可用：", $this -> db_database);

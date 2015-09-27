@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-09-21 07:55:45
-         compiled from "E:\WWW\luosiwang\app\template\\default\\index\index.htm" */ ?>
-<?php /*%%SmartyHeaderCode:482955ff3bdd9ab8d6-05873065%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-09-27 17:57:06
+         compiled from "E:\WWW\luosiwang\app\template\default\index\index.htm" */ ?>
+<?php /*%%SmartyHeaderCode:8295607bd72d649b9-77889829%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c944d6eabeede6350a031b9f18ff65b3b6667906' => 
     array (
-      0 => 'E:\\WWW\\luosiwang\\app\\template\\\\default\\\\index\\index.htm',
+      0 => 'E:\\WWW\\luosiwang\\app\\template\\default\\index\\index.htm',
       1 => 1442793148,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '482955ff3bdd9ab8d6-05873065',
+  'nocache_hash' => '8295607bd72d649b9-77889829',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_55ff3bde1f4f92_24355181',
   'variables' => 
   array (
     'style' => 0,
@@ -29,8 +27,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'chache_class_list' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_5607bd735ee907_31410587',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55ff3bde1f4f92_24355181')) {function content_55ff3bde1f4f92_24355181($_smarty_tpl) {?><?php if (!is_callable('smarty_function_url')) include 'E:\\WWW\\luosiwang\\app\\include\\libs\\plugins\\function.url.php';
+<?php if ($_valid && !is_callable('content_5607bd735ee907_31410587')) {function content_5607bd735ee907_31410587($_smarty_tpl) {?><?php if (!is_callable('smarty_function_url')) include 'E:\\WWW\\luosiwang\\app\\include\\libs\\plugins\\function.url.php';
 if (!is_callable('smarty_function_formatpicurl')) include 'E:\\WWW\\luosiwang\\app\\include\\libs\\plugins\\function.formatpicurl.php';
 ?><?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tplstyle']->value)."/header.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
  

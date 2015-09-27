@@ -1814,7 +1814,7 @@ class common{
     }
 	function admin_get_user_login($username,$password,$url='index.php') {
 		global $config;
-		$username = str_replace(" ", "", $username);echo "SELECT * FROM `".$this->def."admin_user` WHERE `username`='$username' limit 1";
+		$username = str_replace(" ", "", $username);
 		$query = $this->db->query("SELECT * FROM `".$this->def."admin_user` WHERE `username`='$username' limit 1");
 		$us = is_array($row = $this->db->fetch_array($query));
 
