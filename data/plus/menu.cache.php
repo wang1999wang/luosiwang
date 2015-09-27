@@ -27,7 +27,7 @@ $menu_name=array('1'=>array('0'=>array('name'=>'二维码','url'=>'index.php?m=cont
 ,'2'=>array('0'=>array('name'=>'首页','url'=>'index.php','furl'=>'','eject'=>'1','type'=>'1','color'=>'','model'=>'','bold'=>'','sort'=>'1')
 ,'1'=>array('name'=>'E叉品牌','url'=>'index.php?m=about#page1','furl'=>'','eject'=>'1','type'=>'1','color'=>'','model'=>'','bold'=>'','sort'=>'2')
 ,'2'=>array('name'=>'叉车家族','url'=>'cars/','furl'=>'','eject'=>'0','type'=>'1','color'=>'','model'=>'','bold'=>'','sort'=>'3')
-,'3'=>array('name'=>'E叉学堂','url'=>'school/','furl'=>'http://www.hr135.com/index.html ','eject'=>'0','type'=>'1','color'=>'','model'=>'','bold'=>'0','sort'=>'4')
+,'3'=>array('name'=>'E叉学堂','url'=>'index.php?m=school','furl'=>'http://www.hr135.com/index.html ','eject'=>'0','type'=>'1','color'=>'','model'=>'','bold'=>'0','sort'=>'4')
 ,'4'=>array('name'=>'E叉易购','url'=>'index.php?m=yigou','furl'=>'http://www.hr135.com/index.html ','eject'=>'0','type'=>'1','color'=>'','model'=>'','bold'=>'0','sort'=>'5')
 ,'5'=>array('name'=>'E叉合伙人','url'=>'index.php?m=hehuoren','furl'=>'http://www.hr135.com/index.html ','eject'=>'0','type'=>'1','color'=>'','model'=>'','bold'=>'0','sort'=>'6')
 ,'6'=>array('name'=>'联系我们','url'=>'index.php?m=contact','furl'=>'','eject'=>'0','type'=>'1','color'=>'','model'=>'','bold'=>'','sort'=>'7')

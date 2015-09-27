@@ -37,10 +37,10 @@ class mysql {
 	public function connect() {
 		if ($this->conn == "pconn") {
 			//永久链接
-			$this->conn = @mysql_pconnect($this->db_host, $this->db_user, $this->db_pwd) or die('数据库连接出错!');
+			$this->conn = @mysql_pconnect($this->db_host, $this->db_user, $this->db_pwd) or die(mysql_error());
 		} else {
 			//即时链接
-			$this->conn = @mysql_connect($this->db_host, $this->db_user, $this->db_pwd) or die('数据库连接出错!');
+			$this->conn = @mysql_connect($this->db_host, $this->db_user, $this->db_pwd) or die(mysql_error());
 		}
 		if (!@mysql_select_db($this -> db_database, $this -> conn)) {
 			if ($this -> show_error) {
