@@ -1,13 +1,4 @@
 <?php
-/*
-* $Author ：PHPYUN开发团队
-*
-* 官网: http://www.phpyun.com
-*
-* 版权所有 2009-2015 宿迁鑫潮信息技术有限公司，并保留所有权利。
-*
-* 软件声明：未经授权前提下，不得用于商业运营、二次开发以及任何形式的再次发布。
- */
 class navigation_controller extends common{
 	function set_search(){
 		$search_list[]=array("param"=>"type","name"=>'导航类型',"value"=>array("1"=>"站内链接","2"=>"原链接"));

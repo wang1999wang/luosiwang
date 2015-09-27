@@ -1,9 +1,4 @@
 <?php
-/*
- * Created on 2012
- * Link for shyflc@qq.com
- * This System Powered by PHPYUN.com
- */
 class admin_company_rating_controller extends common
 {
 	function index_action()

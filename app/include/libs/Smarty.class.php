@@ -697,7 +697,6 @@ class Smarty extends Smarty_Internal_TemplateBase
         }
     }
     
-    /**************PHPYUN3.3 2015-03-1611:47***************/
     //是否安装
 	function get_install(){
 		if(@!include_once(DATA_PATH."phpyun.lock")){
@@ -728,7 +727,6 @@ class Smarty extends Smarty_Internal_TemplateBase
 		$this->get_ip();
 		$this->get_web();
 	}
-    /**************PHPYUN3.3 2015-03-1611:47***************/
 
     /**
      * Class destructor
