@@ -18,7 +18,7 @@ class qqconfig_controller extends common
 					$this->obj->DB_update_all("admin_config","`config`='".iconv("utf-8", "gbk", $v)."'","`name`='".$key."'");
 			    }
 		 	}
-			$this->web_config();
+			//$this->web_config();
 			$this->ACT_layer_msg("快捷登录参数配置修改成功！",9,1,2,1);
 		}
 	}

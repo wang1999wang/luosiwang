@@ -45,7 +45,7 @@ class admin_style_controller extends common
 
 				$this->obj->DB_insert_once("admin_config","`config`='$dir',`name`='style'");
 			}
-			$this->web_config();
+			//$this->web_config();
 			$this->layer_msg('模板风格更换成功！',9);
 		}else{
 			$this->layer_msg('该目录无效！',3);

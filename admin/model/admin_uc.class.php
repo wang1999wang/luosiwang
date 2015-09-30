@@ -34,12 +34,12 @@ class admin_uc_controller extends common
 		}else{
 			$this->obj->DB_insert_once("admin_config","`name`='sy_uc_type',`config`='uc_center'");
 		}
-		 $this->web_config();		
+		 //$this->web_config();		
 		$this->ACT_layer_msg("UC整合已开启！",9,"index.php?m=admin_uc",2,1); 
 	}
 	function close_action(){
 		$this->obj->DB_update_all("admin_config","`config`=''","`name`='sy_uc_type'");
-		$this->web_config();  
+		//$this->web_config();  
 		$this->layer_msg('UC整合已取消！',9,0,"index.php?m=admin_uc");
 	}
 	function pw_action(){
@@ -72,7 +72,7 @@ class admin_uc_controller extends common
 			$this->obj->DB_insert_once("admin_config","`name`='sy_pw_type',`config`='pw_center'");
 		}
 		$this->obj->DB_update_all("admin_config","`config`=''","`name`='sy_uc_type'");
-		$this->web_config();
+		//$this->web_config();
 		$user_arr = $this->obj->DB_select_all("member");
 		require_once APP_PATH.'/api/pw_api/pw_client/class_db.php';
 		$db_uc = new UcDB;
@@ -100,7 +100,7 @@ class admin_uc_controller extends common
 	function pwclose_action()
 	{
 		$this->obj->DB_update_all("admin_config","`config`=''","`name`='sy_pw_type'");
-		$this->web_config();  
+		//$this->web_config();  
 		$this->layer_msg('PW整合已取消！',9,0,"index.php?m=admin_pw");
 
 	}

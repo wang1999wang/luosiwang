@@ -42,7 +42,7 @@ class config_controller extends common{
 			$this->logo_reset("sy_wx_qcode",$waplogo_path);
 		}
 		
-		$this->web_config();
+		//$this->web_config();
 		$this->ACT_layer_msg("Õ¯’æLOGO≈‰÷√…Ë÷√≥…π¶£°",9,$_SERVER['HTTP_REFERER'],2,1);
 	}
 	function logo_upload($picurl,$upload){

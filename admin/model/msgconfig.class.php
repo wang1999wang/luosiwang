@@ -19,7 +19,7 @@ class msgconfig_controller extends common
 					$this->obj->DB_update_all("admin_config","`config`='".iconv("utf-8", "gbk", $v)."'","`name`='$key'");
 			    }
 		 	}
-			$this->web_config();
+			//$this->web_config();
 			$this->ACT_layer_msg( "短信配置设置成功！",9,1,2,1);
 		 }
 	}

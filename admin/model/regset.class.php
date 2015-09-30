@@ -15,7 +15,7 @@ class regset_controller extends common{
 				$this->obj->DB_update_all("admin_config","`config`='".iconv("utf-8", "gbk", $v)."'","`name`='$key'");
 			   }
 		 	}
-			$this->web_config();
+			//$this->web_config();
 			$this->layer_msg("×¢²áÉèÖÃ³É¹¦£¡",9,1);
 		 }
 	}

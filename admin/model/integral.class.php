@@ -29,7 +29,7 @@ class integral_controller extends common
 
 				   }
 			 }
-		 $this->web_config();
+		 //$this->web_config();
 		 $this->ACT_layer_msg($this->config['integral_pricename']."ÅäÖÃĞŞ¸Ä³É¹¦£¡",9,1,2,1);
 		}
 	}

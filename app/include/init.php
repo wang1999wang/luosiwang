@@ -39,9 +39,9 @@ if($ActionName=='')	$ActionName = 'index';
 
 global $ModuleName,$DirName;
 
-if($config['sy_'.$ModuleName.'_web']==2){
+/*if($config['sy_'.$ModuleName.'_web']==2){
     echo '´ËÄ£¿éÎ´¿ªÆô£¡';die;
-}
+}*/
 
 $ControllerPath=APP_PATH.'app/controller/'.$ModuleName.'/';
 require(APP_PATH.'app/public/common.php');

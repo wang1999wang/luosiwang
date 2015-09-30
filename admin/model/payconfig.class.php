@@ -32,7 +32,7 @@ class payconfig_controller extends common
 		   }else{
 			 $this->obj->DB_update_all("admin_config","`config`='$alipaytype'","`name`='alipaytype'");
 		   }
-		   $this->web_config();
+		   //$this->web_config();
 		  
 		   made_web(APP_PATH."api/".$dir."/alipay_data.php",ArrayToString($alipaya),"alipaydata");
 		  $this->ACT_layer_msg( "支付宝配置成功！",9,$_SERVER['HTTP_REFERER'],2,1);
@@ -96,7 +96,7 @@ class payconfig_controller extends common
 					$this->obj->DB_update_all("admin_config","`config`='".iconv("utf-8", "gbk", $v)."'","`name`='".$key."'");
 				}
 			}
-			$this->web_config();
+			//$this->web_config();
 			$this->ACT_layer_msg( "修改成功！",9,$_SERVER['HTTP_REFERER'],2,1);
 		}
 	}

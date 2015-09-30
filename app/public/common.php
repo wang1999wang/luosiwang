@@ -67,7 +67,7 @@ class common{
 		$this->$model();
 
 		if(!file_exists(PLUS_PATH."config.php")){
-			$this->web_config();
+			//$this->web_config();
 		}
 
         $this->get_home_nav();
@@ -615,7 +615,7 @@ class common{
 			}
 		}
 		$configarr['autodate'] = $this->config['autodate'];
-		//made_web(PLUS_PATH.'config.php',ArrayToString($configarr),'config');
+		made_web(PLUS_PATH.'config.php',ArrayToString($configarr),'config');
 		if(!file_exists(PLUS_PATH.'pimg_cache.php')){
 			$this->advertise_cache();
 		}

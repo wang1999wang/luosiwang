@@ -1,5 +1,5 @@
 <?php
-class index_controller extends job_controller{
+class index_controller extends trade_controller{
 	function comsearch(){
 		if($this->config['cityid']){
 			$_GET['cityid'] = $this->config['cityid'];

@@ -42,7 +42,7 @@ class warning_controller extends common
 					$this->obj->DB_update_all("admin_config","`config`='".iconv("utf-8", "gbk", $v)."'","`name`='$key'");
 				}
 			 }
-			$this->web_config();
+			//$this->web_config();
 			$this->ACT_layer_msg("Ô¤¾¯ÅäÖÃĞŞ¸Ä³É¹¦£¡",9,1,2,1);
 		}
 		$this->yuntpl(array('admin/admin_warning_config'));

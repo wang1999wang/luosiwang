@@ -39,7 +39,7 @@ class userconfig_controller extends common
 				$this->logo_reset("sy_banner",$flogo_path);
 			}
 			
-			$this->web_config();
+			//$this->web_config();
 			$this->ACT_layer_msg("会员头像配置设置成功！",9,$_SERVER['HTTP_REFERER'],2,1);
 		}
 		$this->yuntpl(array('admin/admin_avatar_config'));
@@ -73,7 +73,7 @@ class userconfig_controller extends common
 					$this->obj->DB_update_all("admin_config","`config`='".iconv("utf-8", "gbk", $v)."'","`name`='$key'");
 				}
 			}
-			$this->web_config();
+			//$this->web_config();
 			$this->ACT_layer_msg("会员配置修改成功！",9,1,2,1);
 		}
 	}
