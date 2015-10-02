@@ -1,0 +1,461 @@
+/*-job.css*/
+/*--Author:deiphi@qq.com 2012-1-12*/
+
+.jobHeader{width:730px;float:left;clear:both;border:1px solid #DDD;background:#f3fafd;}
+.jobHeader .logo{width:205px;height:55px;float:left;text-align:left;}
+.jobHeader .menu{width:238px;float:left;border-right:1px solid #DDD;}
+.jobHeader .menu p{margin:0px;padding:0px;}
+.jobHeader .menu p a{width:50%;height:37px;line-height:37px;float:left;float:left;display:block;font-size:14px;text-align:center;}
+/*.jobHeader .menu p.btns a{font-size:12px;line-height:30px;background:url(/images/job/btn_bg.png) center 2px no-repeat;}*/
+
+/*2012-08-31*/
+.jobHeader .menu li{width:86px; height:26px; float:left; padding-left:17px; padding-right:15px;}
+.jobHeader .menu li.btns_1 a{ width:86px; height:26px; display:block; line-height:26px; color:#990000; background:url(/images/job/btn_bg1-1.gif) no-repeat;}
+.jobHeader .menu li.btns_1 a:hover{ width:86px; height:26px; display:block; line-height:26px; color:#990000; background:url(/images/job/btn_bg1-2.gif) no-repeat;}
+.jobHeader .menu li.btns_2 a{ width:86px; height:26px; display:block; line-height:26px; color:#2052b2; background:url(/images/job/btn_bg2-1.gif) no-repeat;}
+.jobHeader .menu li.btns_2 a:hover{ width:86px; height:26px; display:block; line-height:26px; color:#2052b2; background:url(/images/job/btn_bg2-2.gif) no-repeat;}
+
+
+.jobHeader .box{width:491px;height:74px;float:right;text-align:left;position:relative;}
+.jobHeader .searchTab{width:487px;height:28px;line-height:28px;position:absolute;left:0px;top:0px;}
+.jobHeader .searchTab b a{width:66px;height:28px;line-height:28px;float:left;overflow:hidden;text-align:center;display:block;border-right:1px solid #DDD;}
+.jobHeader .searchTab b a.on{color:#333;background:white;}
+.jobHeader .searchTab span{float:right;padding-right:6px;}
+.jobHeader .searchTab span em{font-style:normal;color:#fb4100;}
+.jobHeader .search{width:100%;float:left;clear:both;margin-top:27px;border-top:1px solid #DDD;background:white;}
+.jobHeader .search .inner{width:475px;float:left;clear:both;padding:12px 8px;}
+.jobHeader .search span{width:65px;height:20px;line-height:22px;float:left;padding:0px 3px;margin-right:3px;overflow:hidden;color:#666;cursor:pointer;border:1px solid #DDD;background:white url(/images/job/ico_select.gif) 54px 1px no-repeat;}
+.jobHeader .search span div{width:50px;height:20px;overflow:hidden;}
+.jobHeader .search .key{width:194px;height:20px;line-height:20px;float:left;border:0px;padding:0px 3px;border:1px solid #DDD;background:white;}
+.jobHeader .search .button{width:45px;height:22px;line-height:20px;float:left;text-align:center;cursor:pointer;border:0px;font-weight:bold;color:white;background:url(/images/job/btn_search.png) no-repeat;}
+
+.mainContainer{width:730px;float:left;clear:both;}
+.main{width:730px;float:left;border:1px solid #DDD;padding-bottom:12px;overflow-x:hidden;}
+.mainHome{margin-top:10px;}
+
+.selectBox{border:1px solid #fe9902;position:absolute;top:25px; display:none;background:#fff9ee; text-align:center; }
+.selectBox .innerbox{float:left;clear:both;padding:6px 8px;text-align:left;position:relative;}
+.selectBox b{width:100%;clear:both;display:block;padding:2px 0px 2px 0px; text-indent:10px; color:#723300; background:#ffd596;}
+.selectBox a{float:left;margin-right:6px;_margin-right:5px;white-space:nowrap; color:#333; padding:0px 2px; margin:3px ;}
+.selectBox a:hover{ color:#fff; background:#fe9d0b; }
+
+.selectBox .city{width:100%;float:left;clear:both;border-bottom:1px solid #DDD;display:none;background:white;}
+.selectBox .city div{float:left;clear:both;padding:12px 0px;padding-top:0px;}
+.selectBox .currentCity{display:none;}
+.selectBox ul{width:100%;margin:0px;padding:0px;display:block;list-style-type:none;}
+.selectBox ul li{width:80px;float:left;white-space:nowrap;padding:1px 0px;overflow:hidden;}
+.selectBox .closeBox{width:100%;position:absolute;left:0px;top:2px;}
+.selectBox .closeBox a.close{float:right;padding-right:4px;}
+
+#boxPosition{width:350px;left:210px;text-align:center;}
+#boxPosition a{padding-right:5px;padding-bottom:2px;}
+#boxArea{width:434px;left:284px;}
+#boxArea .innerbox div{width:100%;float:left;padding:3px 0px;}
+#boxArea .innerbox div span{width:40px;float:left;display:block; font-weight:bold; color:#723300; margin-top:4px; }
+#boxArea .innerbox div .spcity{width:auto;float:none;display:inline;}
+#boxArea .innerbox div p{width:372px;float:right;display:block;margin:0px;padding:0px 0px;}
+#boxArea .innerbox .province a{margin-right:10px;}
+#boxTime{width:69px;left:358px;}
+#boxTime .innerbox{padding:6px 6px;}
+.timeBox a{width:100%;float:none;display:block;}
+
+.mainVline{background:url(/images/job/line_bg.gif) 422px 0px repeat-y;}
+.main .mainLeft{width:423px;float:left;margin:0px;padding:12px 0px 0px 0px;text-align:left;background:url(/images/job/box_bg.gif) left top no-repeat; overflow:hidden;}
+.main .mainLeft .subject{width:100%;float:left;clear:both;padding:0px 0px 10px 0px;}
+.main .mainLeft .subject b{padding-left:10px;font-size:14px;}
+.main .mainLeft .subject span{float:right;padding-right:10px;}
+.main .mainLeft ul{width:404px;*width:408px;float:Left;clear:both;margin:0px;padding:0px;padding-left:10px;list-style-type:none;}
+.main .mainLeft ul li{width:100%;float:left;clear:both;margin:0px;padding:4px 0px;_padding:5px 0px;}
+.main .mainLeft ul li .span_left { float:left; display:block; width:290px; overflow:hidden; overflow: hidden; white-space: nowrap; -o-text-overflow: ellipsis;text-overflow: ellipsis;}
+.main .mainLeft ul li .span_right { float:right; display:block; width:100px; padding-right:5px; overflow:hidden; overflow: hidden; white-space: nowrap; -o-text-overflow: ellipsis;text-overflow: ellipsis; text-align:right;}
+
+.main .mainRight{width:307px;float:right; overflow:hidden;}
+.main .mainRight .tab{ width:100%;height:38px;overflow:hidden;background:url(/images/job/tag_line_bg.gif) 153px 0px no-repeat;}
+.main .mainRight .tab a{width:153px;height:36px;line-height:32px;float:left;font-size:14px;font-weight:bold;text-align:center;background:url(/images/job/tag_bg.gif) 0px -38px no-repeat;}
+.main .mainRight .tab a.on{color:black;background:url(/images/job/tag_bg.gif) 0px 0px no-repeat;}
+.main .mainRight .library{width:290px;float:left;clear:both;padding:0px 8px;text-align:left;}
+.main .mainRight .library b{width:100%;float:left;clear:both;display:block;padding:5px 0px;}
+.main .mainRight .library b span{font-weight:normal;}
+.main .mainRight .library b span em{font-style:normal;color:#f75e00;}
+.main .mainRight .library a{line-height:2em;margin-right:6px;white-space:nowrap;}
+.main .mainRight .hot{width:291px;float:left;clear:both;padding:0px 8px;padding-top:8px;margin-top:8px;text-align:left;border-top:1px solid #DDD;}
+.main .mainRight .hot .subject{width:100%;float:left;clear:both;white-space:nowrap;}
+.main .mainRight .hot .content{_width:290px;float:left;padding:6px 0px;}
+.main .mainRight .hot a{line-height:2em;margin-right:4px;white-space:nowrap;}
+
+.mainBand{margin-top:12px;background:url(/images/job/big_box_bg.gif) right top no-repeat;}
+.main .title{width:100%;height:40px;line-height:40px;float:left;clear:both;text-align:left;}
+.main .title b{padding-left:10px;font-size:14px;}
+.mainBand .band{width:100%;float:left;clear:both;}
+.mainBand .band ul{width:100%;float:left;clear:both;margin:0px;padding:0px;padding-top:8px;list-style-type:none;}
+.mainBand .band ul li{width:91px;height:90px;float:left;}
+.mainBand .band table{width:68px;height:68px;margin:0px auto;}
+.mainBand .band table td{width:68px;height:68px;padding:1px;text-align:center;border:1px solid #DDD;}
+
+.mainRecommended{margin-top:10px;}
+
+.mainRecommended .subject{width:100%;height:32px;line-height:32px;text-align:left;background:#EEE url(/images/job/detail_sub_bg.gif) top repeat-x;}
+.mainRecommended .subject span{float:left;padding:0px 8px;font-size:12px;}
+.mainRecommended .companyContent{width:708px;float:left;clear:both;padding:0px 10px;padding-top:10px;text-align:left;}
+.mainRecommended .companyContent ul{width:100%;float:left;clear:both;margin:4px 0px;padding:4px 0px;list-style-type:none;border-bottom:1px dashed #DDD;}
+.mainRecommended .companyContent ul li{width:230px;float:left;padding-right:4px;padding-bottom:10px;}
+.mainRecommended .companyContent ul li span{width:100%;height:20px;line-height:20px;overflow:hidden;display:block;}
+.mainRecommended .companyContent ul li p{width:100%;height:20px;line-height:20px;overflow:hidden;display:block;margin:0px;padding:0px;}
+.mainRecommended .companyContent ul li p a{margin-right:3px;}
+
+.side .person{float:left;clear:both;}
+.side .person .inner2{min-height:0px;_height:0px;}
+.side .person ul{padding:8px 8px;list-style-type:none;margin:0px;}
+.side .person ul li.photo{width:92px;min-height:135px;_height:135px;float:left;}
+.side .person ul li.photo table{width:85px;height:106px;border:1px solid #DDD;background:white;}
+.side .person ul li.photo table td{width:100%;height:106px;text-align:center;}
+.side .person ul li.photo p{margin:0px;padding:4px 0px;padding-top:8px;}
+.side .person ul li.info{width:130px;min-height:145px;_height:145px;float:right;text-align:left;}
+.side .person ul li.info p{height:23px;margin:0px;padding:0px;}
+.side .person ul li.info a{ float:left; padding:2px 10px 0 0;}
+
+.sideMoney{margin-top:12px;}
+.newZhaoping{min-height:459px;_height:459px;}
+
+.footerAd{width:732px;min-height:80px;_height:80px;float:left;padding:12px 0px;}
+
+.companyBox{width:705px;float:left;clear:both;text-align:left;padding:12px 12px;}
+.companyBox .item{width:705px;float:left;clear:both;padding:10px 0px;list-style-type:none;border-bottom:1px dashed #DDD;}
+.companyBox .bgcl { background-color:#f1f1f1; }
+.companyBox .item li.info{width:472px;float:left;}
+.companyBox .item li.info b, .companyBox .item li.info p{width:100%;float:left;clear:both;margin:0px;padding:2px 0px;}
+.companyBox .item li.info b a{font-size:14px;}
+.companyBox .item li.info p a{color:black;font-weight:bold;}
+.companyBox .item li.time{width:120px;float:right;position:relative;}
+.companyBox .item li.time span{float:left;padding-left:14px;color:#666;position:absolute;top:40%;background:url(/images/job/ico_time.gif) left center no-repeat;}
+.companyBox .item li.btn{width:80px;float:right;position:relative;}
+.companyBox .item li.btn a{float:right;width:72px;height:17px;display:block;position:absolute;top:40%;background:url(/images/job/icon_btn.png) left top no-repeat;}
+.companyBox .item li.btn a:hover{background:url(/images/job/icon_btn.png) left -23px no-repeat;}
+
+
+.personBox{width:705px;float:left;clear:both;text-align:left;padding:12px 12px;}
+.personBox .classification{ float:left; border-bottom:1px solid #b2b0b0; }
+.personBox .classification li{ text-indent:6px; float:left; line-height:24px; color:#000;}
+.personBox .vertical{ background:url(/images/job/job-Classification-bg.gif) left bottom no-repeat;}
+.personBox .item{width:100%;float:left;clear:both;padding:10px 0px;list-style-type:none;border-bottom:1px dashed #DDD;}
+.personBox .bgcl { background-color:#f1f1f1; }
+.personBox .item li {float:left;font-size:12px;}
+.personBox .item li.time{position:relative;}
+.personBox .item li.time span{float:left;padding-left:14px;color:#666;position:absolute;background:url(/images/job/ico_time.gif) left center no-repeat;}
+
+
+
+.zhaopinDetail{text-align:left;}
+.zhaopinDetail .subject{width:100%;height:32px;line-height:32px;text-align:left;background:#EEE url(/images/job/detail_sub_bg.gif) top repeat-x;}
+.zhaopinDetail .subject b{float:left;padding:0px 8px;font-size:14px;}
+.zhaopinDetail .subject .tab{width:300px;float:right;}
+.zhaopinDetail .subject .tab a{height:32px;display:block;float:right;padding:0px 16px;margin-left:8px;white-space:nowrap;}
+.zhaopinDetail .subject .tab a:hover{color:red;}
+.zhaopinDetail .subject .tab a.on{color:red;font-weight:bold;border-left:1px solid #DDD;border-right:1px solid #DDD;background:white;}
+.zhaopinDetail .detail{padding:12px 8px;font-size:12px;line-height:180%;}
+.zhaopinDetail .detail h1{margin:0px;padding:12px 0px;font-size:22px;font-family:微软雅黑,黑体;font-weight:normal;}
+.zhaopinDetail .item{width:100%;float:left;clear:both;padding-bottom:8px;}
+.zhaopinDetail .item table{padding:0px;text-align:left;font-size:12px;}
+.zhaopinDetail .item .table50{width:100%; float:left;margin:0px;padding:0px;}
+.zhaopinDetail .item .table50 td{margin:0px;}
+.zhaopinDetail .item .table50 td.titles{width:65px; color:#666;}
+
+.zhaopinDetail .item .head{width:100%;float:left;clear:both;padding:12px 0px;}
+.zhaopinDetail .item .text{width:100%;float:left;clear:both;line-height:180%;font-size:14px;}
+.zhaopinDetail .item .photoList{width:100%;float:left;clear:both;}
+.zhaopinDetail .item .photoList ul{width:178px;height:150px;float:left;list-style-type:none;margin:0px;padding:0px;text-align:center;}
+.zhaopinDetail .item .photoList ul li.photo{width:162px;height:130px;}
+.zhaopinDetail .item .photoList ul li.photo table{width:160px;height:120px;}
+.zhaopinDetail .item .photoList ul li.photo table td{width:160px;height:120px;border:1px solid #DDD;text-align:center;}
+.zhaopinDetail .item .photoList ul li.text{width:100%;height:22px;line-height:22px;overflow:hidden;}
+.zhaopinDetail .btns{float:left;clear:both;}
+.zhaopinDetail .btns a{/*width:100px;height:26px;line-height:26px;*/ width:82px; height:28px; line-height:28px; float:left;margin:0px 8px;_margin:0px 4px;display:block;color:white;font-weight:bold;text-align:center;/*border-radius:4px;border:1px solid #ff6600;background:#ff6600;*/ background:url(/images/comm/btn_orange_1.gif) no-repeat;}
+.zhaopinDetail .btns a:hover{/*background:red;*/background:url(/images/comm/btn_orange_1.gif) 0 -28px no-repeat;}
+.zhaopinDetail #about h1{font-size:16px;}
+
+
+
+
+
+.myResume{width:710px;padding:12px 0px;margin:0px auto;}
+.myResume h2{width:100%;float:left;clear:both;padding:12px;text-align:center;}
+.myResume table{width:100%;float:left;clear:both;border-collapse:collapse;border:1px solid #DDD;text-align:left;}
+.myResume table th{padding:8px 5px;border-collapse:collapse;border:1px solid #DDD;font-size:12px;text-align:left;background:#F5F5F5;}
+.myResume table th a{float:right;padding-right:8px;font-weight:normal;}
+.myResume table td{padding:5px;border-collapse:collapse;border:1px solid #DDD;font-size:12px;}
+.myResume table td.text{word-wrap: break-word;word-break:break-all;}
+.myResume .textarea{width:98%;height:80px;}
+.myResume .faq{margin-top:12px;}
+.myResume .faq .textareaAnswer{width:98%;height:40px;}
+.myResume .faq div{width:30px;height:30px;line-height:30px;text-align:center;margin:0px auto;color:white;font-weight:bold;border-radius:4px;}
+.myResume .faq div.question{background:#ff6600;}
+.myResume .faq div.answer{background:green;}
+.myResume .btnBox{width:100%;float:left;clear:both;padding:22px 0px;text-align:center;}
+.myResume .btnBox .btn{width:100px;height:30px;line-height:24px;cursor:pointer;padding:0px;margin:0px auto;font-size:14px;color:white;font-weight:bold;text-align:center;border-radius:4px;border:1px solid #ff8601;background:url(/images/job/btn_bg_orange.gif) top repeat-x;}
+.myResume .btnBox .btn:hover{background:url(/images/job/btn_bg_orange_on.gif) top repeat-x;}
+
+.qiuzhiDetail{text-align:left;border:1px solid #aedef2;}
+.qiuzhiDetail .subject{width:100%;height:32px;line-height:32px;text-align:left;background:#EEE url(/images/job/detail_sub_bg2.gif) top repeat-x;}
+.qiuzhiDetail .subject b{padding:0px 8px;font-size:14px;}
+.qiuzhiDetail .detail{padding:12px 8px;}
+.qiuzhiDetail .btns{width:240px;float:left;clear:both;padding:22px 0px;padding-left:240px;}
+.qiuzhiDetail .btns a{width:82px;height:28px;line-height:28px;float:left;margin:0px 8px;_margin:0px 4px;display:block;color:white;font-weight:bold;text-align:center;/*border-radius:4px;border:1px solid #ff6600;background:#ff6600;*/ background:url(/images/comm/btn_orange_1.gif) no-repeat;}
+.qiuzhiDetail .btns a:hover{ display:block; background:url(/images/comm/btn_orange_1.gif) 0 -28px no-repeat;}
+
+.msgBox{width:501px;float:left;clear:both;border:1px solid #ff8601;padding-bottom:22px;margin-left:100px;_margin-left:50px;}
+.msgBox h2{width:100%;float:left;clear:both;text-align:center;line-height:160%;font-size:16px;padding:12px 0px 22px 0px;}
+.msgBox .leftBox{width:210px;float:left;padding:12px 0px;padding-left:40px;}
+.msgBox .leftBox .btn{width:190px;height:28px;line-height:28px;float:left;clear:both;overflow:hidden;cursor:pointer;padding:0px;margin:0px auto;font-size:14px;color:white;font-weight:bold;text-align:center;border-radius:4px;border:1px solid #ff8601;background:url(/images/job/btn_bg_orange.gif) top repeat-x;}
+.msgBox .leftBox .btn:hover{background:url(/images/job/btn_bg_orange_on.gif) top repeat-x;}
+.msgBox .leftBox b{width:100%;float:left;clear:both;display:block;padding-top:32px;font-size:16px;}
+.msgBox .leftBox h3{width:100%;float:left;clear:both;font-size:16px;padding-top:22px;}
+.msgBox .rightBox{width:220px;float:right;border-left:1px solid #DDD;text-align:left;padding-top:12px;}
+.msgBox .rightBox b{width:100%;float:left;clear:both;padding-left:18px;font-size:16px;}
+.msgBox .rightBox ol{width:100%;float:left;clear:both;}
+
+.winLogin .applySuccessfully{width:100%;float:left;clear:both;}
+.winLogin .applySuccessfully h2{width:100%;float:left;clear:both;text-align:left;text-indent:165px;font-size:18px;padding:22px 0px;background:url(/images/job/face_success.gif) 120px 10px no-repeat;}
+.winLogin .applySuccessfully p{text-align:left;line-height:200%;font-size:14px;padding:0px 22px;}
+
+.printBox{width:718px;margin:0px auto;}
+.printBox .zhaopinDetail{width:100%;float:left;clear:both;border:0px;}
+.printBox .zhaopinDetail .subject{background:none;}
+.printBox .zhaopinDetail .btns{padding-left:280px;}
+.printBox .copyright{width:100%;float:left;clear:both;margin-top:10px;padding:5px 0px;}
+.printBox .copyright span{float:right;}
+
+.printBox .qiuzhiDetail{width:100%;float:left;clear:both;border:0px;}
+.printBox .qiuzhiDetail .subject{text-align:center;background:none;}
+.printBox .qiuzhiDetail .btns{padding-left:280px;}
+.printBox .qiuzhiDetail .detail{padding:0px 8px;}
+.printBox .qiuzhiDetail .myResume table{border:1px solid black;}
+.printBox .qiuzhiDetail .myResume table th{border:1px solid black;background:none;}
+.printBox .qiuzhiDetail .myResume table td{border:1px solid black;}
+
+.JobmainTag{width:730px;height:30px;float:left;clear:both;border:1px solid #DDD;margin-top:12px;position:relative;background:#f3fafd;}
+.JobmainTag .inner{position:absolute;left:0px;top:0px;}
+.JobmainTag .inner a{height:36px;line-height:32px;float:left;display:block;white-space:nowrap;font-size:14px;font-weight:bold;text-align:center;background:url(/images/job/tag_bg.gif) center -38px no-repeat;}
+.JobmainTag .inner a.on{color:black;background:url(/images/job/tag_bg.gif) center 0px no-repeat;}
+.JobmainTag .inner a b{height:31px;line-height:31px;float:left;display:block;padding:0px 22px;border-right:1px solid #DDD;white-space:nowrap;cursor:pointer;}
+
+/*2012/08/01*/
+.recruitment_banner{margin-top:10px; border:1px solid #DDD; float:left;}
+
+
+/*2012/08/01-Recommended*/
+.recommended{width:100%;float:left;clear:both;}
+.recommended img{border:1px solid #DDD;}
+.recommended li{ width:103px; float:left; padding:0; list-style-type: none; margin-left:20px;  margin-bottom:10px; margin-right:20px;_margin-left:17px;_margin-right:17px;}
+
+/*2012-10-23-Views*/
+.views{color:#f00; font-weight:bold; font-family:Arial; padding:0 4px; font-size:12px;}
+.views_font{ font-size:12px; padding-left:10px;}
+
+/*2012-10-24-Error*/
+.page_error_m{ width:630px; margin:0 auto;}
+.page_error{width: 630px; font-size: 14px; line-height: 22px;text-align:left; float:left; padding-top:20px;}
+.page_error_1{height: 80px; font-weight: bold; font-size: 16px; }
+.page_error_2{width:480px;  word-wrap: break-word; overflow: hidden; float: left; padding-left: 10px; margin-top: 20px;}
+.page_error_3{line-height: 36px; padding-left: 89px;float:left; text-align:left;}
+
+
+
+/*2012-11-02-jobindex*/
+.left_01{ float:left;}
+.right_01{ float:right;}
+/*search*/
+.job_search{ width:942px; *height:95px; overflow:hidden; border:1px solid #fe9d0b; background:#fff9ee; float:left; text-align:left; padding:10px 18px;}
+.job_left{ width:745px; float:left;}
+.job_left p{ margin:0; padding:0; float:none;}
+.job_left .search{ width:745px;float:left;}
+.job_left .search ul{float:left; margin-bottom:10px;}
+.job_left .search li{ float:left;font-size:14px; color:#999;}
+.job_left .search .work a{ width:86px; height:26px; display:block; float:left; margin-right:3px; background:url(/images/job/job-search-anniu-0.gif) left no-repeat;}
+.job_left .search .work a:hover,.job_left .search .work a.aa{ background:url(/images/job/job-search-anniu.gif) no-repeat;}
+.job_left .search .person a{width:86px; height:26px; display:block; float:left; background:url(/images/job/job-search-anniu-0.gif) -89px 0 no-repeat;}
+.job_left .search .person a:hover,.job_left .search .person a.bb{background:url(/images/job/job-search-anniu.gif) -89px 0 no-repeat;}
+.job_left .search .zhaopin_new a{width: 86px;  height: 26px;  display: block;  float: left;  background: url(/images/job/job-search-new-a.png) no-repeat; margin-left: 4px;cursor: pointer;}
+.job_left .search .zhaopin_new a:hover{background: url(/images/job/job-search-new-a1.png) no-repeat;}
+
+.job_left .search .zhaopin_new_1 a{width: 86px;  height: 26px;  display: block;  float: left;  background: url(/images/job/job-search-new-b.png) no-repeat; margin-left: 4px;cursor: pointer;}
+.job_left .search .zhaopin_new_1 a:hover{background: url(/images/job/job-search-new-b1.png) no-repeat;}
+
+.job_left .search .input_box{ width:421px; height:28px; float:left;line-height:28px; text-align:left; padding-left:5px; font-size:14px; border:2px solid #fe9d0b;}
+.job_left .search .region{ width:95px; height:30px; padding-left:5px; margin-left:7px;border:2px solid #fe9d0b; line-height:30px; text-align:left; background:#fff url(/images/job/job-search-dian.gif) 86px 13px no-repeat; cursor:pointer;}
+
+.job_left .search .position{ width:95px; height:30px; padding-left:5px; margin-left:7px;border:2px solid #fe9d0b; line-height:30px; text-align:left; background:#fff url(/images/job/job-search-dian.gif) 86px 13px no-repeat; cursor:pointer;}
+
+.job_left .search .area{ width:95px; height:30px; padding-left:5px; margin-left:7px;border:2px solid #fe9d0b; line-height:30px; text-align:left; background:#fff url(/images/job/job-search-dian.gif) 86px 13px no-repeat; cursor:pointer;}
+
+
+/*.job_left .search .button{ width:80px; height:34px; margin-left:6px; background:url(/images/job/job-search-sousuo.gif) no-repeat; border: none; cursor:pointer;}*/
+/*2012-11-21*/
+.job_left .search .btn_01{ width:81px; height:34px; margin-left:6px; background:url(/images/job/job-search-sousuo.gif) right no-repeat; border: none; cursor:pointer;}
+.job_left .search .btn_01_on{  background: url(/images/job/job-search-sousuo01.gif) no-repeat; border: none; }
+
+.job_left .search .text{width:745px; float:left; *float:none; line-height:24px;  overflow:hidden;}
+.job_left .search .text_1{ width:500px; height:24px; overflow:hidden;text-align:left; float:left; }
+.job_left .search .text a{ color:#333;}
+.job_left .search .text a:hover{ color:#f00; text-decoration:underline;}
+.job_left .search .right_01{ }
+
+.job_right{ width:192px; float:right; *padding-top:27px; padding-top:26px;}
+.job_right .btns_1 a{ width:86px; height:34px; display:block; margin-left:10px; _margin-left:5px; float:left; text-align:center; line-height:34px; color:#990000; background:url(/images/job/btn_bg1-1.gif) no-repeat;}
+.job_right .btns_1 a:hover{ background:url(/images/job/btn_bg1-2.gif) no-repeat;}
+.job_right .btns_2 a{ width:86px; height:34px; margin-left:10px; float:left; margin-bottom:3px; _margin-left:5px; text-align:center; display:block; line-height:34px; color:#2052b2; background:url(/images/job/btn_bg2-1.gif) no-repeat;}
+.job_right .btns_2 a:hover{ background:url(/images/job/btn_bg2-2.gif) no-repeat;}
+
+/*content*/
+.job_overall{ width:980px; float:left; margin-top:10px;overflow:hidden;}
+/*left*/
+.job_overall .left{ width:732px; float:left; overflow:hidden;}
+/*Library*/
+.job_overall .library{ width:730px; border:1px solid #e5e5e5; float:left; border-bottom:0; overflow:hidden;}
+.job_overall .nva_01{ width:730px; height:30px;  line-height:30px; text-align:left; border-bottom:2px solid #cf0000; background:url(/images/job/job-search-nva_bg.gif) left bottom repeat-x;}
+/*.job_overall .nva_01 li.float_01{ position:absolute; z-index:10;}
+.job_overall .nva_01 li.float_02{ position:absolute; z-index:10; left:118px;}*/
+.job_overall .nva_01 li{float:left;}
+.job_overall .nva_01 li a{ width:127px; height:30px; text-align:center; display:block; float:left; color:#000;  font-size:14px; font-weight:bold;  background:url(/images/job/job-search-nva_anbg1.gif) -127px 0 no-repeat;}
+.job_overall .nva_01 li a.still{  color:#fff; background: url(/images/job/job-search-nva_anbg1.gif) no-repeat;}
+.job_overall .list{ width:730px; text-align:left; float:left; background:#fffafa;}
+.job_overall .list01{ width:730px; text-align:left; float:left; background:#fafeff;}
+.job_overall .list_01:hover{ background:#f1f6ff; border-bottom:1px solid #a6c6ff;}
+.job_overall .list_01{ width:710px; text-align:left; float:left; padding:10px 10px; border-bottom:1px solid #e5e5e5;}
+.job_overall .list_01 p{ width:100%; line-height:30px;}
+.job_overall .list_01 li{ display:block; float:left; padding-right:17px; line-height:24px;white-space: nowrap;}
+.job_overall .list_01 li a{ color:#666;}
+.job_overall .list_01 li a:hover{ color:#f00;}
+/*banner*/
+.job_overall .banner{width:730px; border:1px solid #e5e5e5; float:left; margin:10px 0;}
+/*Urgent*/
+.job_overall .block{width:730px; border:1px solid #e5e5e5; float:left; margin-bottom:10px;}
+.job_overall .nva_02{ width:704px; height:31px; line-height:31px; padding:0 5px; margin:0 auto;border-bottom:2px solid #cf0000;}
+.job_overall .nva_02 b{ font-size:14px; float:left;background:url(/images/job/job-search-decline_nva_dian.gif) 0 10px no-repeat; padding-left:14px;}
+.job_overall .nva_02 p{ float:right;}
+.job_overall .nva_02 p a,.job_overall .recruiting_list .more a{ color:#f00;}
+.job_overall .nva_02 p a:hover,.job_overall .recruiting_list .more a:hover{ text-decoration:underline;}
+.job_overall .recruiting_list{ width:682px; margin:0 auto; padding-top:10px; text-align:left;}
+.job_overall .recruiting_list p{ line-height:26px; float:left; font-weight:bold; padding:0 5px; border-bottom:1px solid #e5e5e5;}
+.job_overall .recruiting_list .post{ width:245px; float:left; height:26px; overflow:hidden;}
+.job_overall .recruiting_list .company{ width:230px; float:left;height:26px; overflow:hidden;}
+.job_overall .recruiting_list .location{ width:94px; float:left;height:26px; overflow:hidden;}
+.job_overall .recruiting_list .time{ width:100px; float:left;height:26px; overflow:hidden;}
+.job_overall .recruiting_list li{width:669px; float:left; padding:0 5px; line-height:30px; border-bottom:1px dashed #e5e5e5;}
+.job_overall .recruiting_list li:hover{ background:#fafafa;}
+.job_overall .recruiting_list li a{ color:#333;}
+.job_overall .recruiting_list li a:hover{ color:#f00;}
+.job_overall .recruiting_list .more{ width:100%; line-height:26px; text-align:right; float:right;}
+
+/*Recommended Recruitment*/
+.job_overall .enterprise{ width:724px; float:left; padding-bottom:10px;}
+.job_overall .enterprise li{ width:221px; height:77px; margin-left:13px; _margin-left:10px; margin-top:10px; overflow:hidden; float:left; border:2px solid #e5e5e5;}
+/*2012-11-20*/
+.job_overall .enterprise li:hover{ border:2px solid #ff8400;}
+
+.job_overall .enterprise .decline_01{ position: absolute;  z-index:100;}
+.job_overall .enterprise .decline{ width:221px; height:102px; border:2px solid #ff8400; _border:2px solid #e5e5e5; background:#fff; border-top:0;position:absolute; z-index:20;top:79px; left:-2px;+left:-223px; _left:-226px;}
+.job_overall .enterprise .decline_left{ width:111px; height:92px; overflow:hidden; background: url(/images/job/job-search-decline_left_1.gif) top right no-repeat; float:left; padding-top:10px;}
+.job_overall .enterprise .decline_left p{ width:111px; height:24px; overflow:hidden; text-indent:14px; text-align:left; line-height:24px; background:url(/images/job/job-search-decline_left_2.gif) 6px 8px no-repeat;}
+.job_overall .enterprise .decline_left p a{ color:#666;}
+.job_overall .enterprise .decline_left p a:hover{ color:#f00;} 
+.job_overall .enterprise .decline_right{ width:110px; height:92px; float:left; overflow:hidden; padding-top:10px;}
+.job_overall .enterprise .decline_right p{ height:72px; overflow:hidden; padding:0 8px; color:#666; line-height:18px;}
+/*New Jobs*/
+.job_overall .library_01{ width:730px;  border:1px solid #e5e5e5; float:left; margin-bottom:10px; overflow:hidden;}
+.job_overall .latest{ width:710px; padding:12px; float:left; text-align:left; }
+.job_overall .latest li{ width:230px; padding-right:4px; padding-bottom:10px; float:left;}
+.job_overall .latest li span{ width:230px; height:20px; line-height:20px; overflow:hidden; }
+.job_overall .latest li span a{color:#333; }
+.job_overall .latest li span a:hover{color:#ff0000; }
+
+.job_overall .latest li p{width:230px;height: 20px;line-height: 20px;overflow: hidden;}
+.job_overall .latest li p a{ margin-right:4px;}
+
+/*right*/
+.job_overall .right{ width:240px; float:right; overflow:hidden;}
+.job_overall .block_01{ width:238px; border:1px solid #e5e5e5; float:right; margin-bottom:10px;  text-align:left;}
+/*.job_overall .nva_03{ width:238px; height:22px; border-bottom:1px solid #e5e5e5; background:url(/images/job/job-search-decline_nva_03.gif) repeat-x; line-height:22px; font-weight:bold; text-indent:10px;}*/
+.job_overall .nva_03{ width:238px; height:30px; border-bottom:2px solid #cf0000; background: url(/images/job/job-search-decline_nva_03.gif) repeat-x; line-height:30px;text-indent:8px; }
+.job_overall .nva_03 b{  background:url(/images/job/job-search-decline_nva_dian.gif) 0 3px no-repeat; padding-left:14px; }
+/*person message*/
+.job_information{ width:218px; border:1px solid #bfd6ff; background:#f1f6ff; overflow:hidden; float:right; *float:none; text-align:left; padding:10px;border-radius: 5px; margin-bottom:10px;}
+.job_information li{ float:left;}
+.job_photo{ width:74px; height:94px; overflow:hidden;  margin-right:8px; border:1px solid #e5e5e5;}
+.job_information li p{ height:20px;margin:0; padding:0;}
+.job_information li.ww{ width:200px;}
+.job_integrity{ width:74px; height:9px;float:left;overflow:hidden;border:1px solid #FF5705}
+/*.job_integrity_bg{ height:9px; display:block; background:url(/images/job/integrity_bg.gif) repeat-x left top;}*/
+.job_integrity_bg{ height:9px; display:block; background:url(/images/myoffice/person_resumerwsbar.gif) repeat-x left top;}
+/*news resume*/
+.job_overall .resume{ width:218px; height:294px; overflow:hidden; padding:5px 10px; color:#666;}
+.job_overall .resume li{ width:218px; padding-bottom:5px; float:left;}
+.job_overall .avatar{ width:25px; height:25px; overflow:hidden; float:left; padding-right:3px;}
+.job_overall .resume_name{ width:46px; height:25px; line-height:25px; overflow:hidden; float:left;}
+.job_overall .culture{ width:62px; height:25px; line-height:25px; overflow:hidden; float:left;}
+.job_overall .job_01{ width:82px; height:25px; line-height:25px; overflow:hidden; float:left;}
+/*hot area*/
+.job_overall .region{ width:222px; padding:8px 0 8px 10px; float:left;}
+.job_overall .region li{ width:55px; height:24px; line-height:22px; overflow:hidden; float:left; text-align:center;}
+.job_overall .region li a{ color:#666; border:1px solid #fff; display:block;}
+.job_overall .region li a:hover{ color:#009be9;  background:#f3fbff; border:1px solid #d6eaff; }
+/*news jobs*/
+.job_overall .enterprise_01{ width:235px; padding:10px 0px 10px 3px; float:right; text-align:left;}
+.job_overall .enterprise_01 li{ width:218px; height:24px; text-indent:10px;overflow:hidden; line-height:24px; background:url(/images/job/job-search-decline_left_2.gif) 2px 9px no-repeat;}
+.job_overall .enterprise_01 a{ color:#666;}
+.job_overall .enterprise_01 a:hover{ color:#f00;}
+
+/*banner*/
+.job_overall .banner_02{ width:238px; overflow:hidden; border:1px solid #e5e5e5; _display:none; }
+
+/*2012-11-21*/
+.job_overall .nva_04{width:730px; height:30px;  line-height:30px; border-bottom:2px solid #cf0000; background:url(/images/job/job-search-nva_bg.gif) bottom repeat-x;}
+.job_overall .nva_04 b{ width:161px; text-align:left; display:block; text-indent:10px; color:#fff; font-size:14px; background:url(/images/job/job-search-decline_nva_beijing.gif) no-repeat;}
+
+/*2012-11-26-*/
+.job_overall .pop-up_box{position:absolute; float:left;}
+.job_overall .pop-up_box_dian{position:absolute; top:22px; left:12px;*top:-4px;*left:-160px; z-index:10; float:left;}
+.job_overall .pop-up_box_content{position:absolute; top:27px; left:-10px;*top:1px;*left:-181px; width:710px; height:125px; padding:10px; border-bottom:1px solid #e5e5e5; border-top:1px solid #e5e5e5; float:left; display:block; background:#fff; overflow:hidden;}
+.job_overall .pop-up_box_content p{ width:236px; height:26px; float:left; line-height:26px; overflow:hidden;}
+.job_overall .pop-up_box_content p a{ text-indent:8px; float:left; color:#666; background:url(/images/job/job-search-decline_left_2.gif) 0 9px no-repeat;}
+.job_overall .pop-up_box_content p a:hover{ color:#fe9902; background:url(/images/job/job-search-sousuo_dian.gif) 0 9px no-repeat;}
+.job_overall .pop-up_box_02 a{ width:117px; height:18px; display:block; background:url(/images/job/job-search-sousuo_01.gif) no-repeat; line-height:18px; text-align:center; color:#fff; float:right; margin-top:5px; margin-right:10px;}
+.job_overall .pop-up_box_02 a:hover{ background:url(/images/job/job-search-sousuo_01.gif) 0 -18px no-repeat;}
+
+
+/*2012-11-30-*/
+.job_overall .post_01{width:730px; text-align:left; float:left; background:#f9f9f9;}
+.job_overall .post_02{width:730px; text-align:left; float:left;border-bottom:1px solid #e5e5e5;}
+.job_overall .post_03{ width:170px; height:100%; float:left; text-align:center; line-height:66px;}
+.job_overall .post_02 ul{ width:539px; padding:10px;float: right;border-left:1px solid #e5e5e5; background:#fff;}
+.job_overall .post_02 li{ display:block; float:left; padding-left:15px; width:61px; line-height:22px;white-space: nowrap;}
+.job_overall .post_02 li a{ color:#666; display:block;  padding:0 4px; float:left;}
+.job_overall .post_02 li a:hover{ color:#fff; background:#ff0e00;}
+
+/*2012-12-01*/
+.latest_0_01{float:right; padding-right:10px; color:#666;}
+.latest_0_01 a{ color:#666;}
+.latest_0_01 a:hover{ color:#666; text-decoration:underline;}
+.name_01{ width:218px; margin:5px 0px 5px 10px ; float:left; display:inline; overflow:hidden;  height:24px;  line-height:24px;  border-bottom:1px solid #e5e5e5; background:#f9f9f9; color:#333;}
+.more_04{float:right; padding-right:4px;}
+.more_04 a{ color:#666;}
+.more_04 a:hover{ color:#f00;}
+
+/*新增广告位*/
+.job_advertising{width:980px; float:left; padding-bottom:10px;}
+.job_advertising .advertising{ margin-top:0px; float:left;}
+.job_advertising .advertising li{ width:322px; height:60px; overflow:hidden; float:left;}
+.job_advertising .advertising li.margins{ padding-right:7px;}
+
+/*标准查询*/
+.standard_search{float: left;overflow:hidden;margin-bottom: 10px;padding:12px 8px;width: 224px;background:#E8E9E9 url(../images/yellowpage/bz_search_bg.gif) top left no-repeat;text-align:left;}
+.standard_search h2{font-size:15px;color:#0E48BC;}
+.standard_search p{margin:4px 0;overflow:hidden;}
+.standard_search .txt1{float:left;width:78%;height:20px;line-height:20px;border:1px solid #8DADD8;border-right-color:transparent;text-indent:6px;color:#989898;}
+.standard_search .btn1{float:left;margin-left:-2px;width:20%;height:24px;text-align:center;background:#3672BD;border:none;color:#fff;}
+.standard_search label{margin-right:4px;font-weight:800;}
+.standard_search a{display: block;float: left;margin-right: 19px;width: 28px;height: 29px;line-height: 29px;text-align: center;color: #fff;font-weight: 800;}
+.standard_search a:hover{text-decoration: underline;}
+.standard_search .a1{border:1px solid #960102;background:#DB1E1F;}
+.standard_search .a2{border:1px solid #C78B01;background:#FFB60D;}
+.standard_search .a3{border:1px solid #094AAC;background:#377AE0;}
+.standard_search .a4{border:1px solid #658F02;background:#83B806;}

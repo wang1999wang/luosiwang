@@ -1,176 +1,225 @@
-//JS -- Ç°Ì¨Ê×Ò³
+ï»¿/*æ¯äº”åˆ†é’Ÿæ›´æ–°ä¸€æ¬¡æœ€æ–°æ±‚è´­*/
+function clickTime() {
+    var thistime = new Date();
+    var years = thistime.getYear();
+    var days = thistime.getDay();
+    var hours = thistime.getHours();
+    var minutes = thistime.getMinutes();
+    var seconds = thistime.getSeconds();
+    var lastDate = new Date(thistime.getYear(), thistime.getMonth(), thistime.getDate(), hours, 5 * parseInt(minutes / 5));
+    minutes = 4 - minutes % 5;
+    seconds = 59 - seconds;
+    var smin = lastDate.getMinutes();
+    if (smin < 10) smin = "0" + smin;
+    if (minutes == 0 && seconds == 0) {
 
-function show_job(id,showhtml){
-	if(showhtml=="1"){
-		$.post("index.php?m=ajax&c=show_leftjob",{},function(data){	
-			$("#menuLst").html(data);	
-			$(".lst"+id).attr("class","lst"+id+" hov");			
-		});
-	}else{
-		var num=$(".lstCon").length/3;
-		if(id<num){
-			var height=id*35;
-			var heightdiv=$(".lst"+id+" .lstCon").height();
-			if(heightdiv-height<35){
-				height=heightdiv=$(".lst"+id+" .lstCon").height()/2;
-			}
-			$(".lst"+id+" .lstCon").attr("style","top:-"+height+"px");
-		}else if(id<num*2){
-			var height=id*35;
-			var heightdiv=$(".lst"+id+" .lstCon").height()/2;
-			$(".lst"+id+" .lstCon").attr("style","top:-"+heightdiv+"px");
-		}else{
-			var height=($(".lstCon").length-id)*35;
-			var heightdiv=$(".lst"+id+" .lstCon").height();
-			if(heightdiv>height){
-				heightdiv=heightdiv-height;
-			}else{
-				heightdiv=0;
-			}
-			$(".lst"+id+" .lstCon").attr("style","top:-"+heightdiv+"px");
-		}
-		$(".lst"+id).attr("class","lst"+id+" hov");	
-	}
-}
-function selects(id,type,name){
-	$("#job_"+type).hide();
-	$("#"+type).val(name);
-	$("#"+type+"id").val(id);
-} 
-function hide_job(id){
-	$("#menuLst li").removeClass("hov"); 
-}
-function showDiv2(obj){
-	if($(obj).attr("class")=="current1"){
-		$(obj).removeClass();
-	}
-	else{
-		$(obj).addClass("current1");
-		$(obj).find(".shade").height($(obj).find(".area").height()+60)
-	}
-}
-function clean(){
-	$("#edu").val("ÇëÑ¡Ôñ");
-	$("#eduid").val("");
-	$("#exp").val("ÇëÑ¡Ôñ");
-	$("#expid").val("");
-	$("#mun").val("ÇëÑ¡Ôñ")
-	$("#munid").val("");;
-	$("#salary").val("ÇëÑ¡Ôñ");
-	$("#salaryid").val("");
-	$("#index_job_class_val").val("ÇëÑ¡ÔñÖ°Î»Àà±ğ");
-	$("#job_class").val("");
-	$("#city").val("ÇëÑ¡Ôñ¹¤×÷µØµã");
-	$("#cityid").val("");
-	$("#hy").val("ÇëÑ¡ÔñĞĞÒµÀà±ğ");
-	$("#hyid").val("");
-}
-$(function(){
-	$('body').click(function(evt) {
-		if($(evt.target).parents("#job_hy").length==0 && evt.target.id != "hy") {
-			$('#job_hy').hide();
-		}
-		if($(evt.target).parents("#job_exp").length==0 && evt.target.id != "exp") {
-			$('#job_exp').hide();
-		}
-		if($(evt.target).parents("#job_edu").length==0 && evt.target.id != "edu") {
-			$('#job_edu').hide();
-		}
-		if($(evt.target).parents("#job_salary").length==0 && evt.target.id != "salary") {
-			$('#job_salary').hide();
-		}
-		if($(evt.target).parents("#job_mun").length==0 && evt.target.id != "mun") {
-			$('#job_mun').hide();
-		}  
-		if($(evt.target).parents(".index_r_wap_l").length==0&&$(evt.target).attr('class')!='index_r_wap_l') {
-			$(".index_r_wap_l>.index_r_wap_box").hide();
-		} 
-		if($(evt.target).parents(".index_r_weixin").length==0&&$(evt.target).attr('class')!='index_r_weixin') {
-			$(".index_r_wap_box_weixin").hide();
-		} 
-		if($(evt.target).parents(".index_r_wap_box").length){
-			$(".index_r_wap_box").hide();
-		}
-		if($(evt.target).parents(".index_nav_tit").length==0){
-			$("#boxNav").hide();
-		}
-	});  
-	/*$.post(weburl+"/index.php?m=ajax&c=DefaultLoginIndex",{},function(data){
-		$("#index_logoin").html(data);
-	});*/
-	
-	/*Ê×Ò³ÓÒ²àĞÂÎÅ¡¢¹«¸æÇĞ»»*/
-	$(".yun_index_h1_list li").hover(function(){
-		var num=$(this).index(); 
-		$(".yun_index_h1_list li").removeClass("yun_index_h1_cur");
-		$(this).addClass("yun_index_h1_cur");
-		$(".yuin_index_r .yun_index_cont").hide();
-		$(".yun_index_cont:eq("+num+")").show(); 
-	}); 
-	$(".index_r_wap_l").click(function(){
-		$(".index_r_wap_box").hide();
-		$(this).find(".index_r_wap_box").show();
-	});
-	$(".index_r_weixin").click(function(){
-		$(".index_r_wap_box").hide();
-		$(this).find(".index_r_wap_box").show();
-	});
+        $.ajax({
+            async: false,
+            cache: false,
+            timeout: 6E4,
+            type: "post",
+            url: "/Ajax/AjaxPage.aspx?t=getindexbuylist",
+            dataType: "json",
+            beforeSend: function () {
+            },
+            success: function (data) {
+                if (data == null) {
+                }
+                else {
+                    if (data.status.code == "1001") {
+                        $("#ulbuylist").html(data.result);
+                    }
+                    else {
+                    }
+                }
+            },
+            error: function () {
+            }
+        });
 
-	/*Ê×Ò³Àà±ğ¿ªÊ¼*/
-	$("#navMenu").click(function(){
-		$("#boxNav").show();
-	});
-	
-	$("#navLst li").hover(function(){
-		$(this).attr('class','show');
-	},function(){$(this).attr('class','');});
-	/*
-	$("#navLst .index_nav_l").hover(function(){
-		$(this).parent().attr('class','show');
-	},function(){$(this).parent().attr('class','');});*/
-	/*Ê×Ò³Àà±ğ½áÊø*/
-})
+    } else {
+        if (minutes < 10) minutes = "0" + minutes;
+        if (seconds < 10) seconds = "0" + seconds;
+        thistime = minutes + ":" + seconds;
+        document.getElementById("timebody").innerHTML = thistime;
+    }
+    setTimeout("clickTime()", 1000);
+}
 
-/*Ê×Ò³¹ã¸æ*/
-$(document).ready(function(){
-	$('#bottom_ad_is_show').val('1');
-	var duilian = $("div.duilian");
-	var duilian_close = $(".btn_close");
-	var scroll_Top = $(window).scrollTop();
-	var window_w = $(window).width();
-	if(window_w>1000){duilian.show();}
-	buttom_ad();
-	$("div .duilian").css("top",scroll_Top+200);
-	$(window).scroll(function(){
-		buttom_ad();
-		var scroll_Top = $(window).scrollTop();
-		duilian.stop().animate({top:scroll_Top+200});
-	});
-	duilian_close.click(function(){
-		$(this).parents('.duilian').hide();
-		return false;
-	});
-});
-function colse_bottom(){
-	$("#bottom_ad_fl").parent().hide();
-	$('#bottom_ad_is_show').val('0');
+clickTime();
+/**/
+
+/*è®¢é˜…å‘¨åˆŠå¼€å§‹*/
+function Subscribe() {
+    var WeeklyEmail = $("input[name='weeklyemail']").val();
+    if (WeeklyEmail == "" || WeeklyEmail == "è®¢é˜…å‘¨åˆŠï¼Œè¯·è¾“å…¥æ‚¨çš„Emailåœ°å€") {
+        alert('è¯·è¾“å…¥æ‚¨çš„é‚®ç®±åœ°å€');
+        return false;
+    }
+    if (!isEmail(WeeklyEmail)) {
+        alert('è¯·è¾“å…¥æ­£ç¡®çš„é‚®ç®±åœ°å€');
+        return false;
+    }
+    $.ajax({
+        async: false,
+        cache: false,
+        timeout: 6E4,
+        type: "post",
+        url: "/Ajax/OfficeAjaxPage.aspx?t=subscribeweekly",
+        data: { Email: WeeklyEmail },
+        dataType: "json",
+        success: function (data) {
+            if (data == null) return;
+            if (data.status.code == "1001") {
+                alert(data.status.msg);
+            } else {
+                alert(data.status.msg);
+
+            }
+        },
+        error: function (a, b) {
+            if (b == "timeout") {
+
+            }
+        }
+
+    });
 }
-function buttom_ad(){
-	if($("#bottom_ad").length>0&&$("#bottom_ad_is_show").length>0){
-		var scrollTop = $(window).scrollTop();
-		var w_height=$(document).height();
-		var bottom_ad=$("#bottom_ad").offset().top;
-		var bottom_ad_fl=$("#bottom_ad_fl").offset().top;
-		var poor_height=parseInt(w_height)-parseInt(scrollTop);
-		var bottom_ad_is_show=$('#bottom_ad_is_show').val();
-		if(window.attachEvent){
-			poor_height=parseInt(poor_height)-parseInt(22);
-		}
-		if(poor_height<=880){
-			$("#bottom_ad_fl").parent().hide();
-		}else if(bottom_ad_is_show=='1'){
-			$("#bottom_ad_fl").parent().show();
-		}
-	}
+
+function Subscribe1() {
+    var WeeklyEmail = $("input[name='weeklyemail1']").val();
+    if (WeeklyEmail == "" || WeeklyEmail == "è®¢é˜…å‘¨åˆŠï¼Œè¾“å…¥Email") {
+        alert('è¯·è¾“å…¥æ‚¨çš„é‚®ç®±åœ°å€');
+        return false;
+    }
+    if (!isEmail(WeeklyEmail)) {
+        alert('è¯·è¾“å…¥æ­£ç¡®çš„é‚®ç®±åœ°å€');
+        return false;
+    }
+    $.ajax({
+        async: false,
+        cache: false,
+        timeout: 6E4,
+        type: "post",
+        url: "/Ajax/OfficeAjaxPage.aspx?t=subscribeweekly",
+        data: { Email: WeeklyEmail },
+        dataType: "json",
+        success: function (data) {
+            if (data == null) return;
+            if (data.status.code == "1001") {
+                alert(data.status.msg);
+            } else {
+                alert(data.status.msg);
+
+            }
+        },
+        error: function (a, b) {
+            if (b == "timeout") {
+
+            }
+        }
+
+    });
 }
-/*Ê×Ò³¹ã¸æ½áÊø*/
+/*è®¢é˜…å‘¨åˆŠç»“æŸ*/
+
+
+/*æ’åä¸‰ç”²*/
+function ShowCompanyThree(tobj, tposition, tcompany1, tlinkurl1, tcompany2, tlinkurl2, tcompany3, tlinkurl3) {
+    var theElement = tobj;
+    var _lc0 = document.getElementById("position" + tposition);
+    var fixWidth = getCompanyThreePosition(_lc0)[0];
+    var _lx = getCompanyThreePosition(theElement)[0];
+    var _ty = getCompanyThreePosition(theElement)[1];
+
+    var _span = document.getElementById("show_box_bw");
+    var _div = document.getElementById("show_box_bw_con");
+    if (_span) {
+        _span.style.visibility = "visible";
+        _div.style.visibility = "visible";
+    }
+    else {
+        _span = document.createElement("span");
+        _div = document.createElement("div");
+        _span.setAttribute("id", "show_box_bw");
+        _div.setAttribute("id", "show_box_bw_con");
+        document.body.appendChild(_span);
+        document.body.appendChild(_div);
+    }
+
+    var dataTag = "";
+    if (tcompany1 != "") {
+        dataTag += "<li><a href='" + tlinkurl1 + "' target='_blank'>" + tcompany1 + "</a></li>";
+    }
+    if (tcompany2 != "") {
+        dataTag += "<li><a href='" + tlinkurl2 + "' target='_blank'>" + tcompany2 + "</a></li>";
+    }
+    if (tcompany3 != "") {
+        dataTag += "<li><a href='" + tlinkurl3 + "' target='_blank'>" + tcompany3 + "</a></li>";
+    }
+
+    _div.innerHTML = "<div class='out_top_bg'><div><ul>" + dataTag + "</ul></div></div>";
+
+    var _url = tobj.href;
+
+    _span.innerHTML = "<a href='" + _url + "'  class='" + tobj.className + "' target='_blank'>" + tobj.innerHTML + "</a>"
+
+    var _spana = _span.getElementsByTagName("a")[0];
+    var _ieffNum = document.all ? 9 : 10;
+
+    var _spanleft = _lx;
+    var _spantop = _ty;
+
+    _span.style.left = _spanleft + "px";
+    _span.style.top = _spantop + "px";
+
+    var _pd = _lx - _ieffNum - fixWidth - 29;
+    _leftDis = _pd + _span.offsetWidth / 2;
+
+    _span.style.fontWeight = "normal";
+    _span.style.marginLeft = "0px";
+
+    if (_leftDis < 50)
+        _div.style.left = _spanleft + "px";
+    else if (50 <= _leftDis && _leftDis < 80)
+        _div.style.left = _spanleft - 30 + "px";
+    else if (80 <= _leftDis && _leftDis < 300)
+        _div.style.left = _spanleft - 80 + "px";
+    else if (300 <= _leftDis && _leftDis < 350)
+        _div.style.left = (_spanleft + _span.offsetWidth - _div.offsetWidth) + 10 + "px";
+    else {
+        _span.style.left = (_spanleft - 13) + "px"
+        _div.style.left = (_spanleft - 13) + _span.offsetWidth - _div.offsetWidth + "px";
+    }
+
+    _div.style.top = _spantop + 19 + "px";
+
+    _span.onmouseover = function () {
+        this.style.visibility = "visible";
+        _div.style.visibility = "visible";
+    }
+    _span.onmouseout = function () {
+        this.style.visibility = "hidden";
+        _div.style.visibility = "hidden";
+    }
+    _div.onmouseover = function () {
+        this.style.visibility = "visible";
+        _span.style.visibility = "visible";
+    }
+    _div.onmouseout = function () {
+        this.style.visibility = "hidden";
+        _span.style.visibility = "hidden";
+    }
+}
+
+function getCompanyThreePosition(theElement) {
+    var positionX = 0;
+    var positionY = 0;
+    while (theElement != null) {
+        positionX += theElement.offsetLeft;
+        positionY += theElement.offsetTop;
+        theElement = theElement.offsetParent;
+    }
+    return [positionX, positionY];
+}
+/**/
