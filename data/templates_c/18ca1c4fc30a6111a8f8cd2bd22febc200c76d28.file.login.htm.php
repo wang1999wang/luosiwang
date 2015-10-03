@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-03 09:35:46
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-03 15:19:44
          compiled from "E:\WWW\luosiwang\app\template\admin\login.htm" */ ?>
-<?php /*%%SmartyHeaderCode:26421560ded884c32b6-57792030%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5875560f81902434c6-27484841%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,20 +11,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '26421560ded884c32b6-57792030',
+  'nocache_hash' => '5875560f81902434c6-27484841',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_560ded886d6734_79308690',
   'variables' => 
   array (
     'config' => 0,
     'pytoken' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_560f81903b66a6_41422848',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560ded886d6734_79308690')) {function content_560ded886d6734_79308690($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php if ($_valid && !is_callable('content_560f81903b66a6_41422848')) {function content_560f81903b66a6_41422848($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <link href="images/admin.css" rel="stylesheet" type="text/css" />

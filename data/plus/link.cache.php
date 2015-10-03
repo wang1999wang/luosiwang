@@ -1,6 +1,6 @@
 <?php 
-$link=array('0'=>array('id'=>'6','link_name'=>'ËÕÖÝÂí¿É²¨ÂÞÐÅÏ¢¿Æ¼¼ÓÐÏÞ¹«Ë¾','link_url'=>'http://www.baidu.com/','img_type'=>'0','pic'=>'','link_type'=>'1','domain'=>'','tem_type'=>'1')
-,'1'=>array('id'=>'5','link_name'=>'ÉÏº£·¨°¢Ä·ÎïÁ÷Éè±¸ÓÐÏÞ¹«Ë¾','link_url'=>'http://www.famelift.com/','img_type'=>'0','pic'=>'','link_type'=>'1','domain'=>'','tem_type'=>'1')
+$link=array('0'=>array('id'=>'6','link_name'=>'è‹å·žé©¬å¯æ³¢ç½—ä¿¡æ¯ç§‘æŠ€æœ‰é™å…¬å¸','link_url'=>'http://www.baidu1.com/','img_type'=>'0','pic'=>'','link_type'=>'1','domain'=>'','tem_type'=>'1')
+,'1'=>array('id'=>'5','link_name'=>'ä¸Šæµ·æ³•é˜¿å§†ç‰©æµè®¾å¤‡æœ‰é™å…¬å¸','link_url'=>'http://www.famelift.com/','img_type'=>'0','pic'=>'','link_type'=>'1','domain'=>'','tem_type'=>'1')
 )
 ; 
 ?>

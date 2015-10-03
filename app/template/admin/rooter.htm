@@ -1,0 +1,81 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        {yun:}block name="charset"{/yun}
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        {yun:}/block{/yun}
+
+        {yun:}block name="seo"{/yun}
+        <title>后台管理</title>
+        {yun:}/block{/yun}
+        
+        <script src="{yun:}$config.sy_weburl{/yun}/js/jquery-1.8.0.min.js"></script>
+        <script src="{yun:}$config.sy_weburl{/yun}/js/layer/layer.min.js" language="javascript"></script>
+        <script src="js/admin_public.js" language="javascript"></script>
+        {yun:}block name="javascript"{/yun}
+        <script>
+            $(document).ready(function () {
+                $(".job_name").hover(function () {
+                    var job_name = $(this).attr('v');
+                    if ($.trim(job_name) != '') {
+                        layer.tips(job_name, this, { guide: 1, style: ['background-color:#F26C4F; color:#fff;top:-7px', '#F26C4F'] });
+                    }
+                }, function () {
+                    var job_name = $(this).attr('v');
+                    if ($.trim(job_name) != '') {
+                        layer.closeTips();
+                    }
+                });
+                //弹窗框部分
+                $(".status").click(function () {
+                    var uid = $(this).attr("pid");
+                    var pytoken = $("#pytoken").val();
+                    var status = $(this).attr("status");
+                    $("#status_" + status).attr("checked", true);
+                    $("input[name=uid]").val(uid);
+                    status_div('锁定用户', '350', '220');
+                });
+                $(".user_status").click(function () {
+                    var id = $(this).attr("pid");
+                    var status = $(this).attr("status");
+                    $("#status" + status).attr("checked", true);
+                    var pytoken = $("#pytoken").val();
+                    $("input[name=yesid]").val(id);
+                    $.layer({
+                        type: 1,
+                        title: '友情链接审核',
+                        closeBtn: [0, true],
+                        border: [10, 0.3, '#000', true],
+                        area: ['350px', '160px'],
+                        page: { dom: "#infobox2" }
+                    });
+                });
+            })
+        </script>
+        {yun:}/block{/yun}
+        
+        <link href="images/reset.css" rel="stylesheet" type="text/css" />
+        <link href="images/system.css" rel="stylesheet" type="text/css" />
+        <link href="images/table_form.css" rel="stylesheet" type="text/css" />
+        {yun:}block name="css"{/yun}
+        {yun:}/block{/yun}
+
+    </head>
+
+    <body class="body_ifm">
+
+        {yun:}block name="content"{/yun}
+
+        {yun:}/block{/yun}
+
+        {yun:}block name="copyright"{/yun}
+
+        {yun:}/block{/yun}
+
+        {yun:}block name="link"{/yun}
+
+        {yun:}/block{/yun}
+
+        {yun:}include file="admin/admin_search.htm"{/yun}
+    </body>
+</html>

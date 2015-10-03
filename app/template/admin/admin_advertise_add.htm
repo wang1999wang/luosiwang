@@ -1,25 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<link href="images/reset.css" rel="stylesheet" type="text/css" />
-<link href="images/system.css" rel="stylesheet" type="text/css" />  
-<link href="images/table_form.css" rel="stylesheet" type="text/css" />
-<script src="{yun:}$config.sy_weburl{/yun}/js/jquery-1.8.0.min.js"></script>
-<script src="{yun:}$config.sy_weburl{/yun}/js/layer/layer.min.js" language="javascript"></script>
-<script src="js/admin_public.js" language="javascript"></script>
+{yun:}extends file="$adminstyle/rooter.htm"{/yun}
+
+{yun:}block name="javascript"{/yun}
 <script>
 function checkform(){
 	if($("#ad_name").val()==""){ 
-		parent.layer.msg('¹ã¸æÃû³Æ²»ÄÜÎª¿Õ£¡', 2,2);
+		parent.layer.msg('å¹¿å‘Šåç§°ä¸èƒ½ä¸ºç©ºï¼', 2,2);
 		return false;
 	}
 	if($("#ad_start").val()==""){ 
-		parent.layer.msg('ÇëÌîĞ´¿ªÊ¼Ê±¼ä£¡', 2,2);
+		parent.layer.msg('è¯·å¡«å†™å¼€å§‹æ—¶é—´ï¼', 2,2);
 		return false;
 	}
 	if($("#ad_end").val()==""){ 
-		parent.layer.msg('ÇëÌîĞ´½áÊøÊ±¼ä£¡', 2,2);
+		parent.layer.msg('è¯·å¡«å†™ç»“æŸæ—¶é—´ï¼', 2,2);
 		return false;
 	}
 	if($("#ad_start").val()!="" && $("#ad_end").val()!="" ){
@@ -30,17 +23,17 @@ function checkform(){
 		 date1 = new Date(time1arr[0],time1arr[1],time1arr[2]);
 		 date2 = new Date(time2arr[0],time2arr[1],time2arr[2]);
 		 if(date1>date2){ 
-			 parent.layer.msg('½áÊøÊ±¼ä²»µÃµÍÓÚ¿ªÊ¼Ê±¼ä£¬ÇëÖØĞÂÉè¶¨£¡', 2,2);
+			 parent.layer.msg('ç»“æŸæ—¶é—´ä¸å¾—ä½äºå¼€å§‹æ—¶é—´ï¼Œè¯·é‡æ–°è®¾å®šï¼', 2,2);
 			 return false;
 		}
 	} 
 	var item = $('input[name="ad_type"]:checked').val();
 	
 	if(!item){
-		 parent.layer.msg('ÇëÑ¡ÔñÒ»ÖÖ¹ã¸æÀàĞÍ£¡', 2,2); return false;
+		 parent.layer.msg('è¯·é€‰æ‹©ä¸€ç§å¹¿å‘Šç±»å‹ï¼', 2,2); return false;
 	}else{ 
 		if(item=="word"&&$("input[name=word_info]").val()==""){
-			parent.layer.msg('ÇëÌîĞ´ÎÄ×ÖĞÅÏ¢£¡', 2,2); return false;
+			parent.layer.msg('è¯·å¡«å†™æ–‡å­—ä¿¡æ¯ï¼', 2,2); return false;
 		}
 
 	}
@@ -61,33 +54,36 @@ function replace_type(type){
 	}
 }
 function adpic_url(){
-	$("#typeid").html("<input  type='file' id='pic_url' name='ad_url' value='' class=\"input-text\"><label><input id='upload' type='radio' name='upload'  onclick='adpic_src();'>Ô¶³ÌµØÖ·</label><label><input id='upload_pic' type='radio' checked name='upload' onclick='adpic_url();'>±¾µØÉÏ´«</label>");
+	$("#typeid").html("<input  type='file' id='pic_url' name='ad_url' value='' class=\"input-text\"><label><input id='upload' type='radio' name='upload'  onclick='adpic_src();'>è¿œç¨‹åœ°å€</label><label><input id='upload_pic' type='radio' checked name='upload' onclick='adpic_url();'>æœ¬åœ°ä¸Šä¼ </label>");
 }
 function adpic_src(){
-	$("#typeid").html("<input class='input-text'  type='text' id='pic_url' name='ad_url' value='{yun:}$ad_info.pic_url{/yun}'><label><input id='upload' checked type='radio' name='upload'>Ô¶³ÌµØÖ·</label><label><input id='upload_pic' type='radio' name='upload' onclick='adpic_url();'>±¾µØÉÏ´«</label>");
+	$("#typeid").html("<input class='input-text'  type='text' id='pic_url' name='ad_url' value='{yun:}$ad_info.pic_url{/yun}'><label><input id='upload' checked type='radio' name='upload'>è¿œç¨‹åœ°å€</label><label><input id='upload_pic' type='radio' name='upload' onclick='adpic_url();'>æœ¬åœ°ä¸Šä¼ </label>");
 } 
 function adflash_url(){
-	$("#flashid").html("<input  type='file'  name='ad_url' value='' class=\"input-text\"><label><input id='flash'  type='radio' name='flash'  onclick='adflash_src();' >Ô¶³ÌµØÖ·</label><label><input id='upload_flash' type='radio' checked name='upload_flash' onclick='adflash_url();'>±¾µØÉÏ´«</label>");
+	$("#flashid").html("<input  type='file'  name='ad_url' value='' class=\"input-text\"><label><input id='flash'  type='radio' name='flash'  onclick='adflash_src();' >è¿œç¨‹åœ°å€</label><label><input id='upload_flash' type='radio' checked name='upload_flash' onclick='adflash_url();'>æœ¬åœ°ä¸Šä¼ </label>");
 }
 function adflash_src(){
-	$("#flashid").html("<input class='input-text'  type='text'  name='ad_url' value='{yun:}$ad_info.flash_url{/yun}'><label><input id='upload' checked type='radio' name='upload' >Ô¶³ÌµØÖ·</label><label><input id='upload_pic' type='radio' name='upload' onclick='adflash_url();'>±¾µØÉÏ´«</label>");
+	$("#flashid").html("<input class='input-text'  type='text'  name='ad_url' value='{yun:}$ad_info.flash_url{/yun}'><label><input id='upload' checked type='radio' name='upload' >è¿œç¨‹åœ°å€</label><label><input id='upload_pic' type='radio' name='upload' onclick='adflash_url();'>æœ¬åœ°ä¸Šä¼ </label>");
 }
 </script>
+{yun:}/block{/yun}
+
+{yun:}block name="css"{/yun}
 <style>
 * {margin: 0 ;padding: 0;}
 body,div{ margin: 0 ;padding: 0;}
 </style>
-<title>ºóÌ¨¹ÜÀí</title>
-</head>
-<body class="body_ifm">
+{yun:}/block{/yun}
+
+{yun:}block name="content"{/yun}
 <div class="infoboxp">
 <div class="infoboxp_top_bg"></div>
 <div class="admin_Prompt">
 <div class="admin_Prompt_span">
-    ×¢ÒâÊÂÏî£ºÌí¼Ó¹ã¸æÊ±£¬ÇëÕıÈ·Ñ¡Ôñ·ÖÀàºÍÀàĞÍ¡£
+    æ³¨æ„äº‹é¡¹ï¼šæ·»åŠ å¹¿å‘Šæ—¶ï¼Œè¯·æ­£ç¡®é€‰æ‹©åˆ†ç±»å’Œç±»å‹ã€‚
 </div><div class="admin_Prompt_close"></div></div>
   <div class="infoboxp_top">
-      <span class="admin_title_span">{yun:}if is_array($ad_info){/yun}¸üĞÂ¹ã¸æ{yun:}else{/yun}Ìí¼Ó¹ã¸æ{yun:}/if{/yun}</span>
+      <span class="admin_title_span">{yun:}if is_array($ad_info){/yun}æ›´æ–°å¹¿å‘Š{yun:}else{/yun}æ·»åŠ å¹¿å‘Š{yun:}/if{/yun}</span>
       </div>
    <div class="clear"></div>
   <div class="admin_table_border">
@@ -95,18 +91,18 @@ body,div{ margin: 0 ;padding: 0;}
   <form name="myform" target="supportiframe" action="{yun:}if is_array($ad_info){/yun}index.php?m=advertise&c=modify_save{yun:}else{/yun}index.php?m=advertise&c=ad_saveadd{yun:}/if{/yun}" method="post" encType="multipart/form-data" onsubmit="return checkform();">
     <table width="100%" class="table_form" style="background:#fff">
       <tr >
-        <th width="200">¹ã¸æÃû³Æ£º</th>
+        <th width="200">å¹¿å‘Šåç§°ï¼š</th>
         <td>
         <input class="input-text" id="ad_name" value="{yun:}$ad_info.ad_name{/yun}" name="ad_name" size="30">
-        <label><input type="checkbox" name="target" value="2" {yun:}if $ad_info.target!=1{/yun}checked{yun:}/if{/yun}>ĞÂ´°¿Ú</label>
+        <label><input type="checkbox" name="target" value="2" {yun:}if $ad_info.target!=1{/yun}checked{yun:}/if{/yun}>æ–°çª—å£</label>
         </td>
       </tr>
      <tr class="admin_table_trbg">
-        <th>Ê¹ÓÃ·¶Î§£º</th>
-        <td><input type="button" value="{yun:}if $domainname!=""{/yun}{yun:}$domainname{/yun}{yun:}else{/yun}È«Õ¾{yun:}/if{/yun}" class="city_news_but" onClick="domain_show();"></td>
+        <th>ä½¿ç”¨èŒƒå›´ï¼š</th>
+        <td><input type="button" value="{yun:}if $domainname!=""{/yun}{yun:}$domainname{/yun}{yun:}else{/yun}å…¨ç«™{yun:}/if{/yun}" class="city_news_but" onClick="domain_show();"></td>
       </tr> 
      	<tr>
-        <th width="200">¹ã¸æËùÊô·ÖÀà£º</th>
+        <th width="200">å¹¿å‘Šæ‰€å±åˆ†ç±»ï¼š</th>
         <td><select name="class_id">
         	{yun:}foreach from=$class item=list{/yun}
         	<option value="{yun:}$list.id{/yun}" {yun:}if $list.id==$ad_info.class_id{/yun}selected{yun:}/if{/yun} >{yun:}$list.class_name{/yun}</option>
@@ -114,18 +110,18 @@ body,div{ margin: 0 ;padding: 0;}
         </select></td>
       </tr> 
 	  <tr class="admin_table_trbg">
-        <th width="200">¹ã¸æÊÇ·ñÆôÓÃ£º</th>
+        <th width="200">å¹¿å‘Šæ˜¯å¦å¯ç”¨ï¼š</th>
         <td>
-		<input name='is_open' value='1' type='radio' checked>ÆôÓÃ
-		<input name='is_open' value='0' {yun:}if '0'==$ad_info.is_open{/yun}checked{yun:}/if{/yun} type='radio'>¹Ø±Õ
+		<input name='is_open' value='1' type='radio' checked>å¯ç”¨
+		<input name='is_open' value='0' {yun:}if '0'==$ad_info.is_open{/yun}checked{yun:}/if{/yun} type='radio'>å…³é—­
 		</td>
       </tr>
 	  <tr>
-        <th width="200">ÅÅĞò£º</th>
-        <td><input id="sort" class="input-text" value="{yun:}$ad_info.sort{/yun}" name="sort" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')">Ô½´óÔ½ÔÚÇ°</td>
+        <th width="200">æ’åºï¼š</th>
+        <td><input id="sort" class="input-text" value="{yun:}$ad_info.sort{/yun}" name="sort" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')">è¶Šå¤§è¶Šåœ¨å‰</td>
       </tr>
       <tr class="admin_table_trbg">
-        <th width="200">¿ªÊ¼Ê±¼ä£º</th>
+        <th width="200">å¼€å§‹æ—¶é—´ï¼š</th>
         <td>
         <link href="{yun:}$config.sy_weburl{/yun}/js/time/jscal2.css" type="text/css" rel="stylesheet">
 		<script src="{yun:}$config.sy_weburl{/yun}/js/time/calendar.js" type="text/javascript"></script>
@@ -141,7 +137,7 @@ body,div{ margin: 0 ;padding: 0;}
         onSelect : function() {this.hide();}
         });
         </script>
-        &nbsp;&nbsp;½áÊøÊ±¼ä£º
+        &nbsp;&nbsp;ç»“æŸæ—¶é—´ï¼š
         <input id="ad_end" class="input-text" type="text" readonly size="20" value="{yun:}$ad_info.time_end{/yun}" name="time_end">
         <script type="text/javascript">
         Calendar.setup({
@@ -156,26 +152,26 @@ body,div{ margin: 0 ;padding: 0;}
           </td>
       </tr>
 		<tr>
-			<th width="200">±¸×¢£º</th>
+			<th width="200">å¤‡æ³¨ï¼š</th>
 			<td><textarea class="text" cols="50" rows="3" name="remark">{yun:}$ad_info.remark{/yun}</textarea></td>
 		</tr>
      	<tr>
-        <th width="200">¹ã¸æÀàĞÍ£º</th>
-        <td colspan="2"><label><input type="radio" id="word_ad" name="ad_type" value="word" onClick="replace_type('word');" {yun:}if $ad_info.ad_type=="word"{/yun}checked{yun:}/if{/yun}>ÎÄ×Ö¹ã¸æ</label>
-          <label><input  value="pic" type="radio" id="pic_ad" name="ad_type" onClick="replace_type('pic');" {yun:}if $ad_info.ad_type=="pic"{/yun}checked{yun:}/if{/yun}>Í¼Æ¬¹ã¸æ</label>
-         <label> <input type="radio" value="flash" id="flash_ad" name="ad_type" onClick="replace_type('flash');"{yun:}if $ad_info.ad_type=="flash"{/yun}checked{yun:}/if{/yun}>FLASH¹ã¸æ</label>
+        <th width="200">å¹¿å‘Šç±»å‹ï¼š</th>
+        <td colspan="2"><label><input type="radio" id="word_ad" name="ad_type" value="word" onClick="replace_type('word');" {yun:}if $ad_info.ad_type=="word"{/yun}checked{yun:}/if{/yun}>æ–‡å­—å¹¿å‘Š</label>
+          <label><input  value="pic" type="radio" id="pic_ad" name="ad_type" onClick="replace_type('pic');" {yun:}if $ad_info.ad_type=="pic"{/yun}checked{yun:}/if{/yun}>å›¾ç‰‡å¹¿å‘Š</label>
+         <label> <input type="radio" value="flash" id="flash_ad" name="ad_type" onClick="replace_type('flash');"{yun:}if $ad_info.ad_type=="flash"{/yun}checked{yun:}/if{/yun}>FLASHå¹¿å‘Š</label>
           </td>
       </tr>
       <tr> 
       <td class="admin_table_trbg" colspan="2" style="padding:0; background:none">
       <table width="100%" id="word" style="display:none">
     	<tr class="admin_table_trbg">
-           <th width="200" >ÎÄ×ÖĞÅÏ¢£º</th>
+           <th width="200" >æ–‡å­—ä¿¡æ¯ï¼š</th>
         <td ><input class='input-text' id="word_info"    name='word_info' value='{yun:}$ad_info.word_info{/yun}'></td>
       </tr>
       <tr>
-        <th>ÎÄ×ÖÁ´½Ó£º</th>
-        <td><input class='input-text' id="word_url"    name='word_url' value='{yun:}$ad_info.word_url{/yun}'>Íâ²¿Á´½ÓÇë¼ÓÉÏ¡°http://¡±</td>
+        <th>æ–‡å­—é“¾æ¥ï¼š</th>
+        <td><input class='input-text' id="word_url"    name='word_url' value='{yun:}$ad_info.word_url{/yun}'>å¤–éƒ¨é“¾æ¥è¯·åŠ ä¸Šâ€œhttp://â€</td>
       </tr>
       </table>
 	   </td>
@@ -184,33 +180,33 @@ body,div{ margin: 0 ;padding: 0;}
       <td colspan="2">
       <table id="pic" style="display:none"width="100%">
       <tr class="admin_table_trbg">
-        <th width="200" >Í¼Æ¬µØÖ·£º</th>
+        <th width="200" >å›¾ç‰‡åœ°å€ï¼š</th>
         <td  id='typeid'><input class='input-text' type='text' id='pic_url' name='pic_url' value='{yun:}$ad_info.pic_url{/yun}'  >
-          <label><input id='upload' checked type='radio' name='upload'>Ô¶³ÌµØÖ·</label>
-          <label><input id='upload_pic' type='radio' name='upload' onclick='adpic_url();'>±¾µØÉÏ´«</label>
+          <label><input id='upload' checked type='radio' name='upload'>è¿œç¨‹åœ°å€</label>
+          <label><input id='upload_pic' type='radio' name='upload' onclick='adpic_url();'>æœ¬åœ°ä¸Šä¼ </label>
           </td>
       </tr>
       <tr>
-        <th>Í¼Æ¬Á´½Ó£º</th>
-        <td><input class='input-text' id="pic_src" name='pic_src' value='{yun:}$ad_info.pic_src{/yun}'  >Íâ²¿Á´½ÓÇë¼ÓÉÏ¡°http://¡±</td>
+        <th>å›¾ç‰‡é“¾æ¥ï¼š</th>
+        <td><input class='input-text' id="pic_src" name='pic_src' value='{yun:}$ad_info.pic_src{/yun}'  >å¤–éƒ¨é“¾æ¥è¯·åŠ ä¸Šâ€œhttp://â€</td>
       </tr>
       <tr class="admin_table_trbg">
-        <th>Í¼Æ¬¿í¶È£º</th>
-        <td><input class='input-text' id="pic_width" size='8'onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" name='pic_width' value='{yun:}$ad_info.pic_width{/yun}'>px(ÏñËØ) &nbsp;&nbsp;Í¼Æ¬¸ß¶È£º<input class='input-text' id="pic_height" size='8' onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" name='pic_height' value='{yun:}$ad_info.pic_height{/yun}'>px(ÏñËØ)</td>
+        <th>å›¾ç‰‡å®½åº¦ï¼š</th>
+        <td><input class='input-text' id="pic_width" size='8'onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" name='pic_width' value='{yun:}$ad_info.pic_width{/yun}'>px(åƒç´ ) &nbsp;&nbsp;å›¾ç‰‡é«˜åº¦ï¼š<input class='input-text' id="pic_height" size='8' onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" name='pic_height' value='{yun:}$ad_info.pic_height{/yun}'>px(åƒç´ )</td>
       </tr>
        </table>
 	   <table id="flash" style="display:none" width="100%">
 		   <tr class="admin_table_trbg">
-			<th width="200">FLASHµØÖ·£º</th>
+			<th width="200">FLASHåœ°å€ï¼š</th>
 			<td id='flashid'><input class='input-text' id="flash_url"  name='flash_url' value='{yun:}$ad_info.flash_url{/yun}'   >
-			  <label><input type='radio' id='flash' checked name='flash'>Ô¶³ÌµØÖ·</label>
-			 <label> <input type='radio' id='upload_flash' name='upload_flash'  onclick='adflash_url();'>±¾µØÉÏ´«</label>
+			  <label><input type='radio' id='flash' checked name='flash'>è¿œç¨‹åœ°å€</label>
+			 <label> <input type='radio' id='upload_flash' name='upload_flash'  onclick='adflash_url();'>æœ¬åœ°ä¸Šä¼ </label>
              </td>
 		  </tr>
 		  <tr>
-			  <th >FLASH¿í¶È£º</th>
+			  <th >FLASHå®½åº¦ï¼š</th>
 			<td><input class='input-text' id="flash_width" name='flash_width' value='{yun:}$ad_info.flash_width{/yun}'>
-            FLASH¸ß¶È£º<input class='input-text' id="flash_height" name='flash_height' value='{yun:}$ad_info.flash_height{/yun}'></td>
+            FLASHé«˜åº¦ï¼š<input class='input-text' id="flash_height" name='flash_height' value='{yun:}$ad_info.flash_height{/yun}'></td>
       </tr>
       </table>
       </td>
@@ -222,8 +218,8 @@ body,div{ margin: 0 ;padding: 0;}
       <tr class="admin_table_trbg">
         <td align="center" colspan="2">
         <input type="hidden" name="pytoken" value="{yun:}$pytoken{/yun}">
-        <input class="admin_submit4" type="submit" name="submit" value="&nbsp;Ìá  ½»&nbsp;" />
-        <input class="admin_submit4" type="reset" name="reset" value="&nbsp;ÖØ ÖÃ &nbsp;" /></td>
+        <input class="admin_submit4" type="submit" name="submit" value="&nbsp;æ  äº¤&nbsp;" />
+        <input class="admin_submit4" type="reset" name="reset" value="&nbsp;é‡ ç½® &nbsp;" /></td>
       </tr>
     </table>
   </form>
@@ -234,11 +230,10 @@ replace_type("{yun:}$ad_info.ad_type{/yun}");
 </script>
 <div id="domainlist" style="display:none;">
 <div class="fz_city_news_cont" style="padding:10px;">
-<span class="fz_city_news"><label class="fz_label"><input type="radio" name="did" onClick="check_domain('È«Õ¾')" value="0" checked class="fz_city_news_check">È«Õ¾</label></span>
+<span class="fz_city_news"><label class="fz_label"><input type="radio" name="did" onClick="check_domain('å…¨ç«™')" value="0" checked class="fz_city_news_check">å…¨ç«™</label></span>
 {yun:}foreach from=$domain item=list{/yun}
 <span class="fz_city_news"><label class="fz_label"><input type="radio" name="did" onClick="check_domain('{yun:}$list.title{/yun}')" {yun:}if $list.id==$ad_info.did{/yun}checked{yun:}/if{/yun} value="{yun:}$list.id{/yun}" class="fz_city_news_check">{yun:}$list.title{/yun}</label></span>
 {yun:}/foreach{/yun}
 </div>
 </div>
-</body>
-</html>
+{yun:}/block{/yun}

@@ -309,10 +309,10 @@ body fieldset.blue legend {padding: 3px 8px;font-weight: 700;color: #347add;back
 .admin_cz_bj {color:#0A74C0;}
 .admin_cz_img {color:#0A74C0;}
 .admin_cz_gx{color:#0A74C0;}
-.admin_submit2 {width: 45px;height: 30px;background:#6688cb;color: #fff;line-height: 22px;border: none;cursor: pointer;}
-.admin_submit4 {width:76px;height:30px;border: none;cursor: pointer; background:#6688cb;color:#fff;}
-.admin_submit6 {width: 82px;height: 30px;background:#6688cb;color: #fff;line-height: 22px;border: none;cursor: pointer;}
-.admin_submit8 {width:106px;height:30px;background:#6688cb;color:#fff;line-height:22px;border:none;cursor:pointer;}
+.admin_submit2 {width: 45px;height: 30px;background-color:#6688cb;color: #fff;line-height: 22px;border: none;cursor: pointer;}
+.admin_submit4 {width:76px;height:30px;border: none;cursor: pointer; background-color:#6688cb;color:#fff;}
+.admin_submit6 {width: 82px;height: 30px;background-color:#6688cb;color: #fff;line-height: 22px;border: none;cursor: pointer;}
+.admin_submit8 {width:106px;height:30px;background-color:#6688cb;color:#fff;line-height:22px;border:none;cursor:pointer;}
 .admin_hy_tj {border-bottom: 1px solid #cbc7c2;}
 .company_job_fenglei {width: 100%}
 .company_job_fenglei .company_job_fl_h1 {background: #dde8f8 url(../images/fl.png) no-repeat right;padding-bottom: 10px;border: 1px dashed #0099FF;margin-bottom: 10px;}

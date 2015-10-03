@@ -1,141 +1,157 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=GBK">
-<link href="images/reset.css" rel="stylesheet" type="text/css" />
-<link href="images/system.css" rel="stylesheet" type="text/css" />
-<link href="images/table_form.css" rel="stylesheet" type="text/css" />
-<script src="{yun:}$config.sy_weburl{/yun}/js/jquery-1.8.0.min.js"></script>
-<script src="{yun:}$config.sy_weburl{/yun}/js/layer/layer.min.js" language="javascript"></script>
-<script src="js/admin_public.js" language="javascript"></script>
-<script>
-$(document).ready(function(){
-	$(".job_name").hover(function(){
-		var job_name=$(this).attr('v'); 
-		if($.trim(job_name)!=''){
-			layer.tips(job_name, this, {guide: 1, style: ['background-color:#F26C4F; color:#fff;top:-7px', '#F26C4F']}); 
-		} 
-	},function(){
-		var job_name=$(this).attr('v'); 
-		if($.trim(job_name)!=''){
-			layer.closeTips();
-		} 
-	});
-	//µ¯´°¿ò²¿·Ö
-		$(".status").click(function(){
-  		var uid=$(this).attr("pid");
-		var pytoken=$("#pytoken").val();
-		var status=$(this).attr("status");
-		$("#status_"+status).attr("checked",true);
-		$("input[name=uid]").val(uid);
-		status_div('Ëø¶¨ÓÃ»§','350','220');
-	});
-	$(".user_status").click(function(){
-		var id=$(this).attr("pid");
-		var status=$(this).attr("status");
-		$("#status"+status).attr("checked",true);
-		var pytoken=$("#pytoken").val();
-		$("input[name=yesid]").val(id);
-		$.layer({
-			type : 1,
-			title :'ÓÑÇéÁ´½ÓÉóºË', 
-			closeBtn : [0 , true],
-			border : [10 , 0.3 , '#000', true],
-			area : ['350px','160px'],
-			page : {dom :"#infobox2"}
-		});
-	});
-	
-	
-	 
-})
-</script>
-<title>ºóÌ¨¹ÜÀí</title>
-</head>
-<body class="body_ifm">
-<div id="infobox2"  style="display:none; width: 350px; "> 
-      <form action="index.php?m=link&c=status" target="supportiframe" method="post" id="formstatus">
-	   <input name="yesid" type="hidden">
-      <div class="admin_Operating_sh" style="margin:15px 10px 10px 10px;">
-		<div class="admin_Operating_sh_h1" style="padding:5px;">ÉóºË²Ù×÷£º
-        <label for="status0"><input type="radio" name="status" value="0" id="status0" >Î´ÉóºË</label>
-        <label for="status1"><input type="radio" name="status" value="1" id="status1" >ÒÑÉóºË</label>
-		</div>
-		<div class="admin_Operating_sub" style="margin:15px 0 0 0;"> <input type="submit"  value='È·ÈÏ' class="submit_btn ">
-         <input type="button"  onClick="layer.closeAll();" class="cancel_btn" style="margin:5px 0 0 8px;" value='È¡Ïû'></div>
-		</div>
-		<input type="hidden" name="pytoken" value="{yun:}$pytoken{/yun}">
-      </form> 
-</div>
-<div class="infoboxp">
-<div class="infoboxp_top_bg"></div>
-<div class="admin_Filter"> <span class="complay_top_span fl">ÓÑÇéÁ´½ÓÁĞ±í</span>
-  <form action="index.php" name="myform" method="get">
-    <input name="m" value="link" type="hidden"/>
-    <input name="status" value="{yun:}$smarty.get.status{/yun}" type="hidden"/>
-    <span class="admin_Filter_span"> Á¬½Ó±êÌâ£º</span> 
-    <input class="admin_Filter_search"  type="text" name="keyword"  size="25" style="float:left">
-    <input class="admin_Filter_bth"  type="submit" name="news_search" value="¼ìË÷" style="float:left"/>
-    <span class='admin_search_div'>
-    <div class="admin_adv_search">
-      <div class="admin_adv_search_bth">¸ß¼¶ËÑË÷</div>
-    </div>
-    </span> <a href="index.php?m=link&c=add" class="admin_infoboxp_tj">Ìí¼ÓÁ´½Ó</a>
-  </form>
-</div>
-{yun:}include file="admin/admin_search.htm"{/yun}
-<div class="table-list">
-  <div class="admin_table_border">
-    <iframe id="supportiframe"  name="supportiframe" onload="returnmessage('supportiframe');" style="display:none"></iframe>
-    <form action="index.php?m=link&c=del" name="myform" method="post" id='myform' target="supportiframe">
-      <input type="hidden" name="pytoken" id='pytoken' value="{yun:}$pytoken{/yun}">
-      <table width="100%">
-        <thead>
-          <tr class="admin_table_top">
-            <th><label for="chkall">
-              <input type="checkbox" id='chkAll' onclick='CheckAll(this.form)' />
-              </label></th>
-            <th> {yun:}if $smarty.get.t=="id" && $smarty.get.order=="asc"{/yun} <a href="{yun:}searchurl order=desc t=id m=link untype='order,t'{/yun}">±àºÅ<img src="images/sanj.jpg"/></a> {yun:}else{/yun} <a href="{yun:}searchurl order=asc t=id m=link untype='order,t'{/yun}">±àºÅ<img src="images/sanj2.jpg"/></a> {yun:}/if{/yun} </th>
-            <th align="left">Á´½Ó±êÌâ</th>
-            <th align="left">Á´½ÓµØÖ·</th>
-            <th align="left">Ê¹ÓÃ·¶Î§</th>
-            <th> {yun:}if $smarty.get.t=="link_time" && $smarty.get.order=="asc"{/yun} <a href="{yun:}searchurl order=desc t=link_time m=link untype='order,t'{/yun}">·¢²¼Ê±¼ä<img src="images/sanj.jpg"/></a> {yun:}else{/yun} <a href="{yun:}searchurl order=asc t=link_time m=link untype='order,t'{/yun}">·¢²¼Ê±¼ä<img src="images/sanj2.jpg"/></a> {yun:}/if{/yun} </th>
-            <th>ÀàĞÍ</th>
-            <th> {yun:}if $smarty.get.t=="link_sorting" && $smarty.get.order=="asc"{/yun} <a href="{yun:}searchurl order=desc t=link_sorting m=link untype='order,t'{/yun}">ÅÅĞò<img src="images/sanj.jpg"/></a> {yun:}else{/yun} <a href="{yun:}searchurl order=asc t=link_sorting m=link untype='order,t'{/yun}">ÅÅĞò<img src="images/sanj2.jpg"/></a> {yun:}/if{/yun} </th>
-            <th>×´Ì¬</th>
-            <th class="admin_table_th_bg" width="110">²Ù×÷</th>
-          </tr>
-        </thead>
-        <tbody>
-        
-        {yun:}foreach item=v key=key from=$linkrows{/yun}
-        <tr align="center"{yun:}if ($key+1)%2=='0'{/yun}class="admin_com_td_bg"{yun:}/if{/yun} id="list{yun:}$v.id{/yun}">
-          <td><input type="checkbox" value="{yun:}$v.id{/yun}" name='del[]' onclick='unselectall()' rel="del_chk" /></td>
-          <td><span>{yun:}$v.id{/yun}</span></td>
-          <td class="ud" align="left">{yun:}$v.link_name{/yun}</td>
-          <td class="od" align="left"><a href="{yun:}$v.link_url{/yun}" target="_blank">{yun:}$v.link_url{/yun}</a></td>
-          <td class="ud" align="left">{yun:}$v.d_title{/yun}</td>
-          <td>{yun:}$v.link_time|date_format:"%Y-%m-%d"{/yun}</td>
-          <td> {yun:}if $v.link_type eq 1{/yun}ÎÄ×ÖÁ´½Ó{yun:}else{/yun}Í¼Æ¬Á´½Ó{yun:}/if{/yun} </td>
-          <td>{yun:}$v.link_sorting{/yun}</td>
-          <td> {yun:}if $v.link_state neq 1{/yun}<span class="admin_com_noAudited">Î´ÉóºË</span>{yun:}else{/yun}<span class="admin_com_Audited">ÒÑÉóºË</span>{yun:}/if{/yun}</td>		  
-          <td width="110"> <a href="javascript:void(0);" class="user_status admin_cz_sc"  pid="{yun:}$v.id{/yun}" status="{yun:}$v.link_state{/yun}">ÉóºË</a>
-		  | <a href="index.php?m=link&c=add&id={yun:}$v.id{/yun}"class="admin_cz_sc">ĞŞ¸Ä</a> | <a href="javascript:void(0)" onClick="layer_del('È·¶¨ÒªÉ¾³ı£¿', 'index.php?m=link&c=del&id={yun:}$v.id{/yun}');" class="admin_cz_sc">É¾³ı</a> </td>
-        </tr>
-        {yun:}/foreach{/yun}
-        <tr style="background: #f1f1f1;">
-          <td align="center"><input type="checkbox" id='chkAll2' onclick='CheckAll2(this.form)' /></td>
-          <td colspan="2" ><label for="chkAll2">È«Ñ¡</label>
-            &nbsp;
-            <input class="admin_submit4"  type="button" name="delsub" value="É¾³ıËùÑ¡"  onclick="return really('del[]')"/></td>
-          <td colspan="7" class="digg">{yun:}$pagenav{/yun}</td>
-        </tr>
-        </tbody>
-        
-      </table>
+{yun:}extends file="$adminstyle/rooter.htm"{/yun}
+
+        {yun:}block name="javascript"{/yun}
+        <script>
+            $(document).ready(function () {
+                $(".job_name").hover(function () {
+                    var job_name = $(this).attr('v');
+                    if ($.trim(job_name) != '') {
+                        layer.tips(job_name, this, { guide: 1, style: ['background-color:#F26C4F; color:#fff;top:-7px', '#F26C4F'] });
+                    }
+                }, function () {
+                    var job_name = $(this).attr('v');
+                    if ($.trim(job_name) != '') {
+                        layer.closeTips();
+                    }
+                });
+                //å¼¹çª—æ¡†éƒ¨åˆ†
+                $(".status").click(function () {
+                    var uid = $(this).attr("pid");
+                    var pytoken = $("#pytoken").val();
+                    var status = $(this).attr("status");
+                    $("#status_" + status).attr("checked", true);
+                    $("input[name=uid]").val(uid);
+                    status_div('é”å®šç”¨æˆ·', '350', '220');
+                });
+                $(".user_status").click(function () {
+                    var id = $(this).attr("pid");
+                    var status = $(this).attr("status");
+                    $("#status" + status).attr("checked", true);
+                    var pytoken = $("#pytoken").val();
+                    $("input[name=yesid]").val(id);
+                    $.layer({
+                        type: 1,
+                        title: 'å‹æƒ…é“¾æ¥å®¡æ ¸',
+                        closeBtn: [0, true],
+                        border: [10, 0.3, '#000', true],
+                        area: ['350px', '160px'],
+                        page: { dom: "#infobox2" }
+                    });
+                });
+            })
+        </script>
+        {yun:}/block{/yun}
+
+{yun:}block name="content"{/yun}
+<div id="infobox2" style="display:none; width: 350px; ">
+    <form action="index.php?m=link&c=status" target="supportiframe" method="post" id="formstatus">
+        <input name="yesid" type="hidden">
+        <div class="admin_Operating_sh" style="margin:15px 10px 10px 10px;">
+            <div class="admin_Operating_sh_h1" style="padding:5px;">
+                å®¡æ ¸æ“ä½œï¼š
+                <label for="status0"><input type="radio" name="status" value="0" id="status0">æœªå®¡æ ¸</label>
+                <label for="status1"><input type="radio" name="status" value="1" id="status1">å·²å®¡æ ¸</label>
+            </div>
+            <div class="admin_Operating_sub" style="margin:15px 0 0 0;">
+                <input type="submit" value='ç¡®è®¤' class="submit_btn ">
+                <input type="button" onclick="layer.closeAll();" class="cancel_btn" style="margin:5px 0 0 8px;" value='å–æ¶ˆ'>
+            </div>
+        </div>
+        <input type="hidden" name="pytoken" value="{yun:}$pytoken{/yun}">
     </form>
-  </div>
 </div>
 
-</body>
-</html>
+<div id="infobox2" style="display:none; width: 350px; ">
+    <form action="index.php?m=link&c=status" target="supportiframe" method="post" id="formstatus">
+        <input name="yesid" type="hidden">
+        <div class="admin_Operating_sh" style="margin:15px 10px 10px 10px;">
+            <div class="admin_Operating_sh_h1" style="padding:5px;">
+                å®¡æ ¸æ“ä½œï¼š
+                <label for="status0"><input type="radio" name="status" value="0" id="status0">æœªå®¡æ ¸</label>
+                <label for="status1"><input type="radio" name="status" value="1" id="status1">å·²å®¡æ ¸</label>
+            </div>
+            <div class="admin_Operating_sub" style="margin:15px 0 0 0;">
+                <input type="submit" value='ç¡®è®¤' class="submit_btn ">
+                <input type="button" onclick="layer.closeAll();" class="cancel_btn" style="margin:5px 0 0 8px;" value='å–æ¶ˆ'>
+            </div>
+        </div>
+        <input type="hidden" name="pytoken" value="{yun:}$pytoken{/yun}">
+    </form>
+</div>
+<div class="infoboxp">
+    <div class="infoboxp_top_bg"></div>
+    <div class="admin_Filter">
+        <span class="complay_top_span fl">å‹æƒ…é“¾æ¥åˆ—è¡¨</span>
+        <form action="index.php" name="myform" method="get">
+            <input name="m" value="link" type="hidden" />
+            <input name="status" value="{yun:}$smarty.get.status{/yun}" type="hidden" />
+            <span class="admin_Filter_span"> è¿æ¥æ ‡é¢˜ï¼š</span>
+            <input class="admin_Filter_search" type="text" name="keyword" size="25" style="float:left">
+            <input class="admin_Filter_bth" type="submit" name="news_search" value="æ£€ç´¢" style="float:left" />
+            <span class='admin_search_div'>
+                <div class="admin_adv_search">
+                    <div class="admin_adv_search_bth">é«˜çº§æœç´¢</div>
+                </div>
+            </span> <a href="index.php?m=link&c=add" class="admin_infoboxp_tj">æ·»åŠ é“¾æ¥</a>
+        </form>
+    </div>
+    
+    <div class="table-list">
+        <div class="admin_table_border">
+            <iframe id="supportiframe" name="supportiframe" onload="returnmessage('supportiframe');" style="display:none"></iframe>
+            <form action="index.php?m=link&c=del" name="myform" method="post" id='myform' target="supportiframe">
+                <input type="hidden" name="pytoken" id='pytoken' value="{yun:}$pytoken{/yun}">
+                <table width="100%">
+                    <thead>
+                        <tr class="admin_table_top">
+                            <th>
+                                <label for="chkall">
+                                    <input type="checkbox" id='chkAll' onclick='CheckAll(this.form)' />
+                                </label>
+                            </th>
+                            <th> {yun:}if $smarty.get.t=="id" && $smarty.get.order=="asc"{/yun} <a href="{yun:}searchurl order=desc t=id m=link untype='order,t'{/yun}">ç¼–å·<img src="images/sanj.jpg" /></a> {yun:}else{/yun} <a href="{yun:}searchurl order=asc t=id m=link untype='order,t'{/yun}">ç¼–å·<img src="images/sanj2.jpg" /></a> {yun:}/if{/yun} </th>
+                            <th align="left">é“¾æ¥æ ‡é¢˜</th>
+                            <th align="left">é“¾æ¥åœ°å€</th>
+                            <th align="left">ä½¿ç”¨èŒƒå›´</th>
+                            <th> {yun:}if $smarty.get.t=="link_time" && $smarty.get.order=="asc"{/yun} <a href="{yun:}searchurl order=desc t=link_time m=link untype='order,t'{/yun}">å‘å¸ƒæ—¶é—´<img src="images/sanj.jpg" /></a> {yun:}else{/yun} <a href="{yun:}searchurl order=asc t=link_time m=link untype='order,t'{/yun}">å‘å¸ƒæ—¶é—´<img src="images/sanj2.jpg" /></a> {yun:}/if{/yun} </th>
+                            <th>ç±»å‹</th>
+                            <th> {yun:}if $smarty.get.t=="link_sorting" && $smarty.get.order=="asc"{/yun} <a href="{yun:}searchurl order=desc t=link_sorting m=link untype='order,t'{/yun}">æ’åº<img src="images/sanj.jpg" /></a> {yun:}else{/yun} <a href="{yun:}searchurl order=asc t=link_sorting m=link untype='order,t'{/yun}">æ’åº<img src="images/sanj2.jpg" /></a> {yun:}/if{/yun} </th>
+                            <th>çŠ¶æ€</th>
+                            <th class="admin_table_th_bg" width="110">æ“ä½œ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {yun:}foreach item=v key=key from=$linkrows{/yun}
+                        <tr align="center" {yun:}if ($key+1)%2=='0'{/yun}class="admin_com_td_bg"{yun:}/if{/yun} id="list{yun:}$v.id{/yun}">
+                    <td><input type="checkbox" value="{yun:}$v.id{/yun}" name='del[]' onclick='unselectall()' rel="del_chk" /></td>
+                    <td><span>{yun:}$v.id{/yun}</span></td>
+                    <td class="ud" align="left">{yun:}$v.link_name{/yun}</td>
+                    <td class="od" align="left"><a href="{yun:}$v.link_url{/yun}" target="_blank">{yun:}$v.link_url{/yun}</a></td>
+                    <td class="ud" align="left">{yun:}$v.d_title{/yun}</td>
+                    <td>{yun:}$v.link_time|date_format:"%Y-%m-%d"{/yun}</td>
+                    <td> {yun:}if $v.link_type eq 1{/yun}æ–‡å­—é“¾æ¥{yun:}else{/yun}å›¾ç‰‡é“¾æ¥{yun:}/if{/yun} </td>
+                    <td>{yun:}$v.link_sorting{/yun}</td>
+                    <td> {yun:}if $v.link_state neq 1{/yun}<span class="admin_com_noAudited">æœªå®¡æ ¸</span>{yun:}else{/yun}<span class="admin_com_Audited">å·²å®¡æ ¸</span>{yun:}/if{/yun}</td>
+                    <td width="110">
+                        <a href="javascript:void(0);" class="user_status admin_cz_sc" pid="{yun:}$v.id{/yun}" status="{yun:}$v.link_state{/yun}">å®¡æ ¸</a>
+                        | <a href="index.php?m=link&c=add&id={yun:}$v.id{/yun}" class="admin_cz_sc">ä¿®æ”¹</a> | <a href="javascript:void(0)" onclick="layer_del('ç¡®å®šè¦åˆ é™¤ï¼Ÿ', 'index.php?m=link&c=del&id={yun:}$v.id{/yun}');" class="admin_cz_sc">åˆ é™¤</a>
+                    </td>
+                    </tr>
+                    {yun:}/foreach{/yun}
+                    <tr style="background: #f1f1f1;">
+                        <td align="center"><input type="checkbox" id='chkAll2' onclick='CheckAll2(this.form)' /></td>
+                        <td colspan="2">
+                            <label for="chkAll2">å…¨é€‰</label>
+                            &nbsp;
+                            <input class="admin_submit4" type="button" name="delsub" value="åˆ é™¤æ‰€é€‰" onclick="return really('del[]')" />
+                        </td>
+                        <td colspan="7" class="digg">{yun:}$pagenav{/yun}</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </form>
+        </div>
+    </div>
+    {yun:}/block{/yun}

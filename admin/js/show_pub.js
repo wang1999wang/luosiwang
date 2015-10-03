@@ -3,7 +3,7 @@ function showdiv2(uid){
 		type: 2, 
 		shadeClose: true,
 		maxmin: false,
-		title: 'ÃûÆóÕĞÆ¸',  
+		title: 'åä¼æ‹›è˜',  
 		border : [10 , 0.3 , '#000', true],
 		offset: [($(window).height() - 500)/2 + 'px', ''],
 		area: ['470px','500px'], 
@@ -15,7 +15,7 @@ function showdiv3(id){
 		type: 2,
 		maxmin: false,
 		shadeClose: true,
-		title: 'ÃûÆóÕĞÆ¸',  
+		title: 'åä¼æ‹›è˜',  
 		offset: [($(window).height() - 500)/2 + 'px', ''],
 		area: ['470px','500px'],
 		iframe: {src: 'index.php?m=admin_company&c=hotjobinfo&id='+id}
@@ -26,7 +26,7 @@ function showdiv4(div,content,reply){
 	$("#reply").html(reply);
 	$.layer({
 		type : 1,
-		title :'»Ø¸´ÆÀÂÛ', 
+		title :'å›å¤è¯„è®º', 
 		offset: [($(window).height() - 210)/2 + 'px', ''],
 		closeBtn : [0 , true],
 		border : [10 , 0.3 , '#000', true],
@@ -34,8 +34,7 @@ function showdiv4(div,content,reply){
 		page : {dom :"#"+div}
 	}); 
 }
-function showdiv5(class_name,orders,integral_buy,href,id,type){
-	
+function showdiv5(class_name,orders,integral_buy,href,id,type){	
 	$("input[name='type']").attr("checked",false);
 	$("#radio_"+type).attr("checked",true);
 	if(type=='1'){
@@ -46,7 +45,7 @@ function showdiv5(class_name,orders,integral_buy,href,id,type){
 	$("#orders").val(orders);
 	$("#integral_buy").val(integral_buy);
 	$("#href").val(href);
-	$(".admin_submit4").val("ĞŞ¸Ä");   
+	$("#houtai_div .admin_submit4").val("ä¿®æ”¹");
 	add_industry('0');
 }
 function showdiv6(div,key_name,type,color,size,bold,tuijian,num,id){
@@ -54,10 +53,10 @@ function showdiv6(div,key_name,type,color,size,bold,tuijian,num,id){
 		$("#type").html(date);
 	})
 	if(bold=="1"){
-		$("#bold").html("<input type=\"radio\" name=\"bold\" value=\"0\">&nbsp;·ñ&nbsp;<input type=\"radio\" name=\"bold\" value=\"1\"checked>&nbsp;ÊÇ");
+		$("#bold").html("<input type=\"radio\" name=\"bold\" value=\"0\">&nbsp;å¦&nbsp;<input type=\"radio\" name=\"bold\" value=\"1\"checked>&nbsp;æ˜¯");
 	}
 	if(tuijian=="1"){
-		$("#tuijian").html("<input type=\"radio\" name=\"tuijian\" value=\"0\">&nbsp;·ñ&nbsp;<input type=\"radio\" name=\"tuijian\" value=\"1\"checked>&nbsp;ÊÇ");
+		$("#tuijian").html("<input type=\"radio\" name=\"tuijian\" value=\"0\">&nbsp;å¦&nbsp;<input type=\"radio\" name=\"tuijian\" value=\"1\"checked>&nbsp;æ˜¯");
 	}
 	$("#"+div).show('1000');
 	$("#key_name").val(key_name);
@@ -84,8 +83,8 @@ function guanbi_key(div){
 	$.post("index.php?m=admin_keyword&c=ajax",{type:0},function(date){
 		$("#type").html(date);
 	})
-	$("#bold").html("<input type=\"radio\" name=\"bold\" value=\"0\" checked>&nbsp;·ñ&nbsp;<input type=\"radio\" name=\"bold\" value=\"1\">&nbsp;ÊÇ");
-	$("#tuijian").html("<input type=\"radio\" name=\"tuijian\" value=\"0\" checked>&nbsp;·ñ&nbsp;<input type=\"radio\" name=\"tuijian\" value=\"1\">&nbsp;ÊÇ");
+	$("#bold").html("<input type=\"radio\" name=\"bold\" value=\"0\" checked>&nbsp;å¦&nbsp;<input type=\"radio\" name=\"bold\" value=\"1\">&nbsp;æ˜¯");
+	$("#tuijian").html("<input type=\"radio\" name=\"tuijian\" value=\"0\" checked>&nbsp;å¦&nbsp;<input type=\"radio\" name=\"tuijian\" value=\"1\">&nbsp;æ˜¯");
 	$("#key_name").val("");
 	$("#color").val("");
 	$("#size").val("");

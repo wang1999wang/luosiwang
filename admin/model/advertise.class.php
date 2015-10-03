@@ -4,8 +4,8 @@ class advertise_controller extends common{
 		include_once("model/model/advertise_class.php");
 	}
 	function set_search(){
-		$search_list[]=array("param"=>"is_check","name"=>'ÉóºË×´Ì¬',"value"=>array("1"=>"ÒÑ¹ıÆÚ","-1"=>"Î´ÉóºË"));
-		$search_list[]=array("param"=>"ad","name"=>'¹ã¸æÀàĞÍ',"value"=>array("1"=>"ÎÄ×Ö¹ã¸æ","2"=>"Í¼Æ¬¹ã¸æ","3"=>"FLASH¹ã¸æ"));
+		$search_list[]=array("param"=>"is_check","name"=>'å®¡æ ¸çŠ¶æ€',"value"=>array("1"=>"å·²è¿‡æœŸ","-1"=>"æœªå®¡æ ¸"));
+		$search_list[]=array("param"=>"ad","name"=>'å¹¿å‘Šç±»å‹',"value"=>array("1"=>"æ–‡å­—å¹¿å‘Š","2"=>"å›¾ç‰‡å¹¿å‘Š","3"=>"FLASHå¹¿å‘Š"));
 		$this->yunset("search_list",$search_list);
 	}
 	function index_action(){
@@ -63,37 +63,37 @@ class advertise_controller extends common{
 				$time = time();
 				$linkrows[$key]['class_name'] = $nclass[$value['class_id']];
 				if($value['is_check']=="1"){
-					$linkrows[$key]['check']="<font color='green'>ÒÑÉóºË</font>";
+					$linkrows[$key]['check']="<font color='green'>å·²å®¡æ ¸</font>";
 				}else{
-					$linkrows[$key]['check']="<font color='red'>Î´ÉóºË</font>";
+					$linkrows[$key]['check']="<font color='red'>æœªå®¡æ ¸</font>";
 				}
 				switch($value['ad_type']){
-					case "word":$linkrows[$key]['ad_typename'] ="ÎÄ×Ö¹ã¸æ";
+					case "word":$linkrows[$key]['ad_typename'] ="æ–‡å­—å¹¿å‘Š";
 					break;
-					case "pic":$linkrows[$key]['ad_typename'] ="<a href=\"javascript:void(0)\" class=\"preview\" url=\"".$value['pic_url']."\">Í¼Æ¬¹ã¸æ</a>";
+					case "pic":$linkrows[$key]['ad_typename'] ="<a href=\"javascript:void(0)\" class=\"preview\" url=\"".$value['pic_url']."\">å›¾ç‰‡å¹¿å‘Š</a>";
 					break;
-					case "flash":$linkrows[$key]['ad_typename'] ="FLASH¹ã¸æ";
+					case "flash":$linkrows[$key]['ad_typename'] ="FLASHå¹¿å‘Š";
 					break;
 				}
 				if($value['time_start']!="" && $start!="" &&($value['time_end']==""||$end!="")){
 					if($value['time_end']=="" || $end>$time){
 						if($value['is_open']=='1'&&$start<$time){
-							$linkrows[$key]['type']="<font color='green'>Ê¹ÓÃÖĞ..</font>";
+							$linkrows[$key]['type']="<font color='green'>ä½¿ç”¨ä¸­..</font>";
 						}else if($start<$time&&$value['is_open']=='0'){
-							$linkrows[$key]['type']="<font color='red'>ÒÑÍ£ÓÃ</font>";
+							$linkrows[$key]['type']="<font color='red'>å·²åœç”¨</font>";
 						}elseif($start>$time && ($end>$time || $value['time']=="")){
-							$linkrows[$key]['type']="<font color='#ff6600'>¹ã¸æÔİÎ´¿ªÊ¼</font>";
+							$linkrows[$key]['type']="<font color='#ff6600'>å¹¿å‘Šæš‚æœªå¼€å§‹</font>";
 						}
 					}else{
-						$linkrows[$key]['type']="<font color='red'>¹ıÆÚ¹ã¸æ</font>";
+						$linkrows[$key]['type']="<font color='red'>è¿‡æœŸå¹¿å‘Š</font>";
 						$linkrows[$key]['is_end']='1';
 					}
 				}else{
-					$linkrows[$key]['type']="<font color='red'>ÎŞĞ§¹ã¸æ</font>";
+					$linkrows[$key]['type']="<font color='red'>æ— æ•ˆå¹¿å‘Š</font>";
 				}
 				if(!empty($domain))
 				{
-					$linkrows[$key]['d_title']='È«Õ¾Ê¹ÓÃ';
+					$linkrows[$key]['d_title']='å…¨ç«™ä½¿ç”¨';
 					foreach($domain as $v)
 					{
 						if($value['did']==$v['id'])
@@ -104,7 +104,7 @@ class advertise_controller extends common{
 				}
 			}
 		}
-		$ad_time=array('1'=>'Ò»Ìì','3'=>'×î½üÈıÌì','7'=>'×î½üÆßÌì','15'=>'×î½ü°ëÔÂ','30'=>'×î½üÒ»¸öÔÂ');
+		$ad_time=array('1'=>'ä¸€å¤©','3'=>'æœ€è¿‘ä¸‰å¤©','7'=>'æœ€è¿‘ä¸ƒå¤©','15'=>'æœ€è¿‘åŠæœˆ','30'=>'æœ€è¿‘ä¸€ä¸ªæœˆ');
         $this->yunset("ad_time",$ad_time);
 		$this->yunset("get_type", $_GET);
 		$this->yunset("nclass",$nclass);
@@ -190,7 +190,7 @@ class advertise_controller extends common{
 			}
 		}
 		$adver->model_ad_arr_action();
-		$this->layer_msg('¹ã¸æ(ID:'.$_GET['id'].')É¾³ı³É¹¦£¡',9,0,"index.php?m=advertise");
+		$this->layer_msg('å¹¿å‘Š(ID:'.$_GET['id'].')åˆ é™¤æˆåŠŸï¼',9,0,"index.php?m=advertise");
 	}
 	function ad_preview_action(){
 		$ad=$this->obj->DB_select_once("ad","`id`='".$_GET['id']."'");
@@ -230,9 +230,9 @@ class advertise_controller extends common{
 		$adver->model_ad_arr_action();
 		if($val=="1")
 		{
-			echo "<font color='green'>ÒÑÉóºË</font>";
+			echo "<font color='green'>å·²å®¡æ ¸</font>";
 		}else{
-			echo "<font color='red' >Î´ÉóºË</font>";
+			echo "<font color='red' >æœªå®¡æ ¸</font>";
 		}
 
 	}
@@ -242,14 +242,14 @@ class advertise_controller extends common{
 			$nid=$this->obj->DB_update_all("ad_class","`integral_buy`='".$_POST['integral_buy']."',`class_name`='".iconv('utf-8','gbk',$_POST['class_name'])."',`orders`='".$_POST['orders']."',`href`='".$_POST['href']."',`type`='".$_POST['type']."'","`id`='".$_POST['id']."'");
 			$nid?$msg=1:$msg=2;
 			if($msg=1){
-				$this->admin_log("¹ã¸æÀà±ğ(ID:".$_POST['id'].")ĞŞ¸Ä³É¹¦");
+				$this->admin_log("å¹¿å‘Šç±»åˆ«(ID:".$_POST['id'].")ä¿®æ”¹æˆåŠŸ");
 			}
 			echo $msg;die;
 		}else if($_POST['type']&&$_POST['id']==''){
 			$nid=$this->obj->DB_insert_once("ad_class","`integral_buy`='".$_POST['integral_buy']."',`class_name`='".iconv('utf-8','gbk',$_POST['class_name'])."',`orders`='".$_POST['orders']."',`href`='".$_POST['href']."',`type`='".$_POST['type']."'");
 			$nid?$msg=1:$msg=2;
 			if($msg=1){
-				$this->admin_log("¹ã¸æÀà±ğ(ID:".$nid.")Ìí¼Ó³É¹¦");
+				$this->admin_log("å¹¿å‘Šç±»åˆ«(ID:".$nid.")æ·»åŠ æˆåŠŸ");
 			}
 			echo $msg;die;
 		}
@@ -277,7 +277,7 @@ class advertise_controller extends common{
 				if(is_array($del)){
 				$this->obj->DB_delete_all("ad_class","`id` in(".@implode(',',$del).")","");
 				}
-				$this->layer_msg('¹ã¸æÀà±ğ(ID:'.@implode(',',$del).')É¾³ı³É¹¦£¡',9,1,$_SERVER['HTTP_REFERER']);
+				$this->layer_msg('å¹¿å‘Šç±»åˆ«(ID:'.@implode(',',$del).')åˆ é™¤æˆåŠŸï¼',9,1,$_SERVER['HTTP_REFERER']);
 	    	}
 	    }
 
@@ -285,10 +285,10 @@ class advertise_controller extends common{
 		$ad = $this->obj->DB_select_once("ad","`class_id`='$id'");
 		if(is_array($ad))
 		{
-			$this->layer_msg('¸Ã·ÖÀàÏÂ»¹ÓĞ¹ã¸æ£¬ÇëÇå¿ÕºóÔÙÖ´ĞĞÉ¾³ı£¡',8,0,"index.php?m=advertise&c=class");
+			$this->layer_msg('è¯¥åˆ†ç±»ä¸‹è¿˜æœ‰å¹¿å‘Šï¼Œè¯·æ¸…ç©ºåå†æ‰§è¡Œåˆ é™¤ï¼',8,0,"index.php?m=advertise&c=class");
 		}else{
 			$this->obj->DB_delete_all("ad_class","`id`='".$id."'");
-			$this->layer_msg('¹ã¸æÀà±ğ(ID:'.$id.')É¾³ı³É¹¦£¡',9,0,"index.php?m=advertise&c=class");
+			$this->layer_msg('å¹¿å‘Šç±»åˆ«(ID:'.$id.')åˆ é™¤æˆåŠŸï¼',9,0,"index.php?m=advertise&c=class");
 		}
 
 
@@ -298,7 +298,7 @@ class advertise_controller extends common{
 		$this->public_action();
 		$adver = new advertise($this->obj);
 		$adver->model_ad_arr_action();
-		$this->layer_msg("¹ã¸æ¸üĞÂ³É¹¦£¡",9,0,"index.php?m=advertise");
+		$this->layer_msg("å¹¿å‘Šæ›´æ–°æˆåŠŸï¼",9,0,"index.php?m=advertise");
 	}
 	function ctime_action()
 	{
@@ -307,7 +307,7 @@ class advertise_controller extends common{
 		$this->public_action();
 		$adver = new advertise($this->obj);
 		$adver->model_ad_arr_action();
-		$id?$this->ACT_layer_msg("¹ã¸æÅúÁ¿ÑÓÆÚ(ID:".$jobid.")ÉèÖÃ³É¹¦£¡",9,$_SERVER['HTTP_REFERER'],2,1):$this->ACT_layer_msg("ÉèÖÃÊ§°Ü£¡",8,$_SERVER['HTTP_REFERER']);
+		$id?$this->ACT_layer_msg("å¹¿å‘Šæ‰¹é‡å»¶æœŸ(ID:".$jobid.")è®¾ç½®æˆåŠŸï¼",9,$_SERVER['HTTP_REFERER'],2,1):$this->ACT_layer_msg("è®¾ç½®å¤±è´¥ï¼",8,$_SERVER['HTTP_REFERER']);
 	}
     function del_action(){
 		extract($_GET);
@@ -321,13 +321,13 @@ class advertise_controller extends common{
 			$layer_type=0;
 		}
 		if(!$delid){
-			$this->layer_msg('ÇëÑ¡ÔñÒªÉ¾³ıµÄÄÚÈİ£¡',8);
+			$this->layer_msg('è¯·é€‰æ‹©è¦åˆ é™¤çš„å†…å®¹ï¼',8);
 		}
 		$del=$this->obj->DB_delete_all("ad","`id` in (".$delid.")"," ");
         $this->public_action();
 		$adver = new advertise($this->obj);
 		$adver->model_ad_arr_action();
-		$del?$this->layer_msg('¹ã¸æ(ID:'.$delid.')É¾³ı³É¹¦£¡',9,$layer_type,$_SERVER['HTTP_REFERER']):$this->layer_msg('É¾³ıÊ§°Ü£¡',8,$layer_type,$_SERVER['HTTP_REFERER']);
+		$del?$this->layer_msg('å¹¿å‘Š(ID:'.$delid.')åˆ é™¤æˆåŠŸï¼',9,$layer_type,$_SERVER['HTTP_REFERER']):$this->layer_msg('åˆ é™¤å¤±è´¥ï¼',8,$layer_type,$_SERVER['HTTP_REFERER']);
 	}
 }
 ?>
