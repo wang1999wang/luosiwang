@@ -4,14 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <link href="images/reset.css" rel="stylesheet" type="text/css" />
 <script src="{yun:}$config.sy_weburl{/yun}/js/jquery-1.8.0.min.js"></script>
-<title>后台管理</title>
+<title>鍚庡彴绠＄悊</title>
 </head>
 <body class="body_ifm">
 <div class="admin_atatic_chart fl" id="main2" style="height:300px;"></div>
-    <!-- ECharts单文件引入 -->
+    <!-- ECharts鍗曟枃浠跺紩鍏� -->
     <script src="js/echarts_plain.js"></script>
     <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts图表
+        // 鍩轰簬鍑嗗濂界殑dom锛屽垵濮嬪寲echarts鍥捐〃
         var myChart = echarts.init(document.getElementById('main2')); 
         var option = {tooltip : {trigger: 'axis'},legend: {data:['{yun:}$name{/yun}']},
     calculable : false,
@@ -41,7 +41,7 @@
         }
     ]
 };
-        myChart.setOption(option); // 为echarts对象加载数据 
+        myChart.setOption(option); // 涓篹charts瀵硅薄鍔犺浇鏁版嵁 
     </script>
 </body>
 </html>

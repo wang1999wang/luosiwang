@@ -2,11 +2,11 @@
 <html>
 <head>
 <link href="images/admin.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="{yun:}$config.sy_weburl{/yun}/js/jquery-1.8.0.min.js"></script>
 <script src="{yun:}$config.sy_weburl{/yun}/js/layer/layer.min.js" language="javascript"></script>
 <script src="js/admin_public.js" language="javascript"></script>
-<title>{yun:}$config.sy_webname{/yun} - 后台管理中心</title>
+<title>{yun:}$config.sy_webname{/yun} - 鍚庡彴绠＄悊涓績</title>
 </head>
 <body>
 <div class="admin_logo_bg">
@@ -20,17 +20,17 @@
 	<iframe id="supportiframe"  name="supportiframe" onload="returnmessage('supportiframe');" style="display:none"></iframe>
 	<form action="" method="post" target="supportiframe">
     <ul class="logoin_list">
-		<li><span><label for="username">用户名：</label></span><input type="text" class="ipt" size="10" name="username" value="" /></li>
-		<li><span><label for="password">密&nbsp; 码：</label></span><input type="password" class="ipt" name="password" value="" /></li>
+		<li><span><label for="username">鐢ㄦ埛鍚嶏細</label></span><input type="text" class="ipt" size="10" name="username" value="" /></li>
+		<li><span><label for="password">瀵�&nbsp; 鐮侊細</label></span><input type="password" class="ipt" name="password" value="" /></li>
        
-       {yun:}if stripos($config.code_web,"后台登陆"){/yun}
+       {yun:}if stripos($config.code_web,"鍚庡彴鐧婚檰"){/yun}
        <li>
-		<span><label for="code">验证码：</label></span><input type="text" id="ipt_code" class="ipt_code" name="authcode" value="" />
+		<span><label for="code">楠岃瘉鐮侊細</label></span><input type="text" id="ipt_code" class="ipt_code" name="authcode" value="" />
         <img src="{yun:}$config.sy_weburl{/yun}/app/include/authcode.inc.php" align="absmiddle" >
         </li>
         {yun:}/if{/yun}
         
-		<li><span>&nbsp;</span><input type="submit" class="admin_login_sub" name="login_sub" value="登录" /><input type="reset" class="admin_login_sub admin_login_sub1" name="login_sub" value="重置" /></li>
+		<li><span>&nbsp;</span><input type="submit" class="admin_login_sub" name="login_sub" value="鐧诲綍" /><input type="reset" class="admin_login_sub admin_login_sub1" name="login_sub" value="閲嶇疆" /></li>
       </ul>
 	  <input type="hidden" name="pytoken" value="{yun:}$pytoken{/yun}">
 	</form>

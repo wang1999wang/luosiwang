@@ -6,14 +6,14 @@ class index_controller extends common {
 		$_POST = $this -> post_trim($_POST);
 
 		if (!empty ($_POST['username']) && !empty ($_POST['password'])) {
-			if (strstr($this -> config['code_web'], 'ºóÌ¨µÇÂ½')) {
+			if (strstr($this -> config['code_web'], 'åå°ç™»é™†')) {
 				if (md5($_POST['authcode']) === $_SESSION['authcode']) {
 					unset($_SESSION['authcode']);
 
 					$this -> admin_get_user_login($_POST['username'], $_POST['password']);
 				} else {
 					unset($_SESSION['authcode']);
-					$this -> ACT_layer_msg("ÑéÖ¤Âë´íÎó£¡", 8, "index.php");
+					$this -> ACT_layer_msg("éªŒè¯ç é”™è¯¯ï¼", 8, "index.php");
 				} 
 			} else {
 				$this -> admin_get_user_login($_POST['username'], $_POST['password']);
@@ -61,7 +61,7 @@ class index_controller extends common {
 		$i = 0;
 		$j = 0;
 		$a = 0;
-		$b = 0;
+		$b = 0;//print_r($menurows);die;
 		if (is_array($menurows)) {
 			foreach($menurows as $key => $v) {
 				if ($v['keyid'] == 0 && @in_array($v['id'], $power)) {
@@ -136,7 +136,7 @@ class index_controller extends common {
 		unset($_SESSION['md']);
 		unset($_SESSION['tooken']);
 		unset($_SESSION['xsstooken']);
-		$this -> layer_msg("ÄúÒÑ³É¹¦ÍË³ö£¡", 9, 0, "index.php");
+		$this -> layer_msg("æ‚¨å·²æˆåŠŸé€€å‡ºï¼", 9, 0, "index.php");
 	} 
 	function index_cache_action() {
 		global $phpyun;
@@ -168,15 +168,15 @@ class index_controller extends common {
 		$fp = fopen(APP_PATH . 'news/' . $id . '.html', "w");
 		$fw = fwrite($fp, $contect);
 		fclose($fp);
-		$fw?$this -> obj -> get_admin_msg("index.php?m=admin_right", "Éú³É³É¹¦£¡"):$this -> obj -> get_admin_msg("index.php?m=admin_right", "Éú³ÉÊ§°Ü£¡");
+		$fw?$this -> obj -> get_admin_msg("index.php?m=admin_right", "ç”ŸæˆæˆåŠŸï¼"):$this -> obj -> get_admin_msg("index.php?m=admin_right", "ç”Ÿæˆå¤±è´¥ï¼");
 	} 
 	function del_cache_action() {
 		$cache = $this -> del_dir("../data/templates_c", 1);
 		$cache = $this -> del_dir("../data/cache", 1);
 		if ($cache == true) {
-			$this -> layer_msg("¸üĞÂ³É¹¦£¡", 9, 0, "index.php");
+			$this -> layer_msg("æ›´æ–°æˆåŠŸï¼", 9, 0, "index.php");
 		} else {
-			$this -> layer_msg("¸üĞÂÊ§°Ü,Çë¼ì²éÊÇ·ñÓĞÈ¨ÏŞ£¡", 8, 0, "index.php");
+			$this -> layer_msg("æ›´æ–°å¤±è´¥,è¯·æ£€æŸ¥æ˜¯å¦æœ‰æƒé™ï¼", 8, 0, "index.php");
 		} 
 	} 
 	function map_action() {
@@ -186,7 +186,7 @@ class index_controller extends common {
 	function topmenu_action() {
 		$id = (int)$_GET['id'];
 		if ($id == "1000") {
-			echo "¹ÜÀíÊ×Ò³";
+			echo "ç®¡ç†é¦–é¡µ";
 		} else {
 			echo $this -> GET_web_check($id);
 		} 
@@ -199,7 +199,7 @@ class index_controller extends common {
 			echo 1;
 			die;
 		} else {
-			$this -> obj -> get_admin_msg($this -> config['sy_weburl'], "ÎŞÈ¨²Ù×÷£¡");
+			$this -> obj -> get_admin_msg($this -> config['sy_weburl'], "æ— æƒæ“ä½œï¼");
 		} 
 	} 
 	function site_action() {

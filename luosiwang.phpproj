@@ -467,6 +467,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".htaccess" />
+    <Content Include="app\template\default\index\index - Copy.htm" />
     <Content Include="app\template\default\rooter.htm" />
     <Content Include="app\template\default\job\index - Copy.htm" />
     <Content Include="app\template\default\job\search - Copy.htm" />

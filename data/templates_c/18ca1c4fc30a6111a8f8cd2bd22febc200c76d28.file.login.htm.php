@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-02 10:35:52
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-03 09:35:46
          compiled from "E:\WWW\luosiwang\app\template\admin\login.htm" */ ?>
 <?php /*%%SmartyHeaderCode:26421560ded884c32b6-57792030%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '18ca1c4fc30a6111a8f8cd2bd22febc200c76d28' => 
     array (
       0 => 'E:\\WWW\\luosiwang\\app\\template\\admin\\login.htm',
-      1 => 1436321722,
+      1 => 1443836143,
       2 => 'file',
     ),
   ),
@@ -15,20 +15,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_560ded886d6734_79308690',
   'variables' => 
   array (
     'config' => 0,
     'pytoken' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_560ded886d6734_79308690',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_560ded886d6734_79308690')) {function content_560ded886d6734_79308690($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <link href="images/admin.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
 /js/jquery-1.8.0.min.js"><?php echo '</script'; ?>
@@ -41,7 +41,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  src="js/admin_public.js" language="javascript"><?php echo '</script'; ?>
 >
 <title><?php echo $_smarty_tpl->tpl_vars['config']->value['sy_webname'];?>
- - ºóÌ¨¹ÜÀíÖĞĞÄ</title>
+ - åå°ç®¡ç†ä¸­å¿ƒ</title>
 </head>
 <body>
 <div class="admin_logo_bg">
@@ -55,18 +55,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<iframe id="supportiframe"  name="supportiframe" onload="returnmessage('supportiframe');" style="display:none"></iframe>
 	<form action="" method="post" target="supportiframe">
     <ul class="logoin_list">
-		<li><span><label for="username">ÓÃ»§Ãû£º</label></span><input type="text" class="ipt" size="10" name="username" value="" /></li>
-		<li><span><label for="password">ÃÜ&nbsp; Âë£º</label></span><input type="password" class="ipt" name="password" value="" /></li>
+		<li><span><label for="username">ç”¨æˆ·åï¼š</label></span><input type="text" class="ipt" size="10" name="username" value="" /></li>
+		<li><span><label for="password">å¯†&nbsp; ç ï¼š</label></span><input type="password" class="ipt" name="password" value="" /></li>
        
-       <?php if (stripos($_smarty_tpl->tpl_vars['config']->value['code_web'],"ºóÌ¨µÇÂ½")) {?>
+       <?php if (stripos($_smarty_tpl->tpl_vars['config']->value['code_web'],"åå°ç™»é™†")) {?>
        <li>
-		<span><label for="code">ÑéÖ¤Âë£º</label></span><input type="text" id="ipt_code" class="ipt_code" name="authcode" value="" />
+		<span><label for="code">éªŒè¯ç ï¼š</label></span><input type="text" id="ipt_code" class="ipt_code" name="authcode" value="" />
         <img src="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
 /app/include/authcode.inc.php" align="absmiddle" >
         </li>
         <?php }?>
         
-		<li><span>&nbsp;</span><input type="submit" class="admin_login_sub" name="login_sub" value="µÇÂ¼" /><input type="reset" class="admin_login_sub admin_login_sub1" name="login_sub" value="ÖØÖÃ" /></li>
+		<li><span>&nbsp;</span><input type="submit" class="admin_login_sub" name="login_sub" value="ç™»å½•" /><input type="reset" class="admin_login_sub admin_login_sub1" name="login_sub" value="é‡ç½®" /></li>
       </ul>
 	  <input type="hidden" name="pytoken" value="<?php echo $_smarty_tpl->tpl_vars['pytoken']->value;?>
 ">

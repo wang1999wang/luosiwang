@@ -47,8 +47,8 @@ class mysql {
 				$this -> show_error("数据库不可用：", $this -> db_database);
 			} 
 		} 
-		@mysql_query("SET NAMES $this->coding");
-		@mysql_query("SET character_set_connection=gbk,character_set_results=gbk,character_set_client=binary", $this -> conn);
+		@mysql_query("SET NAMES {$this->coding}");
+		@mysql_query("SET character_set_connection={$this->coding},character_set_results={$this->coding},character_set_client={$this->coding}", $this -> conn);
 	} 
 
 	public function query($sql) {

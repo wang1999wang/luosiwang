@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-02 10:36:02
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-03 10:01:15
          compiled from "E:\WWW\luosiwang\app\template\admin\index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:19407560ded92477467-67388789%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'df04ca6570600564e0719b693a94e9afc5fcc625' => 
     array (
       0 => 'E:\\WWW\\luosiwang\\app\\template\\admin\\index.htm',
-      1 => 1436322574,
+      1 => 1443837673,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_560ded92e2bca2_65007718',
   'variables' => 
   array (
     'config' => 0,
@@ -30,330 +32,332 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'value' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_560ded92e2bca2_65007718',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560ded92e2bca2_65007718')) {function content_560ded92e2bca2_65007718($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_560ded92e2bca2_65007718')) {function content_560ded92e2bca2_65007718($_smarty_tpl) {?><!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" class="off">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-<title><?php echo $_smarty_tpl->tpl_vars['config']->value['sy_webname'];?>
- - ºóÌ¨¹ÜÀíÖĞĞÄ</title>
-<link href="images/reset.css" rel="stylesheet" type="text/css" />
-<link href="images/system.css" rel="stylesheet" type="text/css" />
-<?php echo '<script'; ?>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <title><?php echo $_smarty_tpl->tpl_vars['config']->value['sy_webname'];?>
+ - åå°ç®¡ç†ä¸­å¿ƒ</title>
+    <link href="images/reset.css" rel="stylesheet" type="text/css" />
+    <link href="images/system.css" rel="stylesheet" type="text/css" />
+    <?php echo '<script'; ?>
  language="javascript" type="text/javascript" src="../js/jquery-1.8.0.min.js"><?php echo '</script'; ?>
 >
-<?php echo '<script'; ?>
+    <?php echo '<script'; ?>
  src="../js/layer/layer.min.js" language="javascript"><?php echo '</script'; ?>
-> 
-<?php echo '<script'; ?>
+>
+    <?php echo '<script'; ?>
  src="js/admin_public.js" language="javascript"><?php echo '</script'; ?>
 >
-<!--[if IE 6]>
-<?php echo '<script'; ?>
+    <!--[if IE 6]>
+    <?php echo '<script'; ?>
  src="./js/png.js"><?php echo '</script'; ?>
 >
-<?php echo '<script'; ?>
+    <?php echo '<script'; ?>
 >
-  DD_belatedPNG.fix('.png,.header .logo,.header .nav li a,.header .nav li.on,.left_menu h3 span.on,.admin_adv_search_bth,admin_infoboxp_tj');
-<?php echo '</script'; ?>
+      DD_belatedPNG.fix('.png,.header .logo,.header .nav li a,.header .nav li.on,.left_menu h3 span.on,.admin_adv_search_bth,admin_infoboxp_tj');
+    <?php echo '</script'; ?>
 >
-<![endif]-->
-<?php echo '<script'; ?>
+    <![endif]-->
+    <?php echo '<script'; ?>
  type="text/javascript">
-	var pc_hash = 'l9Yqpa' 
-	function check_web(id){
-		$("html").removeClass("on");
-		var timestamp=Math.round(new Date().getTime()/1000) ;
-		var pytoken=$("#pytoken").val();
-		$.get("index.php?c=topmenu&id="+id,function(data){
-			document.getElementById("current_pos").innerHTML = data;
-		})
-	}
-<?php echo '</script'; ?>
+        var pc_hash = 'l9Yqpa'
+        function check_web(id){
+            $("html").removeClass("on");
+            var timestamp=Math.round(new Date().getTime()/1000) ;
+            var pytoken=$("#pytoken").val();
+            $.get("index.php?c=topmenu&id="+id,function(data){
+                document.getElementById("current_pos").innerHTML = data;
+            })
+        }
+    <?php echo '</script'; ?>
 >
 </head>
 <body scroll="no">
-<div class="header" style="width:auto;">
-<input type="hidden" name="pytoken" id='pytoken' value="<?php echo $_smarty_tpl->tpl_vars['pytoken']->value;?>
-">
-  <div class="header_bg">
-    <div class="logo lf"><a href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
-" target="_blank"><span class="invisible">ºóÌ¨¹ÜÀíÏµÍ³</span></a></div>
-    <div class="col-auto" style="overflow: visible">
-      <ul class="nav white" id="top_menu">
-        <li id="_M1000" class="on top_menu"><a href="javascript:_M(1000,'index.php?m=admin_right')"  onclick="check_web('1000');" hidefocus="true" style="outline:none;">Ê×Ò³</a></li>
-        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+    <div class="header" style="width:auto;">
+        <input type="hidden" name="pytoken" id='pytoken' value="<?php echo $_smarty_tpl->tpl_vars['pytoken']->value;?>
+" />
+        <div class="header_bg">
+            <div class="logo lf"><a href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+" target="_blank"><span class="invisible">åå°ç®¡ç†ç³»ç»Ÿ</span></a></div>
+            <div class="col-auto" style="overflow: visible">
+                <ul class="nav white" id="top_menu">
+                    <li id="_M1000" class="on top_menu"><a href="javascript:_M(1000,'index.php?m=admin_right')" onclick="check_web('1000');" hidefocus="true" style="outline:none;">é¦–é¡µ</a></li>
+                    <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['navigation']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value) {
 $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?>
-        <li id="_M<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+                    <li id="_M<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
 " class="top_menu"><a class="<?php echo $_smarty_tpl->tpl_vars['v']->value['classname'];?>
 " href="javascript:_M(<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
 ,'<?php echo $_smarty_tpl->tpl_vars['navigation_url']->value[$_smarty_tpl->tpl_vars['v']->value['id']];?>
 ')" onclick="check_web(<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
 );" hidefocus="true" style="outline:none;"><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
 </a></li>
-        <?php } ?>
-      </ul>
-    </div>
-    <div>
-      <div class="admin-header_top">
-        <div class="admin-header_top_wz">
-        <a href="javascript:void(0)" target="right" onclick="layer_del('','index.php?m=index&c=del_cache');"><span>¸üĞÂ»º´æ</span></a> |
-        <a href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
-" target="_blank" id="site_homepage">Õ¾µãÊ×Ò³</a>
+                    <?php } ?>
+                </ul>
+            </div>
+            <div>
+                <div class="admin-header_top">
+                    <div class="admin-header_top_wz">
+                        <a href="javascript:void(0)" target="right" onclick="layer_del('','index.php?m=index&c=del_cache');"><span>æ›´æ–°ç¼“å­˜</span></a> |
+                        <a href="<?php echo $_smarty_tpl->tpl_vars['config']->value['sy_weburl'];?>
+" target="_blank" id="site_homepage">ç«™ç‚¹é¦–é¡µ</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <div id="content" style="width:auto;">
+        <div class="col-left left_menu">
+            <div id="leftMain"> </div>
+            <a href="javascript:;" id="openClose" style="outline-style:none;outline-color:invert;outline-width:medium;height:539px;" hidefocus="hidefocus" class="open" title="å±•å¼€ä¸å…³é—­"><span class="hidden"> </span></a>
         </div>
-    </div>
-  </div>
-</div>
-<div id="content" style="width:auto;">
-  <div class="col-left left_menu">
-    <div id="leftMain"> </div>
-    <a href="javascript:;" id="openClose" style="outline-style:none;outline-color:invert;outline-width:medium;height:539px;" hidefocus="hidefocus" class="open" title="Õ¹¿ªÓë¹Ø±Õ"><span class="hidden"> </span></a>
-    </div>
-  <div class="col-1 lf cat-menu" id="display_center_id" style="display:none" height="100%">
-    <div class="content"> </div>
-  </div>
-  <div class="col-auto">
-    <div class="crumbs-admin-top">
-      <div class="crumbs">
-        <div class="admin_top_shortcut ">
-        ÄúºÃ£¡<font color="#0066FF"><?php echo $_smarty_tpl->tpl_vars['nav_user']->value['name'];?>
+        <div class="col-1 lf cat-menu" id="display_center_id" style="display:none" height="100%">
+            <div class="content"> </div>
+        </div>
+        <div class="col-auto">
+            <div class="crumbs-admin-top">
+                <div class="crumbs">
+                    <div class="admin_top_shortcut ">
+                        æ‚¨å¥½ï¼<font color="#0066FF"><?php echo $_smarty_tpl->tpl_vars['nav_user']->value['name'];?>
 </font> <?php echo $_smarty_tpl->tpl_vars['nav_user']->value['group_name'];?>
-  <a href="javascript:void(0)" onclick="layer_logout('index.php?m=index&c=logout');" class="admin_logout">ÍË³öµÇÂ¼</a> | <a href="javascript:void(0)" onclick="adminmap()"> <span>ºóÌ¨µØÍ¼</span></a>&nbsp;&nbsp;
+  <a href="javascript:void(0)" onclick="layer_logout('index.php?m=index&c=logout');" class="admin_logout">é€€å‡ºç™»å½•</a> | <a href="javascript:void(0)" onclick="adminmap()"> <span>åå°åœ°å›¾</span></a>&nbsp;&nbsp;
+                    </div>
+                    å½“å‰ä½ç½®ï¼š<span id="current_pos">ç®¡ç†é¦–é¡µ</span>
+                </div>
+            </div>
+            <div class="">
+                <div class="" style="position:relative; overflow:hidden">
+                    <iframe name="right" id="rightMain" src="index.php?m=admin_right" frameborder="false" scrolling="auto" style="border:none;" width="100%" height="470" allowtransparency="true"></iframe>
+                </div>
+            </div>
         </div>
-        µ±Ç°Î»ÖÃ£º<span id="current_pos">¹ÜÀíÊ×Ò³</span> </div>
     </div>
-    <div class="">
-      <div class="" style="position:relative; overflow:hidden">
-        <iframe name="right" id="rightMain" src="index.php?m=admin_right" frameborder="false" scrolling="auto" style="border:none;" width="100%" height="470" allowtransparency="true"></iframe>
-      </div>
-    </div>
-  </div>
-</div>
-<ul class="tab-web-panel hidden" style="position: absolute; z-index: 999; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(255, 255, 255); left: 680px; top: 82px; display: none; background-position: initial initial; background-repeat: initial initial; ">
-  <li style="margin:0"><a href="javascript:site_select(1, 'Ä¬ÈÏÕ¾µã', '#', '1')">Ä¬ÈÏÕ¾µã</a></li>
-</ul>
-<div style="display:none;">
-  <div id="DIV_M1000">
-    <h3 class="f14">
-        <div class="shortcut_menu_bb" ><em class="switchs_sz" onclick="shortcut_menu()"></em>¿ì½İ²Ëµ¥</div>
-    </h3>
-    <ul id='keyid_1000' class="left_mune_ul">
-      <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+    <ul class="tab-web-panel hidden" style="position: absolute; z-index: 999; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(255, 255, 255); left: 680px; top: 82px; display: none; background-position: initial initial; background-repeat: initial initial; ">
+        <li style="margin:0"><a href="javascript:site_select(1, 'é»˜è®¤ç«™ç‚¹', '#', '1')">é»˜è®¤ç«™ç‚¹</a></li>
+    </ul>
+    <div style="display:none;">
+        <div id="DIV_M1000">
+            <h3 class="f14">
+                <div class="shortcut_menu_bb"><em class="switchs_sz" onclick="shortcut_menu()"></em>å¿«æ·èœå•</div>
+            </h3>
+            <ul id='keyid_1000' class="left_mune_ul">
+                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['menu']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value) {
 $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?>
-          <li id="_MP<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+                <li id="_MP<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
 " class="sub_menu" name='<?php echo $_smarty_tpl->tpl_vars['v']->value['keyid'];?>
 '>
-            <a href="javascript:_MP(<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+                    <a href="javascript:_MP(<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
 ,'<?php echo $_smarty_tpl->tpl_vars['v']->value['url'];?>
 ');" onclick="check_web(<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
 );" hidefocus="true" style="outline:none;"><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
 </a>
-          </li>
-      <?php } ?>
-    </ul>
-  </div>
-  <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+                </li>
+                <?php } ?>
+            </ul>
+        </div>
+        <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['navigation']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value) {
 $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?>
-  <div id="DIV_M<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+        <div id="DIV_M<?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
 ">
-      <?php  $_smarty_tpl->tpl_vars['val'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['val']->_loop = false;
+            <?php  $_smarty_tpl->tpl_vars['val'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['val']->_loop = false;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['one_menu']->value[$_smarty_tpl->tpl_vars['v']->value['id']]; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['val']->key => $_smarty_tpl->tpl_vars['val']->value) {
 $_smarty_tpl->tpl_vars['val']->_loop = true;
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['val']->key;
 ?>
-        <h3 class="f14">
-            <div class="shortcut_menu_bb"><?php echo $_smarty_tpl->tpl_vars['val']->value['name'];?>
+            <h3 class="f14">
+                <div class="shortcut_menu_bb"><?php echo $_smarty_tpl->tpl_vars['val']->value['name'];?>
 </div>
-        </h3>
-        <ul id="keyid_<?php echo $_smarty_tpl->tpl_vars['val']->value['keyid'];?>
+            </h3>
+            <ul id="keyid_<?php echo $_smarty_tpl->tpl_vars['val']->value['keyid'];?>
 " class="left_mune_ul">
-           <?php  $_smarty_tpl->tpl_vars['value'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['value']->_loop = false;
+                <?php  $_smarty_tpl->tpl_vars['value'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['value']->_loop = false;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['two_menu']->value[$_smarty_tpl->tpl_vars['val']->value['id']]; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['value']->key => $_smarty_tpl->tpl_vars['value']->value) {
 $_smarty_tpl->tpl_vars['value']->_loop = true;
  $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['value']->key;
 ?>
-          <li id="_MP<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
-" class="sub_menu" > <a href="javascript:_MP(<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+                <li id="_MP<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+" class="sub_menu"> <a href="javascript:_MP(<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 ,'<?php echo $_smarty_tpl->tpl_vars['value']->value['url'];?>
 ');" onclick="check_web(<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 );" hidefocus="true" style="outline:none;"><?php echo $_smarty_tpl->tpl_vars['value']->value['name'];?>
 </a> </li>
-          <?php } ?>
-        </ul>
+                <?php } ?>
+            </ul>
+            <?php } ?>
+        </div>
         <?php } ?>
-  </div>
-  <?php } ?>
-  </div>
-<!--¿ì½İ²Ëµ¥¹ÜÀí-->
-<div id="shortcut_menu"  style="display:none; width: 710px;top:0px ">
-	<div class=" " style="height:450px; overflow:auto;overflow-x: hidden;_width:710px">
-	  <div class="common-form">
-		  <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+    </div>
+    <!--å¿«æ·èœå•ç®¡ç†-->
+    <div id="shortcut_menu" style="display:none; width: 710px;top:0px ">
+        <div class=" " style="height:450px; overflow:auto;overflow-x: hidden;_width:710px">
+            <div class="common-form">
+                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['navigation']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value) {
 $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?>
-			<table width="100%" bgcolor="#dfdfdf">
-			  <tr><td height="30" style="padding-left:10px"><strong><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
+                <table width="100%" bgcolor="#dfdfdf">
+                    <tr><td height="30" style="padding-left:10px"><strong><?php echo $_smarty_tpl->tpl_vars['v']->value['name'];?>
 </strong></td></tr>
-			  <tr>
-				<td>
-					<?php  $_smarty_tpl->tpl_vars['val'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['val']->_loop = false;
+                    <tr>
+                        <td>
+                            <?php  $_smarty_tpl->tpl_vars['val'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['val']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['one_menu']->value[$_smarty_tpl->tpl_vars['v']->value['id']]; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['val']->key => $_smarty_tpl->tpl_vars['val']->value) {
 $_smarty_tpl->tpl_vars['val']->_loop = true;
 ?>
-				  <table width="100%" bgcolor="#f7f7f7">
-					<tr><td height="30" style="padding-left:40px;"><strong><?php echo $_smarty_tpl->tpl_vars['val']->value['name'];?>
+                            <table width="100%" bgcolor="#f7f7f7">
+                                <tr><td height="30" style="padding-left:40px;"><strong><?php echo $_smarty_tpl->tpl_vars['val']->value['name'];?>
 </strong></td></tr>
-					<tr>
-					  <td bgcolor="#fdfeff" height="30" style="padding-left:70px;"> <?php  $_smarty_tpl->tpl_vars['value'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['value']->_loop = false;
+                                <tr>
+                                    <td bgcolor="#fdfeff" height="30" style="padding-left:70px;">
+                                        <?php  $_smarty_tpl->tpl_vars['value'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['value']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['two_menu']->value[$_smarty_tpl->tpl_vars['val']->value['id']]; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['value']->key => $_smarty_tpl->tpl_vars['value']->value) {
 $_smarty_tpl->tpl_vars['value']->_loop = true;
 ?>
-						<div style="float:left; width:100px; height:30px; line-height:30px; "><input name='shortcut_menu[]' value='<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
+                                        <div style="float:left; width:100px; height:30px; line-height:30px; "><input name='shortcut_menu[]' value='<?php echo $_smarty_tpl->tpl_vars['value']->value['id'];?>
 ' type='checkbox' <?php if ($_smarty_tpl->tpl_vars['value']->value['menu']=='2') {?>checked<?php }?>><?php echo $_smarty_tpl->tpl_vars['value']->value['name'];?>
 </div>
-						<?php } ?> </td>
-					</tr>
-					<?php } ?>
-				  </table></td>
-			  </tr>
-			</table>
-			<?php } ?>
-			<div style="text-align:center"><input class="admin_submit4" type="button" value="Ìá½»" onclick="check_menu();"></div>
-		</div>
-	</div>
-</div>
-<!--¿ì½İ²Ëµ¥¹ÜÀíend-->
-<?php echo '<script'; ?>
+                                        <?php } ?>
+                                    </td>
+                                </tr>
+                                <?php } ?>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <?php } ?>
+                <div style="text-align:center"><input class="admin_submit4" type="button" value="æäº¤" onclick="check_menu();" /></div>
+            </div>
+        </div>
+    </div>
+    <!--å¿«æ·èœå•ç®¡ç†end-->
+    <?php echo '<script'; ?>
  type="text/javascript">
-$(document).ready(function(){
-	$(".admin_index_city_list").hover(function(){
-		$(".admin_index_city_list").show();
-	},function(){
-		$(".admin_index_city_list").hide();
-	});
-})
-function check_menu(){
-	var chk_value =[];
-	var pytoken=$("#pytoken").val();
-	$('input[name="shortcut_menu[]"]:checked').each(function(){
-		chk_value.push($(this).val());
-	});
-	if(chk_value.length==0){
-		parent.layer.msg('ÇëÖÁÉÙÑ¡ÔñÒ»¸ö£¡', 2,8);return false;
-	}else{
-		$.post("index.php?c=shortcut_menu",{chk_value:chk_value,pytoken:pytoken},function(msg){
-			parent.layer.msg('ÉèÖÃ³É¹¦£¡', 2,9,function(){location=location ;});return false;
-		});
-	}
-}
-function shortcut_menu(){
-	$.layer({
-		type : 1,
-		title : '¿ì½İ²Ëµ¥¹ÜÀí',
-		closeBtn : [0 , true],
-		border : [10 , 0.3 , '#000', true],
-		shade: [0.5, '#000'], 
-		area : ['710px','490px'],
-		page : {dom : '#shortcut_menu'}
-	});
-}
-//×ó²à²Ëµ¥
-//clientHeight-0; ¿Õ°×Öµ iframe×ÔÊÊÓ¦¸ß¶È
-$('#DIV_M1000').clone().appendTo('#leftMain');
-function windowW(){
-	if($(window).width()<980){
-		$('.header').css('width',980+'px');
-		$('#content').css('width',980+'px');
-		$('body').attr('scroll','');
-		$('body').css('overflow','');
-	}
-}
-windowW();
-$(window).resize(function(){
-	if($(window).width()<980){
-		windowW();
-	}else{
-		$('.header').css('width','auto');
-		$('#content').css('width','auto');
-		$('body').attr('scroll','no');
-		$('body').css('overflow','hidden');
-	}
-});
-window.onresize = function(){
-	var heights = document.documentElement.clientHeight-150;document.getElementById('rightMain').height = heights+30;
-	var openClose = $("#rightMain").height()+39;
-	$('#center_frame').height(openClose+9);
-	$("#openClose").height(openClose+30);
-}
-window.onresize();
-//×ó²à¿ª¹Ø
-$("#openClose").click(function(){
-	if($(this).data('clicknum')==1) {
-		$("html").removeClass("on");
-		$(".left_menu").removeClass("left_menu_on");
-		$(this).removeClass("close");
-		$(this).data('clicknum', 0);
-	} else {
-		$(".left_menu").addClass("left_menu_on");
-		$(this).addClass("close");
-		$("html").addClass("on");
-		$(this).data('clicknum', 1);
-	}
-	return false;
-});
-function _M(menuid,targetUrl) {
-	$('.top_menu').removeClass("on");
-	$('#_M'+menuid).addClass("on");
-	$("#menuid").val(menuid);
-	$("#bigid").val(menuid);
-	var menu="#DIV_M"+menuid;
-	$('#leftMain').html("");
-	$(menu).clone().appendTo($("#leftMain"));
-	$(".left_menu").removeClass("left_menu_on");//ÏÔÊ¾×ó²à²Ëµ¥£¬µ±µã»÷¶¥²¿Ê±£¬Õ¹¿ª×ó²à
-	$("#openClose").removeClass("close");
-	$("#openClose").data('clicknum', 0);
-	$("#current_pos").data('clicknum', 1);
-	$('#keyid_'+menuid).find("li:lt(1)").addClass("on fb blue");
-	$("#rightMain").attr('src', targetUrl);
-}
-function _MP(menuid,targetUrl) {
-	$("#menuid").val(menuid);
-	$("#paneladd").html('<a class="panel-add" href="javascript:add_panel();"><em>Ìí¼Ó</em></a>');
-	$("#rightMain").attr('src', targetUrl);
-	$('.sub_menu').removeClass("on fb blue");
-	$('#_MP'+menuid).addClass("on fb blue");
-	$("#current_pos").data('clicknum', 1);
-}
-function admin_site(id){
-	var pytoken=$("#pytoken").val();
-	$.post("index.php?c=site",{id:id,pytoken:pytoken},function(data){window.location.href="index.php";})
-}
-function for_menu(id){
-	$("#keyid_"+id).slideToggle();
-	$("#span_"+id).toggleClass("on"); return false;
-}
-<?php echo '</script'; ?>
+        $(document).ready(function(){
+            $(".admin_index_city_list").hover(function(){
+                $(".admin_index_city_list").show();
+            },function(){
+                $(".admin_index_city_list").hide();
+            });
+        })
+        function check_menu(){
+            var chk_value =[];
+            var pytoken=$("#pytoken").val();
+            $('input[name="shortcut_menu[]"]:checked').each(function(){
+                chk_value.push($(this).val());
+            });
+            if(chk_value.length==0){
+                parent.layer.msg('è¯·è‡³å°‘é€‰æ‹©ä¸€ä¸ªï¼', 2,8);return false;
+            }else{
+                $.post("index.php?c=shortcut_menu",{chk_value:chk_value,pytoken:pytoken},function(msg){
+                    parent.layer.msg('è®¾ç½®æˆåŠŸï¼', 2,9,function(){location=location ;});return false;
+                });
+            }
+        }
+        function shortcut_menu(){
+            $.layer({
+                type : 1,
+                title : 'å¿«æ·èœå•ç®¡ç†',
+                closeBtn : [0 , true],
+                border : [10 , 0.3 , '#000', true],
+                shade: [0.5, '#000'],
+                area : ['710px','490px'],
+                page : {dom : '#shortcut_menu'}
+            });
+        }
+        //å·¦ä¾§èœå•
+        //clientHeight-0; ç©ºç™½å€¼ iframeè‡ªé€‚åº”é«˜åº¦
+        $('#DIV_M1000').clone().appendTo('#leftMain');
+        function windowW(){
+            if($(window).width()<980){
+                $('.header').css('width',980+'px');
+                $('#content').css('width',980+'px');
+                $('body').attr('scroll','');
+                $('body').css('overflow','');
+            }
+        }
+        windowW();
+        $(window).resize(function(){
+            if($(window).width()<980){
+                windowW();
+            }else{
+                $('.header').css('width','auto');
+                $('#content').css('width','auto');
+                $('body').attr('scroll','no');
+                $('body').css('overflow','hidden');
+            }
+        });
+        window.onresize = function(){
+            var heights = document.documentElement.clientHeight-150;document.getElementById('rightMain').height = heights+30;
+            var openClose = $("#rightMain").height()+39;
+            $('#center_frame').height(openClose+9);
+            $("#openClose").height(openClose+30);
+        }
+        window.onresize();
+        //å·¦ä¾§å¼€å…³
+        $("#openClose").click(function(){
+            if($(this).data('clicknum')==1) {
+                $("html").removeClass("on");
+                $(".left_menu").removeClass("left_menu_on");
+                $(this).removeClass("close");
+                $(this).data('clicknum', 0);
+            } else {
+                $(".left_menu").addClass("left_menu_on");
+                $(this).addClass("close");
+                $("html").addClass("on");
+                $(this).data('clicknum', 1);
+            }
+            return false;
+        });
+        function _M(menuid,targetUrl) {
+            $('.top_menu').removeClass("on");
+            $('#_M'+menuid).addClass("on");
+            $("#menuid").val(menuid);
+            $("#bigid").val(menuid);
+            var menu="#DIV_M"+menuid;
+            $('#leftMain').html("");
+            $(menu).clone().appendTo($("#leftMain"));
+            $(".left_menu").removeClass("left_menu_on");//æ˜¾ç¤ºå·¦ä¾§èœå•ï¼Œå½“ç‚¹å‡»é¡¶éƒ¨æ—¶ï¼Œå±•å¼€å·¦ä¾§
+            $("#openClose").removeClass("close");
+            $("#openClose").data('clicknum', 0);
+            $("#current_pos").data('clicknum', 1);
+            $('#keyid_'+menuid).find("li:lt(1)").addClass("on fb blue");
+            $("#rightMain").attr('src', targetUrl);
+        }
+        function _MP(menuid,targetUrl) {
+            $("#menuid").val(menuid);
+            $("#paneladd").html('<a class="panel-add" href="javascript:add_panel();"><em>æ·»åŠ </em></a>');
+            $("#rightMain").attr('src', targetUrl);
+            $('.sub_menu').removeClass("on fb blue");
+            $('#_MP'+menuid).addClass("on fb blue");
+            $("#current_pos").data('clicknum', 1);
+        }
+        function admin_site(id){
+            var pytoken=$("#pytoken").val();
+            $.post("index.php?c=site",{id:id,pytoken:pytoken},function(data){window.location.href="index.php";})
+        }
+        function for_menu(id){
+            $("#keyid_"+id).slideToggle();
+            $("#span_"+id).toggleClass("on"); return false;
+        }
+    <?php echo '</script'; ?>
 >
 </body>
 </html><?php }} ?>

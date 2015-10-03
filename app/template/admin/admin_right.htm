@@ -1,81 +1,101 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<link href="images/reset.css" rel="stylesheet" type="text/css" /> 
-<script src="../js/jquery-1.8.0.min.js"></script>
-<script src="js/admin_public.js" language="javascript"></script> 
-<title>ºóÌ¨¹ÜÀí</title>
-<style>
-<!--
-.mainright a,.maincontent a:visited{color:#F00; text-decoration:none;}
-.mainright a:hover{color:#900; text-decoration:underline;}
-.mainleft a,.mainleft a:visited{color:#06C; text-decoration:none;}
-.mainleft a:hover{color:#00F; text-decoration:underline;}
--->
-</style>
-<script> 
-/*ÆÁ±ÎËùÓĞµÄjs´íÎó*/
-function killerrors() {return true;}
-window.onerror = killerrors;
-function logout(){
-	if (confirm("ÄúÈ·¶¨ÒªÍË³ö¿ØÖÆÃæ°åÂğ£¿"))
-	top.location = 'index.php?c=logout';
-	return false;
-}
-var integral_pricename='{yun:}$config.integral_pricename{/yun}';  
-</script>
-<!--[if IE 6]>
-<script src="./js/png.js"></script>
-<script>
-  DD_belatedPNG.fix('.png,.header .logo,.header .nav li a,.header .nav li.on,.left_menu h3 span.on');
-</script>
-<![endif]-->
-</head>
-<body style="font-size:12px; padding-bottom:0; " onLoad="version_msg();">
-<div id="sysinfobox" class="sysinfobox" style="display:none;">
-	<script>
-    	setTimeout("document.getElementById('sysinfobox').style.display='none'",10000);
-    </script>
-	<div class="sysinfoboxtop" id="sysinfoboxtop"><strong style="float:left;margin-left:10px;">ÓÑÇéÌáĞÑ</strong><span style="float:left;">(10Ãëºó×Ô¶¯ÍË³ö)</span><span style="float:right;margin-right:10px;"><a href="#" onclick="javascript:document.getElementById('sysinfobox').style.display='none';">[¹Ø±Õ]</a></span></div> 
-</div>
-<div style="height:455px;">
-<div class="admin_index_center">
-<div class="admin_message_left">
-<div class="admin_message_left_cont">
-<div class="admin_message_name"><span class="admin_message_up">ÄãºÃ£¡</span><span class="admin_message_yun">{yun:}$nav_user.name{/yun}</span><a  href="javascript:void(0)" onclick="layer_logout('index.php?m=index&c=logout');" class="admin_message_zh">[¸ü»»ÕÊ»§]</a></div>
-<div class="admin_message_login">ÄúµÄµÇÂ½ÕÊ»§£¬<strong>{yun:}$nav_user.username{/yun}</strong>
-ËùÊô½ÇÉ«£º<strong>{yun:}$nav_user.group_name{/yun}</strong> ÉÏ´ÎµÇÂ¼Ê±¼ä£º{yun:}$nav_user.lasttime|date_format:'%Y-%m-%d %H:%M:%S'{/yun}</div>
-<div class="admin_message_jy">
-    {yun:}if $dirname || $mruser==1{/yun}<div>
-        {yun:}if $dirname{/yun}
-     <p>Ç¿ÁÒ½¨Òé½« {yun:}$dirname{/yun} ÎÄ¼ş¼ĞÃû¸ÄÎªÆäËüÃû³Æ£¡
-        {yun:}/if{/yun}
-        {yun:}if $mruser==1{/yun}
-       Ã»ÓĞ¸ü¸ÄÄ¬ÈÏµÄ¹ÜÀíÔ±Ãû³ÆºÍÃÜÂë!<a href="index.php?m=admin_user&c=pass">¡¾ÂíÉÏĞŞ¸Ä¡¿</a></p>{yun:}/if{/yun}
-        </div>
-	{yun:}/if{/yun}</div>
-</div>
-</div>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="images/reset.css" rel="stylesheet" type="text/css" />
+    <script src="../js/jquery-1.8.0.min.js"></script>
+    <script src="js/admin_public.js" language="javascript"></script>
+    <title>åå°ç®¡ç†</title>
+    <style>
+        <!--
+        .mainright a, .maincontent a:visited {
+            color: #F00;
+            text-decoration: none;
+        }
 
-</div>
-<div class="mainright">
-    <div class="maininfo" style="height:180px">
-    	<div class="mainboxtop"><h6>ÏµÍ³ĞÅÏ¢</h6></div>
-        <div class="maincontent">
-        <p style="float:left;">PHPYun³ÌĞò°æ±¾£º {yun:}$db_config.version{/yun} [ <div id="version_msg" style="float:left;">ÎŞĞë¸üĞÂ!</div>]</p>
-		<p style="clear:both;">·şÎñÆ÷Èí¼ş£º{yun:}$soft{/yun}</p>
-        <p>¿ÉÓÃ¿Õ¼ä(´ÅÅÌÇø)£º{yun:}$kongjian{/yun}&nbsp;M</p>
-		<p>MySQL °æ±¾£º{yun:}$banben{/yun}</p>
-		<p>ÓÃ»§ - ·şÎñÆ÷£º{yun:}$yonghu{/yun} - {yun:}$server{/yun}</p>
+        .mainright a:hover {
+            color: #900;
+            text-decoration: underline;
+        }
+
+        .mainleft a, .mainleft a:visited {
+            color: #06C;
+            text-decoration: none;
+        }
+
+        .mainleft a:hover {
+            color: #00F;
+            text-decoration: underline;
+        }
+        -->
+    </style>
+    <script>
+        /*å±è”½æ‰€æœ‰çš„jsé”™è¯¯*/
+        function killerrors() { return true; }
+        window.onerror = killerrors;
+        function logout() {
+            if (confirm("æ‚¨ç¡®å®šè¦é€€å‡ºæ§åˆ¶é¢æ¿å—ï¼Ÿ"))
+                top.location = 'index.php?c=logout';
+            return false;
+        }
+        var integral_pricename = '{yun:}$config.integral_pricename{/yun}';
+    </script>
+    <!--[if IE 6]>
+    <script src="./js/png.js"></script>
+    <script>
+      DD_belatedPNG.fix('.png,.header .logo,.header .nav li a,.header .nav li.on,.left_menu h3 span.on');
+    </script>
+    <![endif]-->
+</head>
+<body style="font-size:12px; padding-bottom:0; " onload="version_msg();">
+    <div id="sysinfobox" class="sysinfobox" style="display:none;">
+        <script>
+            setTimeout("document.getElementById('sysinfobox').style.display='none'", 10000);
+        </script>
+        <div class="sysinfoboxtop" id="sysinfoboxtop"><strong style="float:left;margin-left:10px;">å‹æƒ…æé†’</strong><span style="float:left;">(10ç§’åè‡ªåŠ¨é€€å‡º)</span><span style="float:right;margin-right:10px;"><a href="#" onclick="javascript:document.getElementById('sysinfobox').style.display='none';">[å…³é—­]</a></span></div>
+    </div>
+    <div style="height:455px;">
+        <div class="admin_index_center">
+            <div class="admin_message_left">
+                <div class="admin_message_left_cont">
+                    <div class="admin_message_name"><span class="admin_message_up">ä½ å¥½ï¼</span><span class="admin_message_yun">{yun:}$nav_user.name{/yun}</span><a href="javascript:void(0)" onclick="layer_logout('index.php?m=index&c=logout');" class="admin_message_zh">[æ›´æ¢å¸æˆ·]</a></div>
+                    <div class="admin_message_login">
+                        æ‚¨çš„ç™»é™†å¸æˆ·ï¼Œ<strong>{yun:}$nav_user.username{/yun}</strong>
+                        æ‰€å±è§’è‰²ï¼š<strong>{yun:}$nav_user.group_name{/yun}</strong> ä¸Šæ¬¡ç™»å½•æ—¶é—´ï¼š{yun:}$nav_user.lasttime|date_format:'%Y-%m-%d %H:%M:%S'{/yun}
+                    </div>
+                    <div class="admin_message_jy">
+                        {yun:}if $dirname || $mruser==1{/yun}<div>
+                            {yun:}if $dirname{/yun}
+                            <p>
+                                å¼ºçƒˆå»ºè®®å°† {yun:}$dirname{/yun} æ–‡ä»¶å¤¹åæ”¹ä¸ºå…¶å®ƒåç§°ï¼
+                                {yun:}/if{/yun}
+                                {yun:}if $mruser==1{/yun}
+                                æ²¡æœ‰æ›´æ”¹é»˜è®¤çš„ç®¡ç†å‘˜åç§°å’Œå¯†ç !<a href="index.php?m=admin_user&c=pass">ã€é©¬ä¸Šä¿®æ”¹ã€‘</a>
+                            </p>{yun:}/if{/yun}
+                        </div>
+                        {yun:}/if{/yun}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="mainright">
+            <div class="maininfo" style="height:180px">
+                <div class="mainboxtop"><h6>ç³»ç»Ÿä¿¡æ¯</h6></div>
+                <div class="maincontent">
+                    <p style="float:left;">PHPYunç¨‹åºç‰ˆæœ¬ï¼š {yun:}$db_config.version{/yun} [ <div id="version_msg" style="float:left;">æ— é¡»æ›´æ–°!</div>]</p>
+                    <p style="clear:both;">æœåŠ¡å™¨è½¯ä»¶ï¼š{yun:}$soft{/yun}</p>
+                    <p>å¯ç”¨ç©ºé—´(ç£ç›˜åŒº)ï¼š{yun:}$kongjian{/yun}&nbsp;M</p>
+                    <p>MySQL ç‰ˆæœ¬ï¼š{yun:}$banben{/yun}</p>
+                    <p>ç”¨æˆ· - æœåŠ¡å™¨ï¼š{yun:}$yonghu{/yun} - {yun:}$server{/yun}</p>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
-</div>
-<input type="hidden" name="pytoken" id="pytoken" value="{yun:}$pytoken{/yun}">
-<script>
-function clicktb(name){$("#tbrightMain").attr("src","index.php?m=admin_right&c="+name);}
-</script>
-<script src="http://init.phpyun.com/site.php?site={yun:}$base{/yun}">//´Ë´úÂëÎªÔ¶³Ì»ñÈ¡²¹¶¡¼°Í¨Öª£¬Çë²»ÒªÉ¾³ı</script>
+    <input type="hidden" name="pytoken" id="pytoken" value="{yun:}$pytoken{/yun}" />
+    <script>
+        function clicktb(name) { $("#tbrightMain").attr("src", "index.php?m=admin_right&c=" + name); }
+    </script>
+    <script src="http://init.phpyun.com/site.php?site={yun:}$base{/yun}">        //æ­¤ä»£ç ä¸ºè¿œç¨‹è·å–è¡¥ä¸åŠé€šçŸ¥ï¼Œè¯·ä¸è¦åˆ é™¤</script>
 </body>
 </html>
