@@ -1,61 +1,61 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=GBK">
-<link href="./images/reset.css" rel="stylesheet" type="text/css" />
-<link href="./images/system.css" rel="stylesheet" type="text/css" />
-<script src="{yun:}$config.sy_weburl{/yun}/js/jquery-1.8.0.min.js"></script> 
-<script src="{yun:}$config.sy_weburl{/yun}/js/layer/layer.min.js" language="javascript"></script>
-<script src="js/admin_public.js" language="javascript"></script> 
+{yun:}extends file="$adminstyle/rooter.htm"{/yun}
+
+{yun:}block name="css"{/yun}
 <link href="./images/table_form.css" rel="stylesheet" type="text/css" />
-<title></title>
-</head>
-<body class="body_ifm">
-    <div class="infoboxp"><div class="infoboxp_top_bg"></div>
+{yun:}/block{/yun}
+
+{yun:}block name="content"{/yun}
+
+
+
+<div class="infoboxp">
+    <div class="infoboxp_top_bg"></div>
     <div class="infoboxp_top">
-    <span class="infoboxp_top_span" style="float:left">Ìí¼Ó¹ÜÀíÔ±</span>
-    <a href=" javascript:history.back(-1);" class="admin_infoboxp_tj">¹ÜÀíÔ±ÁĞ±í</a> 
+        <span class="infoboxp_top_span" style="float:left">æ·»åŠ ç®¡ç†å‘˜</span>
+        <a href=" javascript:history.back(-1);" class="admin_infoboxp_tj">ç®¡ç†å‘˜åˆ—è¡¨</a>
     </div>
-<div class="common-form">
-<div class="admin_table_border">
-<iframe id="supportiframe"  name="supportiframe" onload="returnmessage('supportiframe');" style="display:none"></iframe> 
-<form name="myform" action="index.php?m=admin_user&c=save"   target="supportiframe" method="post" id="myform">
-<input type="hidden" value="{yun:}$adminuser[0]{/yun}" name="uid" />
-<table width="100%" class="table_form contentWrap" style="background:#fff;">
-    <tr>
-        <td style="width:110px; text-align:right">ÓÃ»§Ãû£º</td>
-        <td>
-        <input type="text" name="username" id="realname" class="input-text" size="30" value="{yun:}$adminuser[2]{/yun}">
-        </td>
-    </tr>
-      	<tr class="admin_table_trbg" >
-        <td style="width:110px; text-align:right">ÃÜÂë£º</td>
-        <td><input type="password" name="password" id="realname" class="input-text" size="30" value="">{yun:}if is_array($adminuser){/yun}<font color="gray">Èç¹ûÃÜÂëÁô¿ÕÔò²»ĞŞ¸ÄÃÜÂë£¡</font>{yun:}/if{/yun}
-        </td>
-    </tr>
-<tr>
-    <td style="width:110px; text-align:right">ÕæÊµĞÕÃû£º</td>
-<td><input type="text" name="name" id="realname" class="input-text" size="30" value="{yun:}$adminuser[4]{/yun}">
-</td>
-</tr>
-   	<tr class="admin_table_trbg" >
-    <td style="width:110px; text-align:right">È¨ÏŞ£º</td>
-<td>
-<select name="m_id">
-{yun:}foreach item=v from=$user_group{/yun}
-<option value="{yun:}$v.id{/yun}" {yun:}if $v.id eq $adminuser[1]{/yun} selected=selected{yun:}/if{/yun}>{yun:}$v.group_name{/yun}</option>
-{yun:}/foreach{/yun}
-</select>
-</td>
-</tr>
-<tr>
-<td colspan="2" align="center">
-	<input class="admin_submit4" name="useradd" type="submit" value="Ìá½»" id="dosubmit">
-</td>
- </table>
- <input type="hidden" name="pytoken" id='pytoken' value="{yun:}$pytoken{/yun}">
- </form>
+    <div class="common-form">
+        <div class="admin_table_border">
+            <iframe id="supportiframe" name="supportiframe" onload="returnmessage('supportiframe');" style="display:none"></iframe>
+            <form name="myform" action="index.php?m=admin_user&c=save" target="supportiframe" method="post" id="myform">
+                <input type="hidden" value="{yun:}$adminuser[0]{/yun}" name="uid" />
+                <table width="100%" class="table_form contentWrap" style="background:#fff;">
+                    <tr>
+                        <td style="width:110px; text-align:right">ç”¨æˆ·åï¼š</td>
+                        <td>
+                            <input type="text" name="username" id="realname" class="input-text" size="30" value="{yun:}$adminuser[2]{/yun}">
+                        </td>
+                    </tr>
+                    <tr class="admin_table_trbg">
+                        <td style="width:110px; text-align:right">å¯†ç ï¼š</td>
+                        <td>
+                            <input type="password" name="password" id="realname" class="input-text" size="30" value="">{yun:}if is_array($adminuser){/yun}<font color="gray">å¦‚æœå¯†ç ç•™ç©ºåˆ™ä¸ä¿®æ”¹å¯†ç ï¼</font>{yun:}/if{/yun}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:110px; text-align:right">çœŸå®å§“åï¼š</td>
+                        <td>
+                            <input type="text" name="name" id="realname" class="input-text" size="30" value="{yun:}$adminuser[4]{/yun}">
+                        </td>
+                    </tr>
+                    <tr class="admin_table_trbg">
+                        <td style="width:110px; text-align:right">æƒé™ï¼š</td>
+                        <td>
+                            <select name="m_id">
+                                {yun:}foreach item=v from=$user_group{/yun}
+                                <option value="{yun:}$v.id{/yun}" {yun:}if $v.id eq $adminuser[1]{/yun} selected=selected{yun:}/if{/yun}>{yun:}$v.group_name{/yun}</option>
+                                {yun:}/foreach{/yun}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input class="admin_submit4" name="useradd" type="submit" value="æäº¤" id="dosubmit">
+                        </td>
+                </table>
+                <input type="hidden" name="pytoken" id='pytoken' value="{yun:}$pytoken{/yun}">
+            </form>
+        </div>
+    </div>
 </div>
-</div></div>
-</body>
-</html>
+{yun:}/block{/yun}

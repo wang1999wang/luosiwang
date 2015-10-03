@@ -1,35 +1,35 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-03 15:26:34
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-03 21:50:32
          compiled from "E:\WWW\luosiwang\app\template\admin\admin_link_add.htm" */ ?>
-<?php /*%%SmartyHeaderCode:20442560f81a222bfa9-12197184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20128560fdd28a1fb15-34147784%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '023f520da6d88c87fc07d2576b19c207f756fc49' => 
     array (
       0 => 'E:\\WWW\\luosiwang\\app\\template\\admin\\admin_link_add.htm',
-      1 => 1443857189,
+      1 => 1443880218,
       2 => 'file',
     ),
     'c7dbd406038454f5fedad410c70ea02973487dcd' => 
     array (
       0 => 'E:\\WWW\\luosiwang\\\\app\\template\\admin\\rooter.htm',
-      1 => 1443856932,
+      1 => 1443880088,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20442560f81a222bfa9-12197184',
+  'nocache_hash' => '20128560fdd28a1fb15-34147784',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_560f81a2a84d17_03209252',
   'variables' => 
   array (
     'config' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_560fdd29706e68_40079014',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560f81a2a84d17_03209252')) {function content_560f81a2a84d17_03209252($_smarty_tpl) {?><!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_560fdd29706e68_40079014')) {function content_560fdd29706e68_40079014($_smarty_tpl) {?><!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         
@@ -255,8 +255,6 @@ $_smarty_tpl->tpl_vars['list']->_loop = true;
         
 
         
-
-        <?php echo $_smarty_tpl->getSubTemplate ("admin/admin_search.htm", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
     </body>
 </html><?php }} ?>

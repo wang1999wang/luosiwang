@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-03 13:37:19
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-03 21:46:30
          compiled from "E:\WWW\luosiwang\app\template\admin\admin_search.htm" */ ?>
-<?php /*%%SmartyHeaderCode:14816560f5eff6ccb05-92153085%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11589560fdc36a08df4-51276813%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,12 +11,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14816560f5eff6ccb05-92153085',
+  'nocache_hash' => '11589560fdc36a08df4-51276813',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_560f5f0014e715_35611661',
   'variables' => 
   array (
     'search_list' => 0,
@@ -29,8 +27,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'r' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_560fdc373ea999_51812144',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560f5f0014e715_35611661')) {function content_560f5f0014e715_35611661($_smarty_tpl) {?><?php if (!is_callable('smarty_function_searchurl')) include 'E:\\WWW\\luosiwang\\app\\include\\libs\\plugins\\function.searchurl.php';
+<?php if ($_valid && !is_callable('content_560fdc373ea999_51812144')) {function content_560fdc373ea999_51812144($_smarty_tpl) {?><?php if (!is_callable('smarty_function_searchurl')) include 'E:\\WWW\\luosiwang\\app\\include\\libs\\plugins\\function.searchurl.php';
 ?><div class="search_select">
     <?php if ($_GET['keyword']!='') {?>
     <a class="Search_jobs_c_a" href="<?php echo smarty_function_searchurl(array('m'=>$_GET['m'],'c'=>$_GET['c'],'untype'=>'keyword'),$_smarty_tpl);?>

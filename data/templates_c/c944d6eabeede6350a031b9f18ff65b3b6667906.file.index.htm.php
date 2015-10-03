@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-03 12:45:30
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-10-03 21:49:07
          compiled from "E:\WWW\luosiwang\app\template\default\index\index.htm" */ ?>
-<?php /*%%SmartyHeaderCode:27347560f5d6a2beba9-48577647%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11695560fdcd3de1394-11316366%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -13,11 +13,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef68a0e489044c8f67cbbcda28bcb2e01dd866f5' => 
     array (
       0 => 'E:\\WWW\\luosiwang\\\\app\\template\\default\\rooter.htm',
-      1 => 1443830781,
+      1 => 1443879037,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '27347560f5d6a2beba9-48577647',
+  'nocache_hash' => '11695560fdcd3de1394-11316366',
   'function' => 
   array (
   ),
@@ -29,9 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_560f5d70eb2d69_25407614',
+  'unifunc' => 'content_560fdcd9d59d69_36320742',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_560f5d70eb2d69_25407614')) {function content_560f5d70eb2d69_25407614($_smarty_tpl) {?><!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_560fdcd9d59d69_36320742')) {function content_560fdcd9d59d69_36320742($_smarty_tpl) {?><!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         
@@ -43,13 +43,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <meta name="keywords" content="紧固件,标准件,螺丝,螺栓,螺母,螺钉,垫圈">
         <meta name="description" content="买螺丝找华网！紧固件免费采购热线：400-700-9799 华人螺丝网成立于2004年，是紧固件行业人气最旺的网上贸易平台，作为中国紧固件工业协会官方指定网站，旗下包括华人螺丝出口网、《螺丝产业大全》、《华人螺丝》杂志、上海紧固件专业展等品牌。主要提供标准查询：DIN德标、IFI美标、JIS日标、GB国标等免费标准查询；网上的产品供求信息包括：标准紧固件、非标紧固件、高强度紧固件、不锈钢紧固件、螺丝设备、模具、螺栓、螺母、螺柱、螺钉、自攻螺钉、木螺钉、垫圈、挡圈、销、铆钉、组合件、连接副、焊钉等；螺丝商学院的大讲坛、人才市场更是行业最火爆的交流社区，加上专业及时的行业资讯、展会信息等，华人螺丝网是您做生意、交朋友、学知识的最佳平台！">
         
-
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="viewport" content="width=1200" />
-        <meta name="copyright" content="vivo" />
-        <meta name="author" content="uimix, http://www.uimix.com" />
-
         
         <?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
@@ -81,12 +74,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         
 
         
+        
         <link href="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
 /css/comm.css" rel="stylesheet" type="text/css">
         <link href="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
 /css/home.css" rel="stylesheet" type="text/css">
         <link href="<?php echo $_smarty_tpl->tpl_vars['style']->value;?>
 /css/bdsstyle.css" rel="stylesheet" type="text/css">
+        
+
         
     </head>
 
