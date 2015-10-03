@@ -6,7 +6,7 @@
       'dbpass'=>'xx20150829',
       'dbname'=>'qdm169815666_db',
       'def'=>'luosiwang_',
-      'charset'=>'GBK',
+      'charset'=>'UTF8',
       'timezone'=>'PRC',
       'coding'=>'5607343f66f33ccec9c7f0bf33a388fa', //Éú³Écookie¼ÓÃÜ
       'version'=>'1.0',

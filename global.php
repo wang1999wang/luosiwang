@@ -23,7 +23,7 @@ define('DEF_DATA', $db_config['def']);
 unset ($_ENV, $HTTP_ENV_VARS, $_REQUEST, $HTTP_POST_VARS, $HTTP_GET_VARS);
 $_COOKIE = (is_array($_COOKIE)) ? $_COOKIE : $HTTP_COOKIE_VARS;
 header('P3P: CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"'); 
-header('Content-Type: text/html; charset=' . $db_config['charset']); 
+//header('Content-Type: text/html; charset=' . $db_config['charset']); 
 header("Cache-control: private");
 @ob_start('ob_gzhandler');
 date_default_timezone_set($db_config['timezone']);

@@ -24,11 +24,8 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="admin.php" />
     <Compile Include="global.php" />
-    <Compile Include="haha.php" />
     <Compile Include="index.php" />
-    <Compile Include="qqlogin.php" />
     <Compile Include="admin\admin.class.php" />
     <Compile Include="admin\index.php" />
     <Compile Include="admin\model\admin_announcement.class.php" />
@@ -470,6 +467,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".htaccess" />
+    <Content Include="app\template\default\rooter.htm" />
+    <Content Include="app\template\default\job\index - Copy.htm" />
+    <Content Include="app\template\default\job\search - Copy.htm" />
     <Content Include="favicon.ico" />
     <Content Include="httpd(IIS6.0).ini" />
     <Content Include="httpd(IIS7.5).ini" />
